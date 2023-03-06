@@ -1,11 +1,11 @@
 window.TABS = [
-	{ title: 'Get Started', url: 'get_started.html' },
+	{ title: 'Get Started', url: 'index.html' },
 	{ title: 'Iframe', url: 'iframe.html' },
 	{ title: 'API', url: 'api.html' },
 ];
 
 window.NAV_MENU = {
-	get_started: [
+	index: [
 		{
 			title: 'Welcome',
 			url: '#item-1',
