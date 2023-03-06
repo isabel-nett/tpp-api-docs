@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link href="./style/main.css" rel="stylesheet" />
+		<link href="./style/iframe.css" rel="stylesheet" />
+
+		<script src="https://tripleplaypay.com/static/js/triple.js"></script>
+		<script src="./scripts/constants.js"></script>
+		<script src="./scripts/iframe.js" defer></script>
+		<title>Iframe</title>
+	</head>
+	<body>
+		<header class="header mb-5">
+			<div class="logo">
+				<img
+					src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
+					alt=""
+				/>
+			</div>
+
+			<div class="d-flex align-items-center">
+				<ul class="header-menu">
+					<li>
+						<a href="https://3playpay.com/">Home</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/partnership%ef%bf%bc/">Partnership</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/developers/" class="active"
+							>Developers</a
+						>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/faq/">FAQ</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/about/">About</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/contact/">Contact</a>
+					</li>
+				</ul>
+
+				<div class="sign-in-container">
+					<a href="https://tripleplaypay.com/login" class="sign-in">Sign in</a>
+				</div>
+			</div>
+		</header>
+		
+		<div class="container pb-5">
+			<div class="row">
+				<div class="col">
+					<div id="tabs"></div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2">
+						<div id="nav" class="menu"></div>
+					</div>
+
+					<div class="col-10">
+						<div class="page-content">
+							<h2 class="h2" id="item-1">Setup</h2>
+
+							<div>
+								<p>
+									Include
+									<a
+										href="https://tripleplaypay.com/static/js/triple.js"
+										class="triple-url"
+										target="_blank"
+										>triple.js</a
+									>
+									script:
+								</p>
+
+								<div class="d-flex align-items-center">
+									<div class="input-container me-1">
+										<input type="number" id="input" placeholder="Amount, $" class="form-control" />
+									</div>
+
+									<button id="example" class="example-btn btn btn-primary me-1">
+										Example
+									</button>
+
+									<button id="crypto" class="example-btn btn btn-primary">
+										Crypto only
+									</button>
+								</div>
+							</div>
+
+							<div class="mt-2">
+								<code class="code">
+									&lt;script
+									src="https://www.tripleplaypay.com/static/js/triple.js"&gt;&lt;/script&gt;
+								</code>
+							</div>
+
+							<h2 class="h2 mt-4" id="item-2">Initialize Triple</h2>
+
+							<p class="p1 descr-text fz-14">
+								Use payment form in built-in iframe on your page or separate
+								window:
+							</p>
+
+							<div class="mt-2">
+								<div id="item-1-1"></div>
+							</div>
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Configure your payment options:
+
+								<span class="fw-300">
+									Any pay service (Google Pay, Apple Pay, etc...) will appear
+									under the Credit Card section of the iframe when activated
+								</span>
+							</p>
+
+							<div id="item-1-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Button to trigger the payment process:
+							</p>
+
+							<div id="item-1-3"></div>
+
+							<div class="mt-2">
+								<div id="item-1-4"></div>
+							</div>
+
+							<p class="p1 descr-text fz-14 mt-4">Clear irrelevant data:</p>
+
+							<div id="item-1-5"></div>
+
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Generate form again with new parameters:
+							</p>
+
+							<div id="item-1-6"></div>
+
+							<h2 class="h2 mt-5" id="item-3">Creating Payment Tokens</h2>
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Create a token during a charge event
+							</p>
+
+							<div id="item-2-1" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Simply create a token</p>
+
+							<div id="item-2-2" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Create a token but delay a charge, so you can send the token in
+								later to finalize payment
+							</p>
+
+							<div id="item-2-3" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Disable Tokenization</p>
+
+							<div id="item-2-4" class="mt-2"></div>
+
+							<h2 class="h2" id="item-4">Additional config</h2>
+
+
+							<p class="p1 descr-text fz-14 mt-4">Make zip optional/required</p>
+
+							<div id="item-3-1" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Ask for shipping address</p>
+
+							<div id="item-3-2" class="mt-2"></div>
+							<p class="p1 descr-text fz-14 mt-4">Custom payment button text</p>
+
+							<div id="item-3-3" class="mt-2"></div>
+
+
+							<p class="p1 descr-text fz-14 mt-4">Custom fee</p>
+
+							<div id="item-3-4" class="mt-2"></div>
+
+
+							<p class="p1 descr-text fz-14 mt-4">Meta</p>
+
+							<div id="item-3-5" class="mt-2"></div>
+
+
+							<p class="p1 descr-text fz-14 mt-4">Saved meta</p>
+
+							<div id="item-3-6" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Ask full Name</p>
+
+							<div id="item-3-7" class="mt-2"></div>
+
+
+							<p class="p1 descr-text fz-14 mt-4">Ask billing address</p>
+
+							<div id="item-3-8" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Show optIn option</p>
+
+							<div id="item-3-9" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">Email mode</p>
+
+							<div id="item-3-10" class="mt-2"></div>
+
+							<p class="p1 descr-text fz-14 mt-4">PhoneOption mode</p>
+
+							<div id="item-3-11" class="mt-2"></div>
+
+							<h2 class="h2 mt-5" id="item-5">Forms</h2>
+
+							<p class="p1 descr-text fz-14 mt-4">
+								Displaying a form from the api\form in the iframe
+							</p>
+
+							<div id="item-4-1" class="mt-2"></div>
+
+							<h2 class="h2 mt-5" id="item-6">Styling</h2>
+
+							<p class="p1 descr-text fz-14 mt-4">Specify CSS Properties</p>
+
+							<div id="item-5-1" class="mt-2"></div>
+							<div id="item-5-2" class="mt-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./scripts/codeSnippets.js">
+		</script>
+		<script src="./scripts/renderTabs.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./scripts/renderNavbar.js"></script>
+
+		<script>
+			const currPage = currentPage();
+
+			renderNav(window.NAV_MENU[currPage]);
+
+			var scrollSpy = new window.bootstrap.ScrollSpy(document.body, {
+				target: '#nav_el',
+			});
+
+			setTimeout(() => {
+				hotfixScrollSpy(scrollSpy);
+			}, 50);
+		</script>
+	
+	</body>
+</html>

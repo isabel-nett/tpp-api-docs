@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link href="./style/main.css" rel="stylesheet" />
+
+		<script src="./scripts/constants.js"></script>
+		<script src="./scripts/renderTabs.js" defer></script>
+		<title>API</title>
+	</head>
+
+	<body>
+		<header class="header mb-5">
+			<div class="logo">
+				<img
+					src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
+					alt=""
+				/>
+			</div>
+
+			<div class="d-flex align-items-center">
+				<ul class="header-menu">
+					<li>
+						<a href="https://3playpay.com/">Home</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/partnership%ef%bf%bc/">Partnership</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/developers/" class="active"
+							>Developers</a
+						>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/faq/">FAQ</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/about/">About</a>
+					</li>
+
+					<li>
+						<a href="https://3playpay.com/contact/">Contact</a>
+					</li>
+				</ul>
+
+				<div class="sign-in-container">
+					<a href="https://tripleplaypay.com/login" class="sign-in">Sign in</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="container pb-5">
+			<div class="row">
+				<div class="col">
+					<div id="tabs"></div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-2">
+						<div id="nav" class="menu"></div>
+					</div>
+
+					<div class="col-10">
+						<div class="page-content">
+							<h1 class="h1" id="item-1">The Triple Play Pay API</h1>
+
+							<p class="p1 mt-2">
+								For developers who prefer their native language or who don’t
+								have a development app that converts calls to REST, we offer
+								robust Software Development Kits (SDKs) in the following
+								languages: Python, c#, Java, Javascript, PHP, Curl, Go.
+							</p>
+
+							<a
+								class="btn btn-primary dropdown-toggle mt-3"
+								href="https://www.tripleplaypay.com/enroll"
+								target="_blank"
+							>
+								Download SDK
+							</a>
+
+							<h1 class="h1 mt-5" id="item-2">Using REST</h1>
+
+							<p class="p1 mt-2">
+								Triple Play Pay API endpoints return secure JSON metadata that
+								you can utilize for a personalized payment experience.
+							</p>
+
+							<div class="mt-2">
+								<div class="row">
+									<div class="col-6">
+										<p class="p1">
+											<b>Base Address for Testing</b> <br />
+											For development testing in our protected Sandbox
+											environment, the base address of Web API is:
+											<br />https://sandbox.tripleplaypay.com
+										</p>
+									</div>
+
+									<div class="col-6">
+										<p class="p">
+											<b>Base Address for Development</b><br />
+											The base address of the API is: <br />
+											https://tripleplaypay.com
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<h1 class="h1 mt-5" id="item-3">Development Certification</h1>
+
+							<p class="p1 mt-2">
+								For smooth integration and stakeholder satisfaction, Triple Play
+								Pay has built a quick certification process that utilizes a test
+								API Key in our Sandbox environment to ensure that developers
+								have the resources and know-how to properly utilize our
+								endpoints, requests, and responses for successful transactions
+								and user experiences.
+							</p>
+
+							<p class="p1 mt-4">
+								<a
+									href="https://www.tripleplaypay.com/certification"
+									class="custom-link"
+								>
+									Go to the certification page here >
+								</a>
+							</p>
+
+							<h1 class="h1 mt-5" id="item-4">Requests</h1>
+
+							<p class="p1 mt-2">
+								Each endpoint in our API has its own unique path.
+							</p>
+
+							<p class="p1 mt-2">
+								Data is accessed and utilized via standard HTTPS requests in
+								UTF-8 format to an API endpoint. Where possible, the API uses
+								appropriate HTTP verbs for each action:
+							</p>
+
+							<p class="p1 mt-2">
+								<b>GET</b>: Retrieves resources <br />
+								<b>POST</b>: Creates resources<br />
+								<b>PUT</b>: Changes and/or replaces resources or collections<br />
+								<b>DELETE</b>: Deletes resources
+							</p>
+
+							<h1 class="h1 mt-5" id="item-5">Responses</h1>
+
+							<p class="p1 mt-2">
+								Triple Play Pay API responses always include a JSON object.
+								Explore the documentation in the navigation list under this tab
+								for endpoints and their responses.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>Status Codes</b>: Our API uses the following response status
+								codes, as defined in the RFC 2616 and RFC 6585:
+							</p>
+
+							<p class="p1 mt-2">
+								<b>200</b> - OK <br />
+
+								The request has succeeded. The client can read the result of the
+								request in the body and the headers of the response.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>201</b> - Created <br />
+								The request has been fulfilled and resulted in a new resource
+								being created.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>202</b> - Accepted <br />
+								The request has been accepted for processing, but the processing
+								has not been completed.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>204</b> - No Content <br />
+								The request has succeeded but returns no message body.
+							</p>
+
+							<p class="p1 mt-2"><b>304</b> - Not Modified</p>
+
+							<p class="p1 mt-2">
+								<b>400</b> - Bad Request <br />
+								The request could not be understood by the server due to
+								malformed syntax. The message body will contain more
+								information.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>401</b> - Unauthorized <br />
+								The request requires user authentication or, if the request
+								included authorization credentials, authorization has been
+								refused for those credentials.403Forbidden - The server
+								understood the request, but is refusing to fulfill it.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>404</b> - Not Found <br />
+								The requested resource could not be found. This error can be due
+								to a temporary or permanent condition.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>429</b> - Too Many Requests <br />
+								Rate limiting has been applied.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>500</b> - Internal Server Error <br />
+								You should not come across any of these. Please report these to
+								us by posting in the GitHub discussion.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>502</b> - Bad Gateway <br />
+								The server was acting as a gateway or proxy and received an
+								invalid response from the upstream server.
+							</p>
+
+							<p class="p1 mt-2">
+								<b>503</b> - Service Unavailable <br />
+								Again, you should not come across any of these. The server is
+								currently unable to handle the request due to a temporary
+								condition which will be alleviated after some delay. You can
+								choose to resend the request again. Please report these to us by
+								posting in the GitHub discussion.
+							</p>
+
+							<h1 class="h1 mt-5" id="item-6">GitHub</h1>
+
+							<p class="p1 mt-2">
+								Great news! We’re open-source, open-discussion, and open for the
+								success of organizations and developers everywhere.
+							</p>
+
+							<div class="row">
+								<div class="col-6">
+									<p>In the GitHub Repository, you will find:</p>
+
+									<ul>
+										<li>source files</li>
+
+										<li>release notes</li>
+
+										<li>the full OpenAPI SDK variety for download</li>
+									</ul>
+
+									<a
+										class="btn btn-primary dropdown-toggle mt-3"
+										href="https://www.tripleplaypay.com/enroll"
+										target="_blank"
+									>
+										GitHub Repository
+									</a>
+								</div>
+
+								<div class="col-6">
+									<p>In the GitHub Discussion, you will find:</p>
+
+									<ul>
+										<li>sample code to help you with development</li>
+										<li>a place to ask questions</li>
+										<li>a place to share ideas</li>
+									</ul>
+
+									<a
+										class="btn btn-primary dropdown-toggle mt-3"
+										href="https://www.tripleplaypay.com/enroll"
+										target="_blank"
+									>
+										GitHub Discussion
+									</a>
+								</div>
+							</div>
+
+							<h1 class="h1 mt-5" id="item-7">Accessibility</h1>
+
+							<p class="p1 mt-2">
+								Designing and developing an app for accessibility ensures a
+								high-quality product that is usable by all from the very
+								beginning.
+								<b>
+									We believe that it is the responsibility of every stakeholder,
+									subject matter expert, and contributor involved in software
+									and web development to prioritize accessibility at every stage
+									of the development lifecycle.
+								</b>
+								<br /><br />
+								We at Triple Play Pay hold ourselves accountable for creating
+								inclusive and accessible products by setting the priority from
+								conceptualization onward, including by continuously iterating to
+								improve accessibility. We expect the same standard of every
+								organization, stakeholder, and team member who utilizes our
+								products and/or API.
+							</p>
+
+							<h1 class="h1 mt-5" id="item-8">Resources</h1>
+
+							<p class="p1 mt-2">
+								These resources can be harnessed by all designers and developers
+								as a baseline for quality in design and development.
+							</p>
+
+							<div class="row mt-2">
+								<div class="col-6">
+									<p class="p1 mt-2">
+										<b>Accessibility Fundamentals of A11y</b> <br />
+
+										World Wide Web Consortium (W3C)’s Web A11y Institute has
+										published the Fundamentals of A11y resource covering a range
+										of topics and in-depth contexts.
+									</p>
+								</div>
+
+								<div class="col-6">
+									<p class="p1 mt-2">
+										<b>18F Accessibility Guide</b> <br />
+
+										The US Government’s 18F Accessibility Guide is a
+										user-friendly guide for all designers and developers that
+										utilizes the Web Content Accessibility Guidelines (WCAG).
+									</p>
+								</div>
+							</div>
+
+							<p class="p1 mt-4">
+								<b
+									>See something in our products that doesn’t match these
+									standards?
+								</b>
+								<br />
+								Email us at: devteam@tripleplaypay.com
+							</p>
+
+							<h1 class="h1 mt-5" id="item-9">Endpoints</h1>
+
+							<div id="endpoints">
+								<!-- <div>
+									<p class="method">POST</p>
+
+									<p class="mb-2">
+										<span class="fw-700 mb-2"> charge </span>
+									</p>
+
+									<p>Process payment</p>
+								</div>
+
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Parameter</th>
+
+											<th>Type</th>
+											<th></th>
+											<th>Description</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td colspan="1">test</td>
+
+											<td colspan="1">
+												<span class="highlight"> test </span>
+											</td>
+
+											<td colspan="1">
+												<span class="highlight"> Required </span>
+											</td>
+
+											<td colspan="2">test</td>
+										</tr>
+									</tbody>
+								</table> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./scripts/renderNavbar.js"></script>
+		<script src="./scripts/apiPage.js"></script>
+	</body>
+</html>
