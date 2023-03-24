@@ -114,7 +114,7 @@ window.snippets = {
     });`,
 	'item-3-1': `triple.generatePaymentForm({
         ...,
-        zipMode: 'optinal' // or required
+        zipMode: 'optional' // or required
         });`,
 	'item-3-2': `triple.generatePaymentForm({
     ...,
@@ -172,7 +172,7 @@ window.snippets = {
             button: {
                 // Color
                 color: '#fff',
-                // Backgroung
+                // Background
                 background: '#93e368',
                 // Border radius
                 borderRadius: '15px',

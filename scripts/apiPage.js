@@ -50,6 +50,7 @@ function renderEndpoints(endpoints) {
 		const endpoint = endpoints[index];
 
 		result += `
+			</br></br>
 			<div id="item-9-${index + 1}">
 				<p class="method">${endpoint[1]}</p>
 

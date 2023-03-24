@@ -1,6 +1,6 @@
 window.TABS = [
 	{ title: 'Get Started', url: 'index.html' },
-	{ title: 'Iframe', url: 'iframe.html' },
+	{ title: 'iframe', url: 'iframe.html' },
 	{ title: 'API', url: 'api.html' },
 ];
 
@@ -37,7 +37,7 @@ window.NAV_MENU = {
 			url: '#item-1',
 		},
 		{
-			title: 'Initialize Triple',
+			title: 'Initialize a Triple',
 			url: '#item-2',
 		},
 		{
@@ -45,7 +45,7 @@ window.NAV_MENU = {
 			url: '#item-3',
 		},
 		{
-			title: 'Additional config',
+			title: 'Configuration',
 			url: '#item-4',
 		},
 		{
@@ -85,10 +85,6 @@ window.NAV_MENU = {
 		{
 			title: 'Accessibility',
 			url: '#item-7',
-		},
-		{
-			title: 'Resources',
-			url: '#item-8',
 		},
 		// {
 		// 	title: 'Endpoints',
