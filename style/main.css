@@ -88,6 +88,7 @@ p {
 /* components */
 
 .btn-primary {
+    min-width: 150px;
     background-color: #465382;
     box-shadow: none !important;
     border-color: transparent !important;
@@ -96,6 +97,28 @@ p {
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
     background-color: #404b71;
 
+}
+
+.btn-secondary {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 200px;
+    background-color: white;
+    color: #465382;
+    border-color: #465382;
+    border-width: 2px;
+    box-shadow: none !important;
+}
+
+.btn-secondary:hover {
+    background-color: #465382 !important;
+}
+
+.btn-secondary:active, .btn-secondary:focus {
+    background-color: white !important;
+    color: #465382 !important;
+    border-color: #465382 !important;
+    border-width: 2px !important;
 }
 
 .custom-link {

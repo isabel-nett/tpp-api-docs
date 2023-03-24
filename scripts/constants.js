@@ -1,6 +1,6 @@
 window.TABS = [
 	{ title: 'Get Started', url: 'index.html' },
-	{ title: 'iframe', url: 'iframe.html' },
+	{ title: 'Iframe', url: 'iframe.html' },
 	{ title: 'API', url: 'api.html' },
 ];
 
