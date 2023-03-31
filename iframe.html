@@ -39,12 +39,23 @@
 
 				<div class="row">
 					<div class="col-md-2">
-						<div id="nav" class="menu"></div>
+						<nav id="nav" class="h-100 mt-3">
+                            <nav class="nav flex-column nav-pills">
+                              <a class="nav-link" href="#item-1">Setup</a>
+                              <a class="nav-link" href="#item-2">Initialization</a>
+                              <a class="nav-link" href="#item-3">Tokens</a>
+                              <a class="nav-link" href="#item-4">Configuration</a>
+							  <a class="nav-link" href="#item-5">Forms</a>
+							  <a class="nav-link" href="#item-6">Styles</a>
+                            </nav>
+                        </nav>
 					</div>
 
 					<div class="col-10">
-						<div class="page-content">
-							<h2 class="h2" id="item-1">Setup</h2>
+						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+							<h1 class="h1">The Triple Play Pay Iframe</h1>
+
+							<h1 class="h1 mt-4" id="item-1">Setup</h1>
 
 							<p class="mt-2">
 								View full
@@ -65,7 +76,7 @@
 								</code>
 							</div>
 
-							<h2 class="h2 mt-4" id="item-1">Tools</h2>
+							<h1 class="h1 mt-4" id="item-1">Tools</h1>
 
 							<a 
 							class="mt-3 custom-link" 
@@ -98,7 +109,7 @@
 								</button>
 							</div>
 
-							<h2 class="h2 mt-4" id="item-2">Initialize a Triple</h2>
+							<h1 class="h1 mt-4" id="item-2">Initialize a Triple</h1>
 
 							<p class="p1 descr-text fz-14">
 								To accept a Triple (a payment) through the iframe, built it 
@@ -149,7 +160,7 @@
 
 							<div id="item-1-6"></div>
 
-							<h2 class="h2 mt-5" id="item-3">Creating Payment Tokens</h2>
+							<h1 class="h1 mt-5" id="item-3">Creating Payment Tokens</h1>
 
 							<p class="p1 descr-text fz-14 mt-4">
 								Create a token during a charge event
@@ -172,7 +183,7 @@
 
 							<div id="item-2-4" class="mt-2"></div>
 
-							<h2 class="h2 mt-5" id="item-4">Configuration</h2>
+							<h1 class="h1 mt-5" id="item-4">Configuration</h1>
 
 							<p class="p1 descr-text fz-14 mt-4">Custom pay button text:</p>
 
@@ -242,7 +253,7 @@
 
 							<div id="item-3-11" class="mt-2"></div>
 
-							<h2 class="h2 mt-5" id="item-5">Forms</h2>
+							<h1 class="h1 mt-5" id="item-5">Forms</h1>
 
 							<p class="p1 descr-text fz-14 mt-4">
 								Display a form in the iframe:
@@ -250,7 +261,7 @@
 
 							<div id="item-4-1" class="mt-2"></div>
 
-							<h2 class="h2 mt-5" id="item-6">Styling</h2>
+							<h1 class="h1 mt-5" id="item-6">Styles</h1>
 
 							<p class="p1 descr-text fz-14 mt-4">Available button CSS customizations:</p>
 
@@ -288,20 +299,6 @@
 		</script>
 
 		<script src="./scripts/renderNavbar.js"></script>
-
-		<script>
-			const currPage = currentPage();
-
-			renderNav(window.NAV_MENU[currPage]);
-
-			var scrollSpy = new window.bootstrap.ScrollSpy(document.body, {
-				target: '#nav_el',
-			});
-
-			setTimeout(() => {
-				hotfixScrollSpy(scrollSpy);
-			}, 50);
-		</script>
 	
 	</body>
 </html>

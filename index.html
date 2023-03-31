@@ -35,11 +35,18 @@
 
 				<div class="row">
 					<div class="col-md-2">
-						<div id="nav" class="menu"></div>
+						<nav id="nav" class="h-100 mt-3">
+                            <nav class="nav flex-column nav-pills">
+                              <a class="nav-link" href="#item-1">Welcome</a>
+                              <a class="nav-link" href="#item-2">API Key</a>
+                              <a class="nav-link" href="#item-3">SDK</a>
+                              <a class="nav-link" href="#item-4">GitHub</a>
+                            </nav>
+                        </nav>
 					</div>
 
 					<div class="col-10">
-						<div class="page-content">
+						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
 							<h1 class="h1" id="item-1">Welcome!</h1>
 
 							<p class="p1 mt-2">
@@ -72,7 +79,7 @@
 								</a>
 							</p>
 
-							<h1 class="h1 mt-5" id="item-3">Sandbox & Certification</h1>
+							<h1 class="h1 mt-5" id="item-3">Sandbox & Certificate</h1>
 
 							<p class="p1 mt-2">
 								For smooth integration and stakeholder satisfaction, Triple Play
@@ -85,7 +92,7 @@
 
 							<p class="p1 mt-4">
 								<a
-									href="https://www.tripleplaypay.com/certification"
+									href="/certificate.html"
 									class="custom-link"
 								>
 									Go to the certification page here >
@@ -185,19 +192,6 @@
 
 		<script src="./scripts/renderNavbar.js"></script>
 
-		<script>
-			const currPage = currentPage();
-
-			renderNav(window.NAV_MENU[currPage]);
-
-			var scrollSpy = new window.bootstrap.ScrollSpy(document.body, {
-				target: '#nav_el',
-			});
-
-			setTimeout(() => {
-				hotfixScrollSpy(scrollSpy);
-			}, 50);
-		</script>
 		<script>
 			var sdks  = {
 			'PYTHON':['/static/sdk/python-client-generated.zip','TriplePlayPayAPI-PYTHON-v1.5.3.zip'],

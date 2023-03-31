@@ -2,7 +2,7 @@ const TABS_CONTAINER = '#tabs';
 const PAGE_BASE_URL = './';
 
 function renderTab(tab, currPage) {
-	let className = 'nav-link ';
+	let className = 'nav-tab ';
 
 	if (currPage === tab.url) {
 		className += 'active';

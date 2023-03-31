@@ -2,6 +2,7 @@ window.TABS = [
 	{ title: 'Get Started', url: 'index.html' },
 	{ title: 'Iframe', url: 'iframe.html' },
 	{ title: 'API', url: 'api.html' },
+	{ title: 'Certificate', url: 'certificate.html' },
 ];
 
 window.NAV_MENU = {
@@ -59,7 +60,7 @@ window.NAV_MENU = {
 	],
 	api: [
 		{
-			title: 'The Triple Play Pay API',
+			title: 'Overview',
 			url: '#item-1',
 		},
 		{
@@ -67,7 +68,7 @@ window.NAV_MENU = {
 			url: '#item-2',
 		},
 		{
-			title: 'Development Certification',
+			title: 'Certificate',
 			url: '#item-3',
 		},
 		{
@@ -100,5 +101,27 @@ window.NAV_MENU = {
 		// 		},
 		// 	],
 		// },
+	],
+	certification: [
+		{
+			title: 'About',
+			url: '#item-1',
+		},
+		{
+			title: 'Setup',
+			url: '#item-2',
+		},
+		{
+			title: 'Resources',
+			url: '#item-3',
+		},
+		{
+			title: 'Tests',
+			url: '#item-4',
+		},
+		{
+			title: 'Certificate',
+			url: '#item-5',
+		},
 	],
 };

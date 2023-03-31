@@ -82,6 +82,7 @@ function fetchNav() {
 		const formattedEndpoints = endpoints.map((e, index) => {
 			return {
 				title: e[0],
+				method: e[1],
 				url: `#item-9-${index + 1}`,
 			};
 		});

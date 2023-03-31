@@ -10,7 +10,7 @@ function renderNavItem(tab) {
 	if (!tab.inner) {
 		return `
         <li class="${className}">
-            <a href="${tab.url}" class="menu-link nav-link"> ${tab.title} </a>
+            <a href="${tab.url}" class="menu-link nav-link"> ${tab.title}</a>
         </li>
         `;
 	}
@@ -32,7 +32,7 @@ function renderNavItem(tab) {
 	for (let link of tab.inner) {
 		links += `
         <li class="menu-link-el">
-            <a href="${link.url}" class="menu-link nav-link"> ${link.title} </a>
+            <a href="${link.url}" class="menu-link nav-link"> ${link.title} <sup>${link.method}</sup> </a>
         </li>
         `;
 	}
