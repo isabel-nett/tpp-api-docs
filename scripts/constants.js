@@ -3,6 +3,7 @@ window.TABS = [
 	{ title: 'Iframe', url: 'iframe.html' },
 	{ title: 'API', url: 'api.html' },
 	{ title: 'Certificate', url: 'certificate.html' },
+	{ title: 'Payment Methods', url: 'paymentmethods.html' },
 ];
 
 window.NAV_MENU = {
@@ -124,4 +125,18 @@ window.NAV_MENU = {
 			url: '#item-5',
 		},
 	],
+	paymentmethods: [
+		{
+			title: 'Card, ACH, & Crypto',
+			url: '#item-1',
+		},
+		{
+			title: 'Digital Wallets',
+			url: '#item-2',
+		},
+		{
+			title: 'Point-of-Sale',
+			url: '#item-3',
+		},
+	]
 };

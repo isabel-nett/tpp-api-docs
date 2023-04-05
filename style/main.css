@@ -152,6 +152,10 @@ p {
     
 }
 
+.wallet-logo {
+    width: 70px;
+}
+
 .custom-link:hover, .custom-link:active {
     color: #404b71;
 }
