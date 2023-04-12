@@ -38,8 +38,8 @@
 					<nav id="nav" class="h-100 mt-3">
 						<nav class="nav flex-column nav-pills">
 							<a class="nav-link" href="#item-1">Welcome</a>
-							<a class="nav-link" href="#item-2">API Key</a>
-							<a class="nav-link" href="#item-3">SDK</a>
+							<a class="nav-link" href="#item-2">Getting Started</a>
+							<a class="nav-link" href="#item-3">Additional Platforms</a>
 							<a class="nav-link" href="#item-4">GitHub</a>
 						</nav>
 					</nav>
@@ -51,17 +51,23 @@
 
 						<p class="p1 mt-2">
 							Triple Play Pay is a platform built by developers for the modern
-							developer. Enjoy managing just <b>one single interface</b> for
+							developer. With Triple Play Pay, you can enjoy managing just <b>one single interface</b> for
 							all things payments. Utilize our documentation for an easy
 							integration experience.
+							<br>
+							<br>
+							View merchant FAQs <a class="custom-link" href="https://3playpay.com/faq/">here</a>.
 						</p>
 
-						<p class="mt-4 text-center fz-12">
-							By using Triple Play Pay developer tools, you accept the Triple
+						<p class="mt-1 fz-12">
+							**By using Triple Play Pay developer tools, you accept the Triple
 							Play Pay Terms of Service.
 						</p>
 
-						<h1 class="h1 mt-5" id="item-2">API Key</h1>
+						<h1 class="h1 mt-5" id="item-2">Getting Started</h1>
+
+						<!-- <h1 class="h1 mt-5" id="item-2">API Key</h1> -->
+						<h2 class="mt-3 h2">API Key</h2>
 
 						<p class="p1 mt-2">
 							To get an API Key for utilization of our payment processing API,
@@ -69,7 +75,7 @@
 							Triple Play Pay Inc.
 						</p>
 
-						<p class="mt-3">
+						<p class="mt-2">
 							<a
 								class="btn btn-primary"
 								href="https://www.tripleplaypay.com/contact"
@@ -78,8 +84,10 @@
 								Enroll Now
 							</a>
 						</p>
+						<br>
 
-						<h1 class="h1 mt-5" id="item-3">Sandbox & Certificate</h1>
+						<!-- <h1 class="h1 mt-5" id="item-3">Sandbox & Development Certificate</h1> -->
+						<h2 class="mt-3 h2">Sandbox & Development Certificate</h2>
 
 						<p class="p1 mt-2">
 							For smooth integration and stakeholder satisfaction, Triple Play
@@ -99,30 +107,67 @@
 							</a>
 						</p>
 
-						<h1 class="h1 mt-5" id="item-4">OpenAPI SDK</h1>
+						<h1 class="h1 mt-5" id="item-3">Additional Integrations</h1>
 
-						<p class="p1 mt-2">
-							For developers who prefer their native language or who don’t
-							have a development app that converts calls to REST, we offer
-							robust Software Development Kits (SDKs) in the following
-							languages: Python, c#, Java, Javascript, PHP, Curl, Go.
-						</p>
+						<div class="d-flex flex-row gap-4">
 
-						<div class="mt-3">
-							<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
-								<option selected>SDK Download</option>
-								<option value="PYTHON">PYTHON</option>
-								<option value="C">C#</option>
-								<option value="JAVA">JAVA</option>
-								<option value="JAVASCRIPT">JAVASCRIPT</option>
-								<option value="GO">GO</option>
-								<option value="PHP">PHP</option>
-								<option value="JSON">JSON</option>
-								<option value="WOOCOMMERCE">WOOCOMMERCE</option>
-							</select>
+							<div class="col-4">
+								<p class="mt-2" style="font-weight: bold">OpenAPI SDK</p>
+
+								<p class="p1 mt-2">
+									For developers who prefer their native language or who don’t
+									have a development app that converts calls to REST, we offer
+									robust Software Development Kits (SDKs) in the following
+									languages: Python, c#, Java, Javascript, PHP, Curl, Go.
+								</p>
+
+								<div class="mt-3">
+									<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
+										<option selected>SDK Download</option>
+										<option value="PYTHON">PYTHON</option>
+										<option value="C">C#</option>
+										<option value="JAVA">JAVA</option>
+										<option value="JAVASCRIPT">JAVASCRIPT</option>
+										<option value="GO">GO</option>
+										<option value="PHP">PHP</option>
+										<option value="JSON">JSON</option>
+										<option value="WOOCOMMERCE">WOOCOMMERCE</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-4">
+								<p class="mt-2" style="font-weight: bold">Websocket</p>
+
+								<p class="p1 mt-2">
+									Websockets can be used to allow real-time communication between a web browser 
+									(client) and a server. Once a connection is established, the client and server can communicate 
+									freely and continuously.
+									<br>
+									<br>
+									Our websocket is located at: <a class="custom-link" href="wss://tripleplaypay.com/ws/api">wss://tripleplaypay.com/ws/api</a>
+									<br>
+									<br>
+									Example message: <code>{<api command>:{parameter1:value, parameter2:value...}}</code>
+								</p>
+							</div>
+
+							<div class="col-4">
+								<p class="mt-2" style="font-weight: bold">Wordpress</p>
+
+								<p class="p1 mt-2">
+									To integrate with Wordpress, the link below will guide you through installing 
+									WordPress plugins using the upload option in the admin area.
+									<br>
+									<br>
+									View the installation guide:
+									<a class="text-nowrap custom-link" href="https://tripleplaypay.com/static/wordpress/wordpress_plugin_installation.html">Installation Guide</a>
+								</p>
+							</div>
+
 						</div>
 
-						<h1 class="h1 mt-5" id="item-5">GitHub</h1>
+						<h1 class="h1 mt-5" id="item-4">GitHub</h1>
 
 						<p class="p1 mt-2">
 							Great news! We’re open-source, open-discussion, and open for the

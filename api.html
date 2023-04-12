@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 		<link href="/dist/api/style/main.css" rel="stylesheet" />
-
+		<script src="/dist/api/scripts/renderNavbar.js"></script>
 		<script src="/dist/api/scripts/constants.js"></script>
 		<script src="/dist/api/scripts/renderTabs.js" defer></script>
 		<title>API</title>
@@ -41,7 +41,7 @@
 						<div id="nav" class="menu"></div>
 					</div>
 
-					<div class="col-10">
+					<div class="col-12 col-md-10">
 						<div class="page-content">
 							<h1 class="h1" id="item-1">The Triple Play Pay API</h1>
 
@@ -137,9 +137,17 @@
 
 							<p class="p1 mt-2">
 								Triple Play Pay API responses always include a JSON object.
-								Explore the documentation in the navigation list under this tab
+								Explore the documentation under "Endpoints" in the navigation list on this page
 								for endpoints and their responses.
 							</p>
+
+							<br>
+
+							<p class="p1 mt-2" style="font-weight: bolder">
+								View examples of the JSON responses <a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5349536">here in our GitHub</a>.
+							</p>
+
+							<br>
 
 							<p class="p1 mt-2">
 								<b>Status Codes</b>: Our API uses the following response status
@@ -335,7 +343,7 @@
 									standards?
 								</b>
 								<br />
-								Email us at: <a class="custom-link" href="mailto:devteam@tripleplaypay.com">devteam@tripleplaypay.com</a>
+								Email us at: <a target="_blank" class="custom-link" href="mailto:devteam@tripleplaypay.com">devteam@tripleplaypay.com</a>
 							</p>
 
 							<h1 class="h1 mt-5" id="item-9">Endpoints</h1>
