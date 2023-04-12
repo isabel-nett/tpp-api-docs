@@ -21,7 +21,7 @@ window.NAV_MENU = {
 			url: '#item-3',
 		},
 		{
-			title: 'SDK',
+			title: 'Additional Integrations',
 			url: '#item-4',
 		},
 		{
@@ -61,7 +61,7 @@ window.NAV_MENU = {
 	],
 	api: [
 		{
-			title: 'Overview',
+			title: 'SDKs',
 			url: '#item-1',
 		},
 		{

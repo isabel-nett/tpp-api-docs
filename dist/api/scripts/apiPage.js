@@ -8,7 +8,7 @@ function renderTable(tableData) {
 				<th>Parameter</th>
 
 				<th>Type</th>
-				<th>Required</th>
+				<th>Requirement</th>
 				<th>Description</th>
 			</tr>
 		</thead>
@@ -22,24 +22,40 @@ function renderTable(tableData) {
 	let result = '';
 
 	for (let row of tableData) {
+		// result += `
+		// 	<tr>
+		// 		<td>${row[0]}</td>
+		// 		<td><p class="highlight text-capitalize">
+		// 			${row[1]}
+		// 		</p></td>
+		// 		<td><p class="highlight">
+		// 			${row[2]}
+		// 		</p></td>
+		// 		<td>${row[3]}</td>
+		// 	</tr>
+		// `;
 		result += `
-			<tr>
-				<td>${row[0]}</td>
-				<td><p class="highlight text-capitalize">
-					${row[1]}
-				</p></td>
-				<td><p class="highlight">
-					${row[2]}
-				</p></td>
-				<td>${row[3]}</td>
-			</tr>
-		`;
+            <tr>
+				<td><p class="${row[0] === '' ? 'section-head' : ''}">
+					${row[0] === '' ? 'Payment Method: ' + row[1] : row[1]}
+                </p></td>
+                <td><p class="${row[0] === '' ? 'section-head' : 'highlight text-capitalize'}">
+					${row[0] === '' ? '' : row[1]}
+                </p></td>
+                <td><p class="${row[0] === '' ? 'hide' : 'highlight'}">
+                    ${row[2] === false ? 'Optional' : row[2]}
+                </p></td>
+                <td>${row[3]}</td>
+            </tr>
+        `;
 	}
 
 	table = table.replace('{result}', result);
 
 	return table;
 }
+
+// If [0] is empty, the row should have class "section-head"
 
 function renderEndpoints(endpoints) {
 	const container = document.querySelector('#endpoints');

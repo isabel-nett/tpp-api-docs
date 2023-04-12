@@ -247,6 +247,16 @@ pre {
     text-transform: uppercase;
 }
 
+.section-head {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
 th {
     font-size: 14px;
     font-weight: 500;
