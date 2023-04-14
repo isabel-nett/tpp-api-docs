@@ -144,88 +144,108 @@
 							<br>
 
 							<p class="p1 mt-2" style="font-weight: bolder">
-								View examples of our standard JSON responses <a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5349536">here in our GitHub</a>.
+								Our standard response code:
+							</p>
+
+							<div class="mt-3 ms-5 p-4 col-md-6" style="background-color: #f8f8f8; border-radius: 8px;">
+							<code>{<br>
+								"status": true or false,<br>
+								"id": "<transactionId>",<br>
+								"message": result (json) or error message (string),<br>
+								"method": "charge"<br>
+							  }</code>
+							</div>
+							
+							<br>
+
+							<p class="p1 mt-2">
+							  Explore examples of API calls and JSON responses <a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5349536">here in our GitHub</a>.
 							</p>
 
 							<br>
 
-							<p class="p1 mt-2">
+							<p class="mt-2">
 								<b>Status Codes</b>: Our API uses the following response status
 								codes, as defined in the RFC 2616 and RFC 6585:
 							</p>
 
-							<p class="p1 mt-2">
-								<b>200</b> - OK <br />
+							<div class="d-flex row m-4" style="font-size: 12px;">
 
-								The request has succeeded. The client can read the result of the
-								request in the body and the headers of the response.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>200</b> - OK <br />
 
-							<p class="p1 mt-2">
-								<b>201</b> - Created <br />
-								The request has been fulfilled and resulted in a new resource
-								being created.
-							</p>
+									The request has succeeded. The client can read the result of the
+									request in the body and the headers of the response.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>202</b> - Accepted <br />
-								The request has been accepted for processing, but the processing
-								has not been completed.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>201</b> - Created <br />
+									The request has been fulfilled and resulted in a new resource
+									being created.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>204</b> - No Content <br />
-								The request has succeeded but returns no message body.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>202</b> - Accepted <br />
+									The request has been accepted for processing, but the processing
+									has not been completed.
+								</p>
 
-							<p class="p1 mt-2"><b>304</b> - Not Modified</p>
+								<p class="mt-2 col-md-6">
+									<b>204</b> - No Content <br />
+									The request has succeeded but returns no message body.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>400</b> - Bad Request <br />
-								The request could not be understood by the server due to
-								malformed syntax. The message body will contain more
-								information.
-							</p>
+								<p class="mt-2 col-md-6"><b>304</b> - Not Modified</p>
 
-							<p class="p1 mt-2">
-								<b>401</b> - Unauthorized <br />
-								The request requires user authentication or, if the request
-								included authorization credentials, authorization has been
-								refused for those credentials.403Forbidden - The server
-								understood the request, but is refusing to fulfill it.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>400</b> - Bad Request <br />
+									The request could not be understood by the server due to
+									malformed syntax. The message body will contain more
+									information.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>404</b> - Not Found <br />
-								The requested resource could not be found. This error can be due
-								to a temporary or permanent condition.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>401</b> - Unauthorized <br />
+									The request requires user authentication or, if the request
+									included authorization credentials, authorization has been
+									refused for those credentials.403Forbidden - The server
+									understood the request, but is refusing to fulfill it.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>429</b> - Too Many Requests <br />
-								Rate limiting has been applied.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>404</b> - Not Found <br />
+									The requested resource could not be found. This error can be due
+									to a temporary or permanent condition.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>500</b> - Internal Server Error <br />
-								You should not come across any of these. Please report these to
-								us by posting in the GitHub discussion.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>429</b> - Too Many Requests <br />
+									Rate limiting has been applied.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>502</b> - Bad Gateway <br />
-								The server was acting as a gateway or proxy and received an
-								invalid response from the upstream server.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>500</b> - Internal Server Error <br />
+									You should not come across any of these. Please report these to
+									us by posting in the GitHub discussion.
+								</p>
 
-							<p class="p1 mt-2">
-								<b>503</b> - Service Unavailable <br />
-								Again, you should not come across any of these. The server is
-								currently unable to handle the request due to a temporary
-								condition which will be alleviated after some delay. You can
-								choose to resend the request again. Please report these to us by
-								posting in the GitHub discussion.
-							</p>
+								<p class="mt-2 col-md-6">
+									<b>502</b> - Bad Gateway <br />
+									The server was acting as a gateway or proxy and received an
+									invalid response from the upstream server.
+								</p>
+
+								<p class="mt-2 col-md-6">
+									<b>503</b> - Service Unavailable <br />
+									Again, you should not come across any of these. The server is
+									currently unable to handle the request due to a temporary
+									condition which will be alleviated after some delay. You can
+									choose to resend the request again. Please report these to us by
+									posting in the GitHub discussion.
+								</p>
+
+							</div>
+							
 
 							<h1 class="h1 mt-5" id="item-6">GitHub</h1>
 

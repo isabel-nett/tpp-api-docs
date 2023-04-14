@@ -37,7 +37,7 @@ function renderTable(tableData) {
 		result += `
             <tr>
 				<td><p class="${row[0] === '' ? 'section-head' : ''}">
-					${row[0] === '' ? 'Payment Method: ' + row[1] : row[1]}
+					${row[0] === '' ? 'Payment Method: ' + row[1] : row[0]}
                 </p></td>
                 <td><p class="${row[0] === '' ? 'section-head' : 'highlight text-capitalize'}">
 					${row[0] === '' ? '' : row[1]}
