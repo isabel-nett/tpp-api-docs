@@ -36,16 +36,16 @@ function renderTable(tableData) {
 		// `;
 		result += `
             <tr>
-				<td><p class="${row[0] === '' ? 'section-head' : ''}">
+				<td class="col-2"><p class="${row[0] === '' ? 'section-head' : ''}">
 					${row[0] === '' ? 'Payment Method: ' + row[1] : row[0]}
                 </p></td>
-                <td><p class="${row[0] === '' ? 'section-head' : 'highlight text-capitalize'}">
+                <td class="col-1"><p class="${row[0] === '' ? 'section-head' : 'highlight text-capitalize'}">
 					${row[0] === '' ? '' : row[1]}
                 </p></td>
-                <td><p class="${row[0] === '' ? 'hide' : 'highlight'}">
+                <td class="col-1"><p class="${row[0] === '' ? 'hide' : 'highlight'}">
                     ${row[2] === false ? 'Optional' : row[2]}
                 </p></td>
-                <td>${row[3]}</td>
+                <td class="col-5">${row[3]}</td>
             </tr>
         `;
 	}
