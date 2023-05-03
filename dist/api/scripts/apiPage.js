@@ -43,7 +43,7 @@ function renderTable(tableData) {
 					${row[0] === '' ? '' : row[1]}
                 </p></td>
                 <td class="col-1"><p class="${row[0] === '' ? 'hide' : 'highlight'}">
-                    ${row[2] === false ? 'Optional' : row[2]}
+                    ${row[2] === false ? '' : row[2]}
                 </p></td>
                 <td class="col-5">${row[3]}</td>
             </tr>
