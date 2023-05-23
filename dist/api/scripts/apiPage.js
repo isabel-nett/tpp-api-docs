@@ -116,6 +116,8 @@ function fetchNav() {
 			target: '#nav_el',
 		});
 
+		scrollSpy._element.addEventListener('activate.bs.scrollspy', updateUrlWithId);
+
 		setTimeout(() => {
 			hotfixScrollSpy(scrollSpy);
 		}, 50);
