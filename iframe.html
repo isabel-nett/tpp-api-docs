@@ -24,11 +24,11 @@
 			</div>
 
 			<h2 class="fw-300 page-header" style="color: white;">
-				Developer Documents
+				Documentation
 			</h2>
 
 			<div class="sign-in-container">
-				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Sign in</a>
+				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
 			</div>
 		</header>
 		
@@ -55,65 +55,79 @@
 					<div class="col-10">
 						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
 
-							<h1 class="h1" id="item-1">Iframe Setup</h1>
-
-							<p class="mt-2">
-								View full
-								<a
-									href="https://tripleplaypay.com/static/js/triple.js"
-									class="triple-url"
-									target="_blank"
-									>triple.js</a
-								>
-								script.
-							</p>
+							<h1 class="h1" id="item-1">The Triple Play Pay Iframe</h1>
 
 							<div class="mt-2">
-								<span>Inject the following script into your app:</span>
-								<code class="code">
-									&lt;script
-									src="https://www.tripleplaypay.com/static/js/triple.js"&gt;&lt;/script&gt;
-								</code>
+								<span>To include the iframe in your app, inject the following script:</span>
+								<div class="p-3 col-md-8" style="background-color: #f8f8f8; border-radius: 8px;">
+									<code class="code">
+										&lt;script
+										src="https://www.tripleplaypay.com/static/js/triple.js"&gt;&lt;/script&gt;
+									</code>
+								</div>
 							</div>
+
+							<small class="mt-2">
+								View full triple.js script
+								<a
+									href="https://tripleplaypay.com/static/js/triple.js"
+									class="custom-link"
+									target="_blank"
+									>here</a
+								>.
+							</small>
 
 							<h1 class="h1 mt-5" id="item-1">Tools</h1>
 
-							<a 
-							class="mt-3 custom-link" 
-							href="https://tripleplaypay.com/createlink"
-							target="_blank">Access the Payment Link generator</a>
-							<p class="p1 descr-text fz-14">
-								This easy payment functionality utilizes 
-								your unique API key to auto-generate an iframe. It allows you to create 
-								payment and subscription pages to send or provide on the spot as 
-								invoices or bills. At the bottom of the page, you will find a 
-								link to view and copy the code that is generated.</br>
-								*Requires an account with Triple Play Pay.
-							</p>
+							<h5 class="mt-3">Payment Link Generator</h5>
 
-							<hr>
-
-							<p class="mt-3">See a quick example of the iframe in action:</p>
-							<p class="p1 descr-text fz-14">No account or API key required.</p>
-
-							<div class="d-flex align-items-center mb-3 mt-2">
-								<div class="input-container input-group me-1">
-									<span class="input-group-text">$</span>
-									<input type="number" id="input" placeholder="Amount" class="form-control" />
-								</div>
-
-								<button id="example" class="example-btn btn btn-secondary me-1">
-									All Methods
-								</button>
-
-								<button id="crypto" class="example-btn btn btn-primary">
-									Crypto Only
-								</button>
+							<div class="border-left">
+								<a 
+								class="mt-3 custom-link" 
+								href="https://tripleplaypay.com/createlink"
+								target="_blank">Access the Payment Link generator</a>
+								<p class="p1 descr-text fz-14">
+									Account required. This easy payment functionality utilizes 
+									your unique API key to auto-generate an iframe. It allows you to create 
+									payment and subscription pages to send or provide on the spot as 
+									invoices or bills. 
+									<br>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+									</svg>
+									At the bottom of the page, open the Developer Options to find a 
+									link to view and copy the code that is generated.
+								</p>
 							</div>
 
-							<hr>
+							<h5 class="mt-3">Iframe Demo</h5>
 
-							<p class="mt-3">Explore example code for integrating the iframe in a page <a class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5241066">here in our GitHub</a>.</p>
+							<div class="border-left">
+								<p class="mt-3">See a quick example of the iframe in action:</p>
+								<p class="p1 descr-text fz-14">No account or API key required.</p>
+
+								<div class="d-flex align-items-center mb-3 mt-2">
+									<div class="input-container input-group me-1">
+										<span class="input-group-text">$</span>
+										<input type="number" id="input" placeholder="Amount" class="form-control" />
+									</div>
+
+									<button id="example" class="example-btn btn btn-secondary me-1">
+										All Methods
+									</button>
+
+									<button id="crypto" class="example-btn btn btn-primary">
+										Crypto Only
+									</button>
+								</div>
+							</div>
+
+							<h5 class="mt-3">Sample Code</h5>
+
+							<div class="border-left">
+								<a class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5241066" target="_blank">View in GitHub</a>
+								<p class="p1 descr-text fz-14">Explore sample code for integrating the iframe in a page.</p>
+							</div>
 
 							<h1 class="h1 mt-5" id="item-2">Initialize a Triple</h1>
 

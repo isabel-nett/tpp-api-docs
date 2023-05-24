@@ -266,6 +266,12 @@ td {
     font-size: 12px;
 }
 
+.border-left {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: #465382 1px solid;
+}
+
 .header {
     height: 60px;
     padding: 0 55px;

@@ -19,11 +19,11 @@
 			</div>
 
 			<h2 class="fw-300 page-header" style="color: white;">
-				Developer Documents
+				Documentation
 			</h2>
 
 			<div class="sign-in-container">
-				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Sign in</a>
+				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
 			</div>
 		</header>
 
@@ -47,7 +47,7 @@
 
 					<div class="col-10">
 						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-							<h1 class="h1" id="item-1">Welcome to the Development Certificate Process</h1>
+							<h1 class="h1" id="item-1">Welcome to the Development Certification Process</h1>
 
 							<p class="p1 mt-2">
 								For smooth integration and stakeholder satisfaction, Triple Play
@@ -79,30 +79,18 @@
                             
                             </br>
                             <p class="p1 mt-3">
-                                Once your business has enrolled with Triple Play Pay:
+                                For developers: once your business has enrolled with Triple Play Pay,
                             </p>
                             <ol>
                                 <li>Ensure that you have an account with Sandbox access. An admin user at your 
                                     organization must grant Sandbox access.</li>
                                 <li>Retrieve your business's API key in the Processing Settings.</li>
-                                <li>Integrate the API in Sandbox (using the sandbox.tripleplaypay.com URL).</li>
-                                <li>Perform the tests listed in the <a class="custom-link" href="#item-5">Tests</a> section of this page.</li>
-                                <li>View your business's certificate in the portal
-									<!-- <a class="custom-link" href="#item-5"> here</a> -->
-									. 
-                                    <!-- This is visible for all admin users in your organization to be aware of what your 
-                                    team has coded up to. -->
+                                <li>Integrate the API into your platform using the sandbox.tripleplaypay.com/api URL. Visit <a href="https://github.com/TriplePlayPay/API/discussions/2" target="_blank" class="custom-link">GitHub</a> for sample code.</li>
+                                <li>Perform the tests listed in the <a class="custom-link" href="#item-4">Tests</a> section of this page.</li>
+                                <li>Receive your business's certificate via email.
 								</li>
                             </ol>
 							</p>
-                            
-                            <a
-                                    class="btn btn-primary mt-3 mb-3"
-                                    href="https://www.tripleplaypay.com/contact"
-                                    target="_blank"
-                                >
-                                    Enroll Now
-                            </a>
 
                             <h1 class="h1 mt-5" id="item-3">Resources</h1>
 
@@ -163,8 +151,8 @@
 
 										<ul>
 											<li>sample code to help you with development</li>
+											<li>iframe and API call response examples</li>
 											<li>a place to ask questions</li>
-											<li>a place to share ideas</li>
 										</ul>
 
 										<a
@@ -180,11 +168,19 @@
 
                             <h1 class="h1 mt-5" id="item-4">Tests</h1>
 
-                            <p class="p1 mt-2 mb-2">Alright, time for the tests: you will find the specific test data below for the required tests.
-                                </br></br>
-                                Once you have submitted these tests, let us know at <a target="_blank" class="custom-link" href="mailto: devteam@tripleplaypay.com">devteam@tripleplaypay.com</a>. Please give us 24 hours to reach out with results and feedback.
+                            <p class="p1 mt-2 mb-2">Alright, now it's time for the tests: you will find the specific test data below for the required tests.
+                                </br>
+								</br>
+                                Once you have submitted these tests, let us know at <a target="_blank" class="custom-link" href="mailto: devteam@tripleplaypay.com?subject=Integration Tests Complete">devteam@tripleplaypay.com</a>. Please give us 24 hours to reach out with results and feedback.
                                 <br><br>
-                                <small>Optional: Our joint teams can perform a demo of the completed app before moving on to the next phase of onboarding. This should be scheduled proactively.</small>
+								<div class="alert alert-danger" role="alert">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+									</svg>
+									<strong>Caution:</strong> All tests must be made through sandbox.tripleplaypay.com. We do not grant production access to allow any live enrollments or transactions until all tests appropriate for your integration plan are passed.  Premature use of the production URL may result in live emails being sent.
+									<br>
+									<small>If your team wishes to begin enrolling live merchants before development integration is complete, simply <a target="_blank" href="mailto:coo@tripleplaypay.com?subject=Enrollment Help" style="text-decoration: none;" class="custom-link fz-14">contact us</a> for alternative methods.</small>
+								</div>
                             </p>
 
                             <table class="table table-striped w-100 mt-4">
@@ -198,7 +194,7 @@
                                 <tbody>
                                   <tr>
                                     <td>/authorize</td>
-                                    <td>At this time, we are running custom tests only. <a target="_blank" href="mailto: coo@tripleplaypay.com" style="text-decoration: none;" class="custom-link">Contact us</a> to begin.</td>
+                                    <td>At this time, we are running custom tests only. <a href="mailto: coo@tripleplaypay.com?subject=Integration Test Plan" target="_blank" class="fz-12 custom-link">Contact us</a> to begin.</td>
                                   </tr>
     
                                   <tr>
