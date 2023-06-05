@@ -1,110 +1,76 @@
+:root {
+    --main-color: #F8961F;
+    --secondary-color: #20273e;
+    --font-primary: 'Open Sans', sans-serif;
+    
+}
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-primary);
+}
+
+header {
+    background: linear-gradient(black, var(--secondary-color));;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 4;
+    height: 80px;
+    vertical-align: middle;
+}
+
+/* Site Nav */
+
+#siteNav {
+    vertical-align: middle;
+}
+
+#siteNav .nav-link {
+    color: white;
+}
+
+#siteNav .nav-link:hover {
+    color: white;
+}
+
+#siteNav .nav {
+    flex-wrap: nowrap;
+}
+
+#siteNav .navbar-brand {
+    color: white;
+}
+
+/* Page Nav */
+
+#pageNav .nav-link.active {
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+
+#pageNav .nav-link {
+    color: var(--main-color);
+}
+
+#pageNav .nav-link:hover {
+    color: var(--main-color);
+}
+
+#pageNav {
+    position: fixed;
+    top: 150px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    position: relative;
-}
-
-p {
-    margin: 0;
-}
+/* Page Content */
 
 .content {
-    padding: 70px;
-}
-
-#nav {
-    position: fixed;
-    overflow: auto !important;
-    height: 80%;
-    top: 150px;
-    width: 100%;
-    max-width: 200px;
-}
-
-.nav-tabs {
-    padding-bottom: 10px;
-}
-
-.nav-tab {
-    color: #465382;
-    padding: 15px 20px 14px 20px;
-    text-decoration: none;
-}
-
-.nav-tab:hover {
-    color: #212529;
-    font-weight: 600;
-}
-
-.nav-tab.active {
-    background-color: white;
-    border: .2px solid rgba(102,106,147,0.2);
-    border-radius: 5px 5px 0 0;
-    border-bottom: none;
-    color: #000;
-    font-weight: 600;
-}
-
-.nav-link {
-    color: #000;
-}
-
-.nav-link.active {
-    background-color: #404b71 !important;
-    border: none;
-    color: white !important;
-    font-weight: 600;
-}
-
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-link {
-    text-decoration: none;
-    color: #465382;
-    font-size: 16px;
-    transition: all 0.2s ease;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.menu-link:hover {
-    color: #384163;
-}
-
-.menu-link.active {
-    font-weight: 700;
-    color: #384163;
-}
-
-.menu-link-el {
-    margin-bottom: 2px;
-}
-
-.nav-list-inner {
-    padding-left: 20px;
-    padding-top: 10px;
-}
-
-.nav-menu {
-    padding-top: 40px;
-}
-
-.page-content {
-    padding-top: 60px;
-    padding-left: 30px;
+    margin-top: 120px;
 }
 
 /* components */
@@ -160,17 +126,7 @@ p {
     color: #404b71;
 }
 
-.h1 {
-    font-weight: 700;
-    font-size: 30px;
-}
-
-.h2 {
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.p1 {
+p {
     font-weight: 400;
     font-size: 16px;
 }
@@ -272,89 +228,23 @@ td {
     border-left: #465382 1px solid;
 }
 
-.header {
-    height: 60px;
-    padding: 0 55px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000;
-    background-image: linear-gradient(180deg,rgba(102,106,147,0.52) 1%,rgba(0,0,0,0.82) 100%)!important;
-}
-
-.logo {
-    width: 225px;
-}
-
-.logo img {
-    width: 100%;
-}
-
-.header-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-}
-
-.header-menu li {
-    padding: 0 12px;
-}
-
-.header-menu a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 14px;
-}
-
-.header-menu a.active { 
-    color: #F8951F!important
-}
-
-.sign-in-container {
-    width: 230px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.sign-in {
-    color: #F8951F;
-    border-radius: 3px;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 2px solid #F8951F;
-    border-radius: 2px;
-    padding: 0 10px;
-}
-
-.sign-in:hover, .sign-in:active, .sign-in:focus {
-    color: #F8951F;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .menu {
         display: none;
     }
 
-    .header-menu {
-        display: none;
+    #siteNav .nav-link {
+        color: var(--secondary-color);;
+    }
+    
+    #siteNav .nav-link:hover {
+        color: var(--secondary-color);
     }
 
-    #nav {
-        display: none;
-    }
-
-}
-
-@media screen and (max-width: 1100px) {
-
-    #nav {
-        max-width: 170px !important;
-    }
-
-    .page-header {
-        font-size: medium;
+    #siteNav ul {
+        background-color: white;
+        margin: 5px 0px;
+        padding: 5px 10px;
     }
 
 }
