@@ -6,275 +6,349 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<link href="/dist/api/style/main.css" rel="stylesheet" />
-	<script src="/dist/api/scripts/constants.js"></script>
 	<title>Get started</title>
 </head>
 <body>
-	<header class="header mb-5">
-		<div class="logo">
-			<img
-				src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
-				alt=""
-			/>
-		</div>
-
-		<h2 class="fw-300 page-header" style="color: white;">
-			Documentation
-		</h2>
-
-		<div class="sign-in-container">
-			<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
-		</div>
+	<header class="header shadow-sm">
+		<nav id="siteNav" class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				  </svg>
+				</button>
+				<div class="brand">
+					<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+						<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+						<b>Triple Play Pay</b> | Documentation
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="nav nav-underline position-absolute end-0 me-4">
+						<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/index.html">Getting Started</a>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+								<br>
+								<sup>Integrate & customize the iframe</sup>
+							</a>
+							</li>
+							<li><a class="dropdown-item" href="/api.html">API Documentation
+								<br>
+								<sup>Leverage the API in your platform</sup>
+							</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISV Partners & Agents</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/partners.html">Portal Guide
+								<br>
+								<sup>Utilize the TPP portal</sup>
+							</a></li>
+							<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+								<br>
+								<sup>Discover available payment options</sup>
+							</a></li>
+							<li>
+							<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+								<br>
+								<sup>Enroll as an ISV or Agent</sup>
+							</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item">
+						<button href="https://tripleplaypay.com/login" type="button" class="btn btn-primary" id="login" target="_blank">Portal Log-In</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 	</header>
 
-	<div class="container pb-5">
-		<div class="row">
-			<div class="col">
-				<div id="tabs"></div>
-			</div>
+	
 
-			<div class="row">
-				<div class="col-md-2">
-					<nav id="nav" class="h-100 mt-3">
-						<nav class="nav flex-column nav-pills">
-							<a class="nav-link" href="#item-1">Welcome</a>
-							<a class="nav-link" href="#item-2">Getting Integrated</a>
-							<a class="nav-link" href="#item-3">Additional Platforms</a>
-							<a class="nav-link" href="#item-4">GitHub</a>
-						</nav>
-					</nav>
+	<div class="content container-xxl row gap-lg-1 mx-auto">
+		<div class="scrollspy d-none d-lg-block col-4 col-lg-2">
+			<nav id="pageNav" class="h-100 mt-3">
+				<nav class="nav flex-column nav-pills">
+					<a class="nav-link" href="#item-1">Welcome</a>
+					<a class="nav-link" href="#item-2">Integration Overview</a>
+					<a class="nav-link" href="#item-3">Additional Platforms</a>
+					<a class="nav-link" href="#item-4">GitHub</a>
+				</nav>
+			</nav>
+		</div>
+		
+		<main class="col col-lg-9 ms-lg-4">
+			<div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+				<h1 id="item-1">Welcome!</h1>
+
+				<p class="mt-2">
+					Triple Play Pay is a platform built by developers for the modern
+					developer. With Triple Play Pay, you can enjoy managing just <b>one single interface</b> for
+					all things payments. Utilize our documentation for an easy
+					integration experience.
+				</p>
+
+				<h5>Who do we serve?</h5>
+				<p>At Triple Play Pay, our platform is designed to serve independent software vendors (ISVs) 
+					and their diverse range of clients across various industries, including restaurants, hospitals, retail, and more. 
+					Whether you're an ISV serving the medical industry or providing solutions to 
+					retail businesses or anywhere in between, Triple Play Pay is here to support you.</p>
+
+				<p>View merchant FAQs <a class="custom-link" href="https://3playpay.com/faq/" target="_blank">here</a>.</p>
+
+				<sup>
+					**By using Triple Play Pay developer tools, you accept the Triple
+					Play Pay Terms of Service.
+				</sup>
+
+				<!-- <div class="row gap-4 mt-4">
+					<div class="card col mx-4">
+						<div class="card-body">
+						  <h5 class="card-title">Developers</h5>
+						  <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+						  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						  <a href="#" class="card-link">Iframe</a>
+						  <a href="#" class="card-link">API Docs</a>
+						</div>
+					</div>
+					<div class="card col mx-4">
+					<div class="card-body">
+						<h5 class="card-title">Non-Technical Stakeholders</h5>
+						<h6 class="card-subtitle mb-2 text-body-secondary">ISVs & Agents</h6>
+						<p class="card-text">Our mission is to provide a seamless payment processing experience, enabling ISVs & Agents 
+							to focus on their core business while leveraging our robust infrastructure. Our comprehensive documentation is readily available to guide you through the integration process, 
+							making it easy for your team to seamlessly incorporate Triple Play Pay into your software solutions.</p>
+						<a href="#" class="card-link">Portal Guide</a>
+						<a href="#" class="card-link">Payment Method Options</a>
+					</div>
+					</div>
+				</div> -->
+
+				<h1 class="mt-5" id="item-2">Integration Overview</h1>
+
+				<div class="border-left mt-4">
+					<h2 class="mt-3">API Key</h2>
+
+					<p class="mt-2">
+						To get an API Key for utilization of our payment processing API,
+						your organization must enroll as an ISV or as a merchant with
+						Triple Play Pay.
+					</p>
+
+					<p class="mt-2">
+						<a
+							href="https://www.tripleplaypay.com/contact"
+							target="_blank"
+							class="custom-link"
+						>
+							Enroll Now >
+						</a>
+					</p>
 				</div>
 
-				<div class="col-10">
-					<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-						<h1 class="h1" id="item-1">Welcome!</h1>
+				<div class="border-left mt-4">
+					<h2>Developer Sandbox & Development Certificate</h2>
 
-						<p class="p1 mt-2">
-							Triple Play Pay is a platform built by developers for the modern
-							developer. With Triple Play Pay, you can enjoy managing just <b>one single interface</b> for
-							all things payments. Utilize our documentation for an easy
-							integration experience.
+					<div class="alert alert-light mt-3" role="alert">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+							<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+						</svg>
+						<strong>Required:</strong> The Development Certificate is required for any ISV or merchant that wishes to use our API. We do not grant production access to allow any live enrollments or transactions until all mandatory tests are passed.
+						<br>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+							<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+						</svg>
+						<small>Need to begin enrolling live clients before development certification is complete? Simply <a target="_blank" href="mailto: coo@tripleplaypay.com?subject=Enrollment Help" style="text-decoration: none;" class="custom-link fz-14">contact us</a> for options.</small>
+					</div>
+
+					<p class="mt-2">
+						For smooth integration and stakeholder satisfaction, Triple Play
+						Pay has built a quick certification process that utilizes a test
+						API Key in our Sandbox environment to ensure that developers
+						have the resources and know-how to properly utilize our
+						endpoints, requests, and responses for successful transactions
+						and user experiences.
+					</p>
+
+					<p class="mt-2">
+						<a
+							href="/certificate.html"
+							class="custom-link"
+						>
+							Go to the certification page here >
+						</a>
+					</p>
+				</div>
+
+				<div class="border-left mt-4">
+					<h2>Partner Portal Guide</h2>
+
+					<p class="mt-2">
+						Planning on using our portal? The Partner Portal Guide is built to help partner-level 
+						ISVs and Agents understand workflows, processes, security, and customizations that are 
+						available to them and their merchants.
+					</p>
+
+					<p class="mt-2">
+						<a
+							href="/certificate.html"
+							class="custom-link"
+						>
+							Go to Partner Portal & Guide >
+						</a>
+					</p>
+
+					<div class="alert alert-light mt-3" role="alert">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
+							<path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z"/>
+						</svg>
+						<small>We're happy to help! To work with an implementation specialist, please <a target="_blank" href="mailto:devteam@tripleplaypay.com?subject=Integration Roadmapping" class="custom-link fz-14">contact us</a>.</small>
+					</div>
+				</div>
+
+				<h1 class="mt-5" id="item-3">Additional Platforms</h1>
+
+				<div class="d-flex flex-row gap-4">
+
+					<div class="col-4">
+						<p class="mt-2" style="font-weight: bold">OpenAPI SDK</p>
+
+						<p class="mt-2">
+							For developers who prefer their native language or who don’t
+							have a development app that converts calls to REST, we offer
+							robust Software Development Kits (SDKs) in the following
+							languages: Python, c#, Java, Javascript, PHP, Curl, Go.
+						</p>
+
+						<div class="mt-3">
+							<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
+								<option selected>SDK Download</option>
+								<option value="PYTHON">PYTHON</option>
+								<option value="C">C#</option>
+								<option value="JAVA">JAVA</option>
+								<option value="JAVASCRIPT">JAVASCRIPT</option>
+								<option value="GO">GO</option>
+								<option value="PHP">PHP</option>
+								<option value="JSON">JSON</option>
+								<option value="WOOCOMMERCE">WOOCOMMERCE</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-4">
+						<p class="mt-2" style="font-weight: bold">Websocket</p>
+
+						<p class="mt-2">
+							Websockets can be used to allow real-time communication between a web browser 
+							(client) and a server. Once a connection is established, the client and server can communicate 
+							freely and continuously.
 							<br>
 							<br>
-							View merchant FAQs <a class="custom-link" href="https://3playpay.com/faq/">here</a>.
+							Our websocket is located at: <a class="custom-link" href="wss://tripleplaypay.com/ws/api">wss://tripleplaypay.com/ws/api</a>
+							<br>
+							<br>
+							Example message: <code>{<api command>:{parameter1:value, parameter2:value...}}</code>
 						</p>
+					</div>
 
-						<p class="mt-1 fz-12">
-							**By using Triple Play Pay developer tools, you accept the Triple
-							Play Pay Terms of Service.
+					<div class="col-4">
+						<p class="mt-2" style="font-weight: bold">Wordpress</p>
+
+						<p class="mt-2">
+							To integrate with Wordpress, the link below will guide you through installing 
+							WordPress plugins using the upload option in the admin area.
+							<br>
+							<br>
+							View the installation guide:
+							<a class="text-nowrap custom-link" href="https://tripleplaypay.com/static/wordpress/wordpress_plugin_installation.html">Installation Guide</a>
 						</p>
+					</div>
 
-						<h1 class="h1 mt-5" id="item-2">Getting Integrated</h1>
+				</div>
 
-						<div class="border-left mt-4">
-							<h2 class="mt-3 h2">API Key</h2>
+				<h1 class="mt-5" id="item-4">GitHub</h1>
 
-							<p class="p1 mt-2">
-								To get an API Key for utilization of our payment processing API,
-								your organization must enroll as an ISV or as a merchant with
-								Triple Play Pay.
-							</p>
+				<p class="mt-2">
+					Great news! We’re open-source, open-discussion, and open for the
+					success of organizations and developers everywhere.
+				</p>
 
-							<p class="p1 mt-2">
-								<a
-									href="https://www.tripleplaypay.com/contact"
-									target="_blank"
-									class="custom-link"
-								>
-									Enroll Now >
-								</a>
-							</p>
+				<div class="mt-4">
+					<div class="row">
+						<div class="col-md-6 mb-md-0 mb-4">
+							<p>In the GitHub Repository, you will find:</p>
+
+							<ul>
+								<li>source files</li>
+
+								<li>release notes</li>
+
+								<li>the full OpenAPI SDK variety for download</li>
+							</ul>
+
+							<a
+								class="btn btn-primary mt-3"
+								href="https://github.com/TriplePlayPay/API"
+								target="_blank"
+							>
+								GitHub Repository
+							</a>
 						</div>
 
-						<div class="border-left mt-4">
-							<h2 class="h2">Developer Sandbox & Development Certificate</h2>
+						<div class="col-md-6">
+							<p>In the GitHub Discussion, you will find:</p>
 
-							<div class="alert alert-light mt-3" role="alert">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-									<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-								</svg>
-								<strong>Required:</strong> The Development Certificate is required for any ISV or merchant that wishes to use our API. We do not grant production access to allow any live enrollments or transactions until all mandatory tests are passed.
-								<br>
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-									<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-								</svg>
-								<small>Need to begin enrolling live clients before development certification is complete? Simply <a target="_blank" href="mailto: coo@tripleplaypay.com?subject=Enrollment Help" style="text-decoration: none;" class="custom-link fz-14">contact us</a> for options.</small>
-							</div>
+							<ul>
+								<li>sample code to help you with development</li>
+								<li>a place to ask questions</li>
+								<li>a place to share ideas</li>
+							</ul>
 
-							<p class="p1 mt-2">
-								For smooth integration and stakeholder satisfaction, Triple Play
-								Pay has built a quick certification process that utilizes a test
-								API Key in our Sandbox environment to ensure that developers
-								have the resources and know-how to properly utilize our
-								endpoints, requests, and responses for successful transactions
-								and user experiences.
-							</p>
-
-							<p class="p1 mt-2">
-								<a
-									href="/certificate.html"
-									class="custom-link"
-								>
-									Go to the certification page here >
-								</a>
-							</p>
-						</div>
-
-						<div class="border-left mt-4">
-							<h2 class="h2">Partner Portal Guide</h2>
-
-							<p class="p1 mt-2">
-								Planning on using our portal? The Partner Portal Guide is built to help partner-level 
-								ISVs and Agents understand workflows, processes, security, and customizations that are 
-								available to them and their merchants.
-							</p>
-
-							<p class="p1 mt-2">
-								<a
-									href="/certificate.html"
-									class="custom-link"
-								>
-									Go to Partner Portal & Guide >
-								</a>
-							</p>
-
-							<div class="alert alert-light mt-3" role="alert">
-								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill" viewBox="0 0 16 16">
-									<path d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765l-6-3.2ZM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516ZM0 13.373l5.693-3.163L0 6.873v6.5Z"/>
-								</svg>
-								<small>We're happy to help! To work with an implementation specialist, please <a target="_blank" href="mailto:devteam@tripleplaypay.com?subject=Integration Roadmapping" class="custom-link fz-14">contact us</a>.</small>
-							</div>
-						</div>
-
-						<h1 class="h1 mt-5" id="item-3">Additional Platforms</h1>
-
-						<div class="d-flex flex-row gap-4">
-
-							<div class="col-4">
-								<p class="mt-2" style="font-weight: bold">OpenAPI SDK</p>
-
-								<p class="p1 mt-2">
-									For developers who prefer their native language or who don’t
-									have a development app that converts calls to REST, we offer
-									robust Software Development Kits (SDKs) in the following
-									languages: Python, c#, Java, Javascript, PHP, Curl, Go.
-								</p>
-
-								<div class="mt-3">
-									<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
-										<option selected>SDK Download</option>
-										<option value="PYTHON">PYTHON</option>
-										<option value="C">C#</option>
-										<option value="JAVA">JAVA</option>
-										<option value="JAVASCRIPT">JAVASCRIPT</option>
-										<option value="GO">GO</option>
-										<option value="PHP">PHP</option>
-										<option value="JSON">JSON</option>
-										<option value="WOOCOMMERCE">WOOCOMMERCE</option>
-									</select>
-								</div>
-							</div>
-
-							<div class="col-4">
-								<p class="mt-2" style="font-weight: bold">Websocket</p>
-
-								<p class="p1 mt-2">
-									Websockets can be used to allow real-time communication between a web browser 
-									(client) and a server. Once a connection is established, the client and server can communicate 
-									freely and continuously.
-									<br>
-									<br>
-									Our websocket is located at: <a class="custom-link" href="wss://tripleplaypay.com/ws/api">wss://tripleplaypay.com/ws/api</a>
-									<br>
-									<br>
-									Example message: <code>{<api command>:{parameter1:value, parameter2:value...}}</code>
-								</p>
-							</div>
-
-							<div class="col-4">
-								<p class="mt-2" style="font-weight: bold">Wordpress</p>
-
-								<p class="p1 mt-2">
-									To integrate with Wordpress, the link below will guide you through installing 
-									WordPress plugins using the upload option in the admin area.
-									<br>
-									<br>
-									View the installation guide:
-									<a class="text-nowrap custom-link" href="https://tripleplaypay.com/static/wordpress/wordpress_plugin_installation.html">Installation Guide</a>
-								</p>
-							</div>
-
-						</div>
-
-						<h1 class="h1 mt-5" id="item-4">GitHub</h1>
-
-						<p class="p1 mt-2">
-							Great news! We’re open-source, open-discussion, and open for the
-							success of organizations and developers everywhere.
-						</p>
-
-						<div class="mt-4">
-							<div class="row">
-								<div class="col-md-6 mb-md-0 mb-4">
-									<p>In the GitHub Repository, you will find:</p>
-
-									<ul>
-										<li>source files</li>
-
-										<li>release notes</li>
-
-										<li>the full OpenAPI SDK variety for download</li>
-									</ul>
-
-									<a
-										class="btn btn-primary mt-3"
-										href="https://github.com/TriplePlayPay/API"
-										target="_blank"
-									>
-										GitHub Repository
-									</a>
-								</div>
-
-								<div class="col-md-6">
-									<p>In the GitHub Discussion, you will find:</p>
-
-									<ul>
-										<li>sample code to help you with development</li>
-										<li>a place to ask questions</li>
-										<li>a place to share ideas</li>
-									</ul>
-
-									<a
-										class="btn btn-primary mt-3"
-										href="https://github.com/TriplePlayPay/API/discussions"
-										target="_blank"
-									>
-										GitHub Discussion
-									</a>
-								</div>
-							</div>
+							<a
+								class="btn btn-primary mt-3"
+								href="https://github.com/TriplePlayPay/API/discussions"
+								target="_blank"
+							>
+								GitHub Discussion
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</main>
 	</div>
 
-	<footer class="text-center mt-5 p1">
+	<footer class="text-center mt-5">
 		<p class="mt-2 fw-700">POWERED BY: TRIPLE PLAY PAY INC</p>
 		<p class="mt-2">Simon Payments LLC is a registered payment facilitator of Fifth Third Bank</p>
 		<p class="mt-2">© Triple Play Payment Solutions, 2022 All rights reserved.</p>
 		
 	</footer>
 
-	<script src="/dist/api/scripts/renderTabs.js"></script>
 	<script 
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
 		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
 		crossorigin="anonymous">
 	</script>
 
-	<script src="/dist/api/scripts/renderNavbar.js"></script>
+	<!-- <script src="/dist/api/scripts/renderNavbar.js"></script> -->
 
 	<script>
 		var sdks  = {
