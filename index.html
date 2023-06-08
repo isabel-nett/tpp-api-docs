@@ -9,7 +9,7 @@
 	<title>Get started</title>
 </head>
 <body>
-	<header class="header shadow-sm">
+	<header class="header main-shadow">
 		<nav id="siteNav" class="navbar navbar-expand-lg">
 			<div class="container-fluid">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,59 +20,59 @@
 				<div class="brand">
 					<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
 						<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
-						<b>Triple Play Pay</b> | Documentation
+						<span class="d-none d-sm-inline"><span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span></span>
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="nav nav-underline position-absolute end-0 me-4">
+					<ul class="nav nav-underline">
 						<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="/index.html">Getting Started</a>
 						</li>
 						<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
-								<br>
-								<sup>Integrate & customize the iframe</sup>
-							</a>
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Developers</a>
+							<ul class="dropdown-menu" data-bs-display="responsive">
+								<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+									<br>
+									<sup>Integrate & customize the iframe</sup>
+								</a>
+								</li>
+								<li><a class="dropdown-item" href="/api.html">API Documentation
+									<br>
+									<sup>Leverage the API in your platform</sup>
+								</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
 							</li>
-							<li><a class="dropdown-item" href="/api.html">API Documentation
-								<br>
-								<sup>Leverage the API in your platform</sup>
-							</a></li>
-							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
-								<br>
-								<sup>Pass the certification to go live</sup>
-							</a></li>
-						</ul>
-						</li>
-						<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISV Partners & Agents</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/partners.html">Portal Guide
-								<br>
-								<sup>Utilize the TPP portal</sup>
-							</a></li>
-							<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
-								<br>
-								<sup>Discover available payment options</sup>
-							</a></li>
-							<li>
-							<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
-								<br>
-								<sup>Enroll as an ISV or Agent</sup>
-							</a>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+							<ul class="dropdown-menu" data-bs-display="responsive">
+								<li><a class="dropdown-item" href="/partners.html">Portal Guide
+									<br>
+									<sup>Utilize the TPP portal</sup>
+								</a></li>
+								<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+									<br>
+									<sup>Discover available payment options</sup>
+								</a></li>
+								<li>
+								<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+									<br>
+									<sup>Enroll as an ISV or Agent</sup>
+								</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
 							</li>
-							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
-								<br>
-								<sup>Pass the certification to go live</sup>
-							</a></li>
-						</ul>
-						</li>
-						<li class="nav-item">
-						<button href="https://tripleplaypay.com/login" type="button" class="btn btn-primary" id="login" target="_blank">Portal Log-In</button>
+							<li class="nav-item log-in">
+							<button href="https://tripleplaypay.com/login" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
 						</li>
 					</ul>
 				</div>
@@ -96,7 +96,7 @@
 		
 		<main class="col col-lg-9 ms-lg-4">
 			<div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-				<h1 id="item-1">Welcome!</h1>
+				<h1 id="item-1">Welcome</h1>
 
 				<p class="mt-2">
 					Triple Play Pay is a platform built by developers for the modern
@@ -104,19 +104,27 @@
 					all things payments. Utilize our documentation for an easy
 					integration experience.
 				</p>
+				
+				<div class="row">
+					<div class="col d-flex justify-content-center mt-4" width="300px">
+						<img src="dist/api/images/Partnership_iso_sized-01.png" alt="Partnership" width="300px">
+					</div>
+					<div class="col-lg-8 mt-3">
+						<h5>Who do we serve?</h5>
+						<p>Our platform is designed to serve independent software vendors (ISVs) 
+							and their diverse range of clients across various industries, including restaurants, hospitals, retail, and more. 
+							Whether you're an ISV serving the medical industry or providing solutions to 
+							retail businesses or anywhere in between, Triple Play Pay is here to support you.</p>
 
-				<h5>Who do we serve?</h5>
-				<p>At Triple Play Pay, our platform is designed to serve independent software vendors (ISVs) 
-					and their diverse range of clients across various industries, including restaurants, hospitals, retail, and more. 
-					Whether you're an ISV serving the medical industry or providing solutions to 
-					retail businesses or anywhere in between, Triple Play Pay is here to support you.</p>
+						<p>View client and merchant FAQs <a class="custom-link" href="https://3playpay.com/faq/" target="_blank">here</a>.</p>
 
-				<p>View merchant FAQs <a class="custom-link" href="https://3playpay.com/faq/" target="_blank">here</a>.</p>
-
-				<sup>
-					**By using Triple Play Pay developer tools, you accept the Triple
-					Play Pay Terms of Service.
-				</sup>
+						<sup>
+							**By using Triple Play Pay developer tools, you accept the Triple
+							Play Pay Terms of Service.
+						</sup>
+					</div>
+				</div>
+				
 
 				<!-- <div class="row gap-4 mt-4">
 					<div class="card col mx-4">
@@ -144,7 +152,7 @@
 				<h1 class="mt-5" id="item-2">Integration Overview</h1>
 
 				<div class="border-left mt-4">
-					<h2 class="mt-3">API Key</h2>
+					<h2>API Key</h2>
 
 					<p class="mt-2">
 						To get an API Key for utilization of our payment processing API,
@@ -347,8 +355,6 @@
 		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
 		crossorigin="anonymous">
 	</script>
-
-	<!-- <script src="/dist/api/scripts/renderNavbar.js"></script> -->
 
 	<script>
 		var sdks  = {

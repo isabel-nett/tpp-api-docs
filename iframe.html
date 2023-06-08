@@ -7,321 +7,683 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 		<link href="/dist/api/style/main.css" rel="stylesheet" />
 		<link href="/dist/api/style/iframe.css" rel="stylesheet" />
-		
-		<script src="/dist/api/scripts/renderTabs.js" defer></script>
 		<script src="https://tripleplaypay.com/static/js/triple.js"></script>
-		<script src="/dist/api/scripts/constants.js"></script>
 		<script src="/dist/api/scripts/iframe.js" defer></script>
 		<title>Iframe</title>
 	</head>
 	<body>
-		<header class="header mb-5">
-			<div class="logo">
-				<img
-					src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
-					alt=""
-				/>
-			</div>
-
-			<h2 class="fw-300 page-header" style="color: white;">
-				Documentation
-			</h2>
-
-			<div class="sign-in-container">
-				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
-			</div>
-		</header>
-		
-		<div class="container pb-5">
-			<div class="row">
-				<div class="col">
-					<div id="tabs"></div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-2">
-						<nav id="nav" class="h-100 mt-3">
-                            <nav class="nav flex-column nav-pills">
-                              <a class="nav-link" href="#item-1">Setup</a>
-                              <a class="nav-link" href="#item-2">Initialization</a>
-                              <a class="nav-link" href="#item-3">Tokens</a>
-                              <a class="nav-link" href="#item-4">Configuration</a>
-							  <a class="nav-link" href="#item-5">Forms</a>
-							  <a class="nav-link" href="#item-6">Styles</a>
-                            </nav>
-                        </nav>
+		<header class="header main-shadow">
+			<nav id="siteNav" class="navbar navbar-expand-lg">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					  </svg>
+					</button>
+					<div class="brand">
+						<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+							<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+							<span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span>
+						</a>
 					</div>
-
-					<div class="col-10">
-						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-
-							<h1 class="h1" id="item-1">The Triple Play Pay Iframe</h1>
-
-							<div class="mt-2">
-								<span>To include the iframe in your app, inject the following script:</span>
-								<div class="p-3 col-md-8" style="background-color: #f8f8f8; border-radius: 8px;">
-									<code class="code">
-										&lt;script
-										src="https://www.tripleplaypay.com/static/js/triple.js"&gt;&lt;/script&gt;
-									</code>
-								</div>
-							</div>
-
-							<small class="mt-2">
-								View full triple.js script
-								<a
-									href="https://tripleplaypay.com/static/js/triple.js"
-									class="custom-link"
-									target="_blank"
-									>here</a
-								>.
-							</small>
-
-							<h1 class="h1 mt-5" id="item-1">Tools</h1>
-
-							<h5 class="mt-3">Payment Link Generator</h5>
-
-							<div class="border-left">
-								<a 
-								class="mt-3 custom-link" 
-								href="https://tripleplaypay.com/createlink"
-								target="_blank">Access the Payment Link generator</a>
-								<p class="p1 descr-text fz-14">
-									Account required. This easy payment functionality utilizes 
-									your unique API key to auto-generate an iframe. It allows you to create 
-									payment and subscription pages to send or provide on the spot as 
-									invoices or bills. 
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="nav nav-underline">
+							<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="/index.html">Getting Started</a>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
 									<br>
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-									</svg>
-									At the bottom of the page, open the Developer Options to find a 
-									link to view and copy the code that is generated.
-								</p>
-							</div>
-
-							<h5 class="mt-3">Iframe Demo</h5>
-
-							<div class="border-left">
-								<p class="mt-3">See a quick example of the iframe in action:</p>
-								<p class="p1 descr-text fz-14">No account or API key required.</p>
-
-								<div class="d-flex align-items-center mb-3 mt-2">
-									<div class="input-container input-group me-1">
-										<span class="input-group-text">$</span>
-										<input type="number" id="input" placeholder="Amount" class="form-control" />
-									</div>
-
-									<button id="example" class="example-btn btn btn-secondary me-1">
-										All Methods
-									</button>
-
-									<button id="crypto" class="example-btn btn btn-primary">
-										Crypto Only
-									</button>
-								</div>
-							</div>
-
-							<h5 class="mt-3">Sample Code</h5>
-
-							<div class="border-left">
-								<a class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5241066" target="_blank">View in GitHub</a>
-								<p class="p1 descr-text fz-14">Explore sample code for integrating the iframe in a page.</p>
-							</div>
-
-							<h1 class="h1 mt-5" id="item-2">Initialize a Triple</h1>
-
-							<p class="p1 descr-text fz-14">
-								To accept a Triple (a payment) through the iframe, build it 
-								into your page or have it open in a separate
-								window utilizing:
-							</br>
-								<code>containerSelector: '#example'</code>
-								or <code>newWindow: true</code>. 
-							</br>
-							</br>
-								<span class="fw-300">
-									The JS below shows the minimum
-								required code to display the functional iframe in your page 
-								once you have included the above script.
-								</span>
-							</p>
-
-							<div class="mt-2">
-								<div id="item-1-1"></div>
-							</div>
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Configure your payment options:
-
-								<span class="fw-300">
-									Any pay service (Google Pay, Apple Pay, etc...) will appear
-									under the Credit Card section of the iframe when activated.
-								</span>
-							</p>
-
-							<div id="item-1-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Button to trigger the payment process:
-							</p>
-
-							<div id="item-1-3"></div>
-
-							<div class="mt-2">
-								<div id="item-1-4"></div>
-							</div>
-
-							<p class="p1 descr-text fz-14 mt-4">Clear irrelevant data:</p>
-
-							<div id="item-1-5"></div>
-
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Generate form again with new parameters:
-							</p>
-
-							<div id="item-1-6"></div>
-
-							<h1 class="h1 mt-5" id="item-3">Creating Payment Tokens</h1>
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Create a token during a charge event:
-							</p>
-
-							<div id="item-2-1" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Simply create a token:</p>
-
-							<div id="item-2-2" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Create a token but delay a charge, so you can send the token in
-								later to finalize payment:
-							</p>
-
-							<div id="item-2-3" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Disable tokenization:</p>
-
-							<div id="item-2-4" class="mt-2"></div>
-
-							<h1 class="h1 mt-5" id="item-4">Configuration</h1>
-
-							<p class="p1 descr-text fz-14 mt-4">Custom pay button text:</p>
-
-							<div id="item-3-3" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Charge a custom fee:</p>
-
-							<div id="item-3-4" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Meta data:
-								<span class="fw-300">
-									Add any custom fields to collect additional data.
-								</span>
-							</p>
-
-							<div id="item-3-5" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Saved meta:</p>
-
-							<div id="item-3-6" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect full name:</p>
-
-							<div id="item-3-7" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect shipping address:
-								<span class="fw-300">
-									Includes inputs for full name and address.
-								</span>
-							</p>
-
-							<div id="item-3-2" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect billing address:
-								<span class="fw-300">
-									Includes inputs for full name and address.
-								</span>
-							</p>
-
-							<div id="item-3-8" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect ZIP:
-								<span class="fw-300">
-									Available as optional or required.
-								</span>
-							</p>
-
-							<div id="item-3-1" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Provide option to opt in to emails:</p>
-
-							<div id="item-3-9" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect email address:
-								<span class="fw-300">
-									Available as false, optional, or required.
-								</span>
-							</p>
-
-							<div id="item-3-10" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Collect phone number:
-								<span class="fw-300">
-									Available as false, optional, or required.
-								</span>
-							</p>
-
-							<div id="item-3-11" class="mt-2"></div>
-
-							<h1 class="h1 mt-5" id="item-5">Forms</h1>
-
-							<p class="p1 descr-text fz-14 mt-4">
-								Display a form in the iframe:
-							</p>
-
-							<div id="item-4-1" class="mt-2"></div>
-
-							<h1 class="h1 mt-5" id="item-6">Styles</h1>
-
-							<p class="p1 descr-text fz-14 mt-4">Available button CSS customizations:</p>
-
-							<div id="item-5-1" class="mt-2"></div>
-
-							<p class="p1 descr-text fz-14 mt-4">Available input field CSS customizations:
-							</br>
-								<span class="fw-300">
-								Note: Borders are enabled by default. To hide borders, use
-								<code>"borderLeftStyle":"hidden"</code>, addressing the respective
-								border that you would like to hide.
-								</span>
-							</p>
-
-							<div id="item-5-2" class="mt-2"></div>
+									<sup>Integrate & customize the iframe</sup>
+								</a>
+								</li>
+								<li><a class="dropdown-item" href="/api.html">API Documentation
+									<br>
+									<sup>Leverage the API in your platform</sup>
+								</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/partners.html">Portal Guide
+									<br>
+									<sup>Utilize the TPP portal</sup>
+								</a></li>
+								<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+									<br>
+									<sup>Discover available payment options</sup>
+								</a></li>
+								<li>
+								<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+									<br>
+									<sup>Enroll as an ISV or Agent</sup>
+								</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
+							</li>
+							<li class="nav-item log-in">
+							<button href="https://tripleplaypay.com/login" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
+							</li>
+						</ul>
 					</div>
 				</div>
+			</nav>
+		</header>
+
+		<div class="content container-xxl row gap-lg-1 mx-auto">
+			<div class="scrollspy d-none d-lg-block col-4 col-lg-2">
+				<nav id="pageNav" class="h-100 mt-3">
+					<nav class="nav flex-column nav-pills">
+						<a class="nav-link" href="#item-1">Setup & Tools</a>
+						<a class="nav-link" href="#item-2">Initialization</a>
+						<a class="nav-link" href="#item-3">Tokens</a>
+						<a class="nav-link" href="#item-4">Configuration</a>
+						<a class="nav-link" href="#item-5">Forms</a>
+						<a class="nav-link" href="#item-6">Styles</a>
+					</nav>
+				</nav>
 			</div>
+								
+			<main class="col col-lg-9 ms-lg-4">
+				<div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+
+					<h1 class="h1" id="item-1">The Triple Play Pay Iframe</h1>
+
+					<div class="mt-2">
+						<span>To include the iframe in your app, inject the following script:</span>
+						<div class="p-3 col-md-8" style="background-color: #f8f8f8; border-radius: 8px;">
+							<code class="code">
+								&lt;script
+								src="https://www.tripleplaypay.com/static/js/triple.js"&gt;&lt;/script&gt;
+							</code>
+						</div>
+					</div>
+
+					<small class="mt-2">
+						View full triple.js script
+						<a
+							href="https://tripleplaypay.com/static/js/triple.js"
+							class="custom-link"
+							target="_blank"
+							>here</a
+						>.
+					</small>
+
+					<h1 class="h1 mt-5" id="item-1">Tools</h1>
+
+					<h5 class="mt-3">Payment Link Generator</h5>
+
+					<div class="border-left">
+						<a 
+						class="mt-3 custom-link" 
+						href="https://tripleplaypay.com/createlink"
+						target="_blank">Access the Payment Link generator</a>
+						<p class="descr-text fz-14">
+							Account required. This easy payment functionality utilizes 
+							your unique API key to auto-generate an iframe. It allows you to create 
+							payment and subscription pages to send or provide on the spot as 
+							invoices or bills. 
+							<br>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+							</svg>
+							At the bottom of the page, open the Developer Options to find a 
+							link to view and copy the code that is generated.
+						</p>
+					</div>
+
+					<h5 class="mt-3">Iframe Demo</h5>
+
+					<div class="border-left">
+						<p class="mt-3">See a quick example of the iframe in action:</p>
+						<p class="descr-text fz-14">No account or API key required.</p>
+
+						<div class="d-flex align-items-center mb-3 mt-2">
+							<div class="input-container input-group me-1">
+								<span class="input-group-text">$</span>
+								<input type="number" id="input" placeholder="Amount" class="form-control" />
+							</div>
+
+							<button id="example" class="example-btn btn btn-secondary me-1">
+								All Methods
+							</button>
+
+							<button id="crypto" class="example-btn btn btn-primary">
+								Crypto Only
+							</button>
+						</div>
+					</div>
+
+					<h5 class="mt-3">Sample Code</h5>
+
+					<div class="border-left">
+						<a class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5241066" target="_blank">View in GitHub</a>
+						<p class="descr-text fz-14">Explore sample code for integrating the iframe in a page.</p>
+					</div>
+
+					<h1 class="h1 mt-5" id="item-2">Initialize a Triple</h1>
+
+					<p class="descr-text fz-14">
+						To accept a Triple (a payment) through the iframe, build it 
+						into your page or have it open in a separate
+						window utilizing:
+					</br>
+						<code>containerSelector: '#example'</code>
+						or <code>newWindow: true</code>. 
+					</br>
+					</br>
+						<span class="fw-300">
+							The JS below shows the minimum
+						required code to display the functional iframe in your page 
+						once you have included the above script.
+						</span>
+					</p>
+
+					<div class="mt-2">
+						<div id="item-1-1"></div>
+					</div>
+
+					<p class="descr-text fz-14 mt-4">
+						Configure your payment options:
+
+						<span class="fw-300">
+							Any pay service (Google Pay, Apple Pay, etc...) will appear
+							under the Credit Card section of the iframe when activated.
+						</span>
+					</p>
+
+					<div id="item-1-2"></div>
+
+					<p class="descr-text fz-14 mt-4">
+						Button to trigger the payment process:
+					</p>
+
+					<div id="item-1-3"></div>
+
+					<div class="mt-2">
+						<div id="item-1-4"></div>
+					</div>
+
+					<p class="descr-text fz-14 mt-4">Clear irrelevant data:</p>
+
+					<div id="item-1-5"></div>
+
+
+					<p class="descr-text fz-14 mt-4">
+						Generate form again with new parameters:
+					</p>
+
+					<div id="item-1-6"></div>
+
+					<h1 class="h1 mt-5" id="item-3">Creating Payment Tokens</h1>
+
+					<p class="descr-text fz-14 mt-4">
+						Create a token during a charge event:
+					</p>
+
+					<div id="item-2-1" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Simply create a token:</p>
+
+					<div id="item-2-2" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">
+						Create a token but delay a charge, so you can send the token in
+						later to finalize payment:
+					</p>
+
+					<div id="item-2-3" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Disable tokenization:</p>
+
+					<div id="item-2-4" class="mt-2"></div>
+
+					<h1 class="h1 mt-5" id="item-4">Configuration</h1>
+
+					<p class="descr-text fz-14 mt-4">Custom pay button text:</p>
+
+					<div id="item-3-3" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Charge a custom fee:</p>
+
+					<div id="item-3-4" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Meta data:
+						<span class="fw-300">
+							Add any custom fields to collect additional data.
+						</span>
+					</p>
+
+					<div id="item-3-5" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Saved meta:</p>
+
+					<div id="item-3-6" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect full name:</p>
+
+					<div id="item-3-7" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect shipping address:
+						<span class="fw-300">
+							Includes inputs for full name and address.
+						</span>
+					</p>
+
+					<div id="item-3-2" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect billing address:
+						<span class="fw-300">
+							Includes inputs for full name and address.
+						</span>
+					</p>
+
+					<div id="item-3-8" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect ZIP:
+						<span class="fw-300">
+							Available as optional or required.
+						</span>
+					</p>
+
+					<div id="item-3-1" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Provide option to opt in to emails:</p>
+
+					<div id="item-3-9" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect email address:
+						<span class="fw-300">
+							Available as false, optional, or required.
+						</span>
+					</p>
+
+					<div id="item-3-10" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Collect phone number:
+						<span class="fw-300">
+							Available as false, optional, or required.
+						</span>
+					</p>
+
+					<div id="item-3-11" class="mt-2"></div>
+
+					<h1 class="h1 mt-5" id="item-5">Forms</h1>
+
+					<p class="descr-text fz-14 mt-4">
+						Display a form in the iframe:
+					</p>
+
+					<div id="item-4-1" class="mt-2"></div>
+
+					<h1 class="h1 mt-5" id="item-6">Styles</h1>
+
+					<p class="descr-text fz-14 mt-4">Available button CSS customizations:</p>
+
+					<div id="item-5-1" class="mt-2"></div>
+
+					<p class="descr-text fz-14 mt-4">Available input field CSS customizations:
+					</br>
+						<span class="fw-300">
+						Note: Borders are enabled by default. To hide borders, use
+						<code>"borderLeftStyle":"hidden"</code>, addressing the respective
+						border that you would like to hide.
+						</span>
+					</p>
+
+					<div id="item-5-2" class="mt-2"></div>
+				</div>
+			</main>
 		</div>
 
-		<footer class="text-center mt-5 p1">
+		<footer class="text-center mt-5 ">
 			<p class="mt-2 fw-700">POWERED BY: TRIPLE PLAY PAY INC</p>
 			<p class="mt-2">Simon Payments LLC is a registered payment facilitator of Fifth Third Bank</p>
 			<p class="mt-2">© Triple Play Payment Solutions, 2022 All rights reserved.</p>
 			
 		</footer>
 
-		<script src="/dist/api/scripts/codeSnippets.js">
-		</script>
-		<script src=/dist/api/scripts/renderTabs.js"></script>
-		<script 
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
-			integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
-			crossorigin="anonymous">
-		</script>
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
+crossorigin="anonymous">
+</script>
 
-		<script src="/dist/api/scripts/renderNavbar.js"></script>
+<script>
+window.snippets = {
+'item-1-1': `triple.generatePaymentForm({
+	// Div location for payment form
+	containerSelector: '#example',
+	amount: 10.00,
+	//Handle error response
+	onError: (errorData) => {
+		console.log('Error');
+		console.log(errorData);
+	},
+	// Handle success response
+	onSuccess: (data) => {
+		console.log('Success');
+		console.log(data);
+	},
+});`,
+'item-1-2': `triple.generatePaymentForm({
+	amount: 10.00,
+	paymentOptions: ['credit_card', 'bank', 'crypto']
+	newWindow: true,
+	// Handle error response here
+	onError: (errorData) => {
+		console.log('Payment was rejected');
+		console.log(errorData);
+	},
+	// Handle success response here
+	onSuccess: (data) => {
+		console.log('Payment was successful');
+		console.log(data);
+	},
+});`,
+'item-1-3': `html----<button id="btn">Pay now</button>`,
+'item-1-4': `
+const button = document.querySelector('#btn');
+
+button.addEventListener('click', () => {
+	// This will open payment form in a new window
+	triple.processPayment();
+});`,
+'item-1-5': `triple.clear();`,
+'item-1-6': `triple.generatePaymentForm(...)`,
+'item-2-1': `triple.generatePaymentForm({
+	// Container for our payment form
+	containerSelector: '#example',
+	// Amount
+	amount: 100,
+
+	// will process payment and save user token
+	tokenMode: 'charge',
+	//Handle error response
+	onError: (errorData) => {
+		console.log('This is error');
+		console.log(errorData);
+	},
+	// Handle success response
+	onSuccess: (data) => {
+		console.log('This is success');
+		console.log(data);
+	},
+});`,
+'item-2-2': `triple.generatePaymentForm({
+	// Container for our payment form
+	containerSelector: '#example',
+	// will just save user token without payment
+	// 'amount' is not required for this action
+	tokenMode: 'save',
+	//Handle error response
+	onError: (errorData) => {
+		console.log('This is error');
+		console.log(errorData);
+	},
+	// Handle success response
+	onSuccess: (data) => {
+		console.log('This is success');
+		console.log(data);
+	},
+});`,
+'item-2-3': `triple.generatePaymentForm({
+	// Container for our payment form
+	containerSelector: '#example',
+	amount: 1.00,
+	//turn off email field requirement, or supply an email instead example: 'test@test.com'
+	email: false,
+	// will just save user token without payment
+	// 'amount' is required for this action
+	tokenMode: 'save',
+	//Handle error response
+	onError: (errorData) => {
+		console.log('This is error');
+		console.log(errorData);
+	},
+	// Handle success response
+	onSuccess: (data) => {
+		console.log('This is success');
+		console.log(data);
+	},
+});`,
+'item-2-4': `triple.generatePaymentForm({
+	// Container for our payment form
+	containerSelector: '#example',
+	amount: 1,
+	// Disable token feature(no saving/no payments with token)
+	tokenMode: false,
+	//Handle error response
+	onError: (errorData) => {
+		console.log('This is error');
+		console.log(errorData);
+	},
+	// Handle success response
+	onSuccess: (data) => {
+		console.log('This is success');
+		console.log(data);
+	},
+});`,
+'item-3-1': `triple.generatePaymentForm({
+	...,
+	zipMode: 'optional' // or required
+	});`,
+'item-3-2': `triple.generatePaymentForm({
+	...,
+	address: true
+});`,
+'item-3-3': `
+triple.generatePaymentForm({
+	...,
+	payBtnText: 'Test payment {amount}'
+});`,
+'item-3-4': `triple.generatePaymentForm({
+	...,
+	fee: 0.1
+});`,
+'item-3-5': `triple.generatePaymentForm({
+	...,
+	meta: {...} // any additional fields
+});`,
+'item-3-6': `triple.generatePaymentForm({
+	...,
+	meta_id: 1 // or [1,2,3]
+});`,
+'item-3-7': `triple.generatePaymentForm({
+	...,
+	fullName: true
+});`,
+'item-3-8': `triple.generatePaymentForm({
+	...,
+	billingAddress: true
+});`,
+'item-3-9': `triple.generatePaymentForm({
+	...,
+	optIn: true
+});`,
+'item-3-10': `
+triple.generatePaymentForm({
+	...,
+	emailOption: 'required' // or optional or false
+});`,
+'item-3-11': `triple.generatePaymentForm({
+	...,
+	phoneOption: 'required' // or optional or false
+});`,
+'item-4-1': `triple.form({
+	containerSelector: '#example',
+	// relative or absolute
+	url: '/form/7ec17b5b-72c4-48b9-a0ab-cf7f222031e3/test/user@gmail.com',
+	// custom height
+	height: 450,
+});`,
+'item-5-1': `triple.generatePaymentForm({
+	// ... Payment properties
+	styles: {
+		// button styling
+		button: {
+			// Color
+			color: '#fff',
+			// Background
+			background: '#93e368',
+			// Border radius
+			borderRadius: '15px',
+			// Font size
+			fontSize: '18px',
+			// Handle :active pseudo class
+			active: {
+				// Change color on active state
+				color: '#eef7e9',
+				// Change background on active state
+				background: '#82cf59',
+			},
+			// Handle :hover pseudo class
+			hover: {
+				color: '#eef7e9',
+				background: '#8ed667',
+			},
+		},
+	},
+});`,
+'item-5-2': `triple.generatePaymentForm({
+	// ... Payment properties
+	styles: {
+		// input styling
+		input: {
+			color: '#454545',
+			background: '#f5faf2',
+			borderRadius: '5px',
+			borderColor: '#fff',
+			borderWidth: '1px',
+			height: '50px',
+			fontSize: '14px',
+			fontWeight: '500',
+			// Handle focus pseudo class
+			focus: {
+				borderColor: '#c8e3b8',
+				background: 'black',
+				color: '#bfbfbf',
+			},
+			// Handle error state (when input contains incorrect data)
+			error: {
+				borderColor: '#cf6565',
+				background: '#edcccc',
+				color: '#bfbfbf',
+			},
+			// Placeholder style
+			placeholder: {
+				color: '#a3a3a3',
+				fontSize: '14px',
+				fontWeight: '500',
+			},
+			// Error text style (text below input in error state)
+			errorText: {
+				color: 'blue',
+				fontSize: '14px',
+				fontWeight: '500',
+			},
+		},
+	},
+});`,
+};
+for (let key in window.snippets) {
+	let el = document.getElementById(`${key}`);
+
+	if (!el) {
+		console.log('break');
+		console.log(key);
+
+		continue;
+	}
+
+	const defaultCodeType = 'JS';
+
+	const container = document.createElement('div');
+	const p = document.createElement('p');
+	container.className = 'snippet';
+
+	const pre = document.createElement('pre');
+	code = document.createElement('code');
+	code.className = 'code';
+
+	let contentText = `${window.snippets[key].trim()}`;
+	let codeType = defaultCodeType;
+
+	if (contentText.includes('----')) {
+		codeType = contentText.split('----')[0].toUpperCase();
+		contentText = contentText.split('----')[1];
+	}
+
+	p.textContent = codeType;
+	code.textContent = contentText;
+	container.appendChild(p);
+	container.appendChild(pre);
+	pre.appendChild(code);
+	el.appendChild(container);
+}
+const defaultBtn = document.querySelector('#example');
+const cryptoBtn = document.querySelector('#crypto');
+const input = document.querySelector('#input');
+const DEFAULT_VALUE = 0.1;
+
+function handleDefaultClick() {
+	const triple = new Triple('testapikey');
+
+	triple.generatePaymentForm({
+		amount: input.value || DEFAULT_VALUE,
+		newWindow: true,
+		//Handle error response
+		onError: (errorData) => {
+			console.log('Error');
+			console.log(errorData);
+		},
+		// Handle success response
+		onSuccess: (data) => {
+			console.log('Success');
+			console.log(data);
+		},
+	});
+
+	triple.processPayment();
+}
+
+function handleCryptoClick() {
+	const triple = new Triple('testapikey');
+
+	triple.crypto({
+		amount: input.value || DEFAULT_VALUE,
+		newWindow: true,
+		//Handle error response
+		onError: (errorData) => {
+			console.log('Error');
+			console.log(errorData);
+		},
+		// Handle success response
+		onSuccess: (data) => {
+			console.log('Success');
+			console.log(data);
+		},
+	});
+
+	triple.processPayment();
+}
+
+defaultBtn.addEventListener('click', handleDefaultClick);
+cryptoBtn.addEventListener('click', handleCryptoClick);
+</script>
 	
 	</body>
 </html>

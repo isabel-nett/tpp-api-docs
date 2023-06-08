@@ -6,176 +6,219 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 	<link href="/dist/api/style/main.css" rel="stylesheet" />
-	<script src="/dist/api/scripts/constants.js"></script>
 	<title>Partner Portal Guide</title>
 </head>
 <body>
-	<header class="header mb-5">
-		<div class="logo">
-			<img
-				src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
-				alt=""
-			/>
-		</div>
-
-		<h2 class="fw-300 page-header" style="color: white;">
-			Documentation
-		</h2>
-
-		<div class="sign-in-container">
-			<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
-		</div>
+	<header class="header main-shadow">
+		<nav id="siteNav" class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				  </svg>
+				</button>
+				<div class="brand">
+					<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+						<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+						<span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="nav nav-underline">
+						<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/index.html">Getting Started</a>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+								<br>
+								<sup>Integrate & customize the iframe</sup>
+							</a>
+							</li>
+							<li><a class="dropdown-item" href="/api.html">API Documentation
+								<br>
+								<sup>Leverage the API in your platform</sup>
+							</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/partners.html">Portal Guide
+								<br>
+								<sup>Utilize the TPP portal</sup>
+							</a></li>
+							<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+								<br>
+								<sup>Discover available payment options</sup>
+							</a></li>
+							<li>
+							<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+								<br>
+								<sup>Enroll as an ISV or Agent</sup>
+							</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item log-in">
+						<button href="https://tripleplaypay.com/login" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 	</header>
 
-	<div class="container pb-5">
-		<div class="row">
-			<div class="col">
-				<div id="tabs"></div>
-			</div>
+	<div class="content container-xxl row gap-lg-1 mx-auto">
+		<div class="scrollspy d-none d-lg-block col-4 col-lg-2">
+			<nav id="pageNav" class="h-100 mt-3">
+				<nav class="nav flex-column nav-pills">
+					<a class="nav-link" href="#item-1">Who are Partners?</a>
+					<a class="nav-link" href="#item-2">Enrolling Merchants</a>
+				</nav>
+			</nav>
+		</div>
+				
+		<main class="col col-lg-9 ms-lg-4">
+			<div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+				<h1 class="h1" id="item-1">Who are Partners?</h1>
 
-			<div class="row">
-				<div class="col-md-2">
-					<nav id="nav" class="h-100 mt-3">
-						<nav class="nav flex-column nav-pills">
-							<a class="nav-link" href="#item-1">Who are Partners?</a>
-							<a class="nav-link" href="#item-2">Enrolling Merchants</a>
-							<!-- <a class="nav-link" href="#item-4">Reporting</a>
-                            <a class="nav-link" href="#item-5">Whitelabel & Branding</a> -->
-						</nav>
-					</nav>
+				<p>The Triple Play Pay portal houses reporting dashboards, client enrollment and management, 
+					and transaction rate and payout settings for partners and merchants. Partners are ISVs and Agents whose accounts 
+					act as parent accounts to their child merchant accounts. With Triple Play Pay, merchants 
+					receive the transaction rates that their parent accounts set. Revenue Share, or "Rev Share", 
+					for partners is calculated from these transaction rates.
+				</p>
+				
+				<h1 class="h1 mt-5" id="item-2">Enrolling Merchants</h1>
+
+				<div class="alert alert-light mt-3" role="alert">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+						<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+					</svg>
+					<small>Live merchant enrollments can only be completed once production functionality is enabled for your account. 
+						<a target="_blank" href="mailto:csm@tripleplaypay.com?subject=Is my production access enabled?" class="custom-link fz-14">Contact us here</a>
+						if you are just getting started and are not sure if your production-side functionality is yet enabled.
+					</small>
 				</div>
 
-				<div class="col-10">
-					<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-						<h1 class="h1" id="item-1">Who are Partners?</h1>
+				<h4>Individually Enroll a Single Merchant</h4>
+				<div class="border-left mb-4">
 
-                        <p>The Triple Play Pay portal houses reporting dashboards, client enrollment and management, 
-                            and transaction rate and payout settings for partners and merchants. Partners are ISVs and Agents whose accounts 
-                            act as parent accounts to their child merchant accounts. With Triple Play Pay, merchants 
-                            receive the transaction rates that their parent accounts set. Revenue Share, or "Rev Share", 
-                            for partners is calculated from these transaction rates.
-                        </p>
-						
-						<h1 class="h1 mt-5" id="item-2">Enrolling Merchants</h1>
+					How to manually enroll an individual merchant
 
+						Go to your Clients page and click on your Business Account.
+						In the Client Details section, you will see a link labeled Enrollment Link. This link is unique to your client account.
+						Copy the link and open it in a new tab. You can bookmark the page for quick access on-the-go.
+						Fill out the form with the merchant's details.
+						Click the Send Click to Agree Form button. This will send a form to the merchant where they can input their required business details and agree to our Terms & Conditions.
+					<p>How to anually enroll an individual merchant with a form:</p>
+					<ol>
+						<li>Go to your Clients page and click on your Business Account.</li>
+						<li>In the Client Details section, you will see a link labeled Enrollment Link. This link is unique to your client account.</li>
+						<li>Copy the link and open it in a new tab. You can bookmark the page for quick access on-the-go.</li>
+						<li>To enroll a merchant, fill out the form with the merchant's details. If you wish, enter a transaction rate mark-up and/or a fee if the client has agreed to pay you a portion of their total volume.</li>
+						<li>Click the "Send Click to Agree Form" button. This will send a link to the merchant via email where they must input their required business details and agree to our Terms & Conditions. 
+							<a href="https://tripleplaypay.com/enroll/testapikey" target="_blank" class="custom-link">Here is an example</a> 
+							of the form with some default data (please do not send this form).</li>
+					</ol>
+				</div>
+
+				<h4>Batch-Enroll Merchants</h4>
+				<div class="border-left mb-4">
+					<p>Enroll multiple merchants by completing and sending us a <a href="https://docs.google.com/spreadsheets/d/1UUxl_BwM7qfByeOW5QvvlgKAkDIi6kIekhNhU0jVaRA/edit#gid=0" target="_blank" class="custom-link">Batch Enrollment Spreadsheet</a>.</p>
+					<p>Copy this document into your own Google or Excel sheet, fill it out with each merchant on their own line 
+						of the spreadsheet (view additional instructions <a href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5422644" target="_blank" class="custom-link">here</a>), and email it to 
+						<a href="mailto:csm@tripleplaypay.com?subject=Batch Enroll Spreadsheed Complete" target="_blank" class="custom-link">csm@tripleplaypay.com</a>.</p>
+					<br>
+					<p>What to have handy when you fill out this spreadsheet:</p> 
+					<ul>
+						<li>Your account ID. To get this, go to "Clients" in the navigation bar of the portal and click on your business account. 
+							It will be visible at the top of the page that pops up.
+						</li>
+						<div class="alert alert-light mt-3" role="alert">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+							</svg>
+							<small>Need help finding your ID? <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=What's my Client ID?" class="custom-link fz-14">We're happy to help</a>.</small>
+						</div>
+						<li>Your approved MCC codes (each merchant needs to be designated an MCC code).</li>
+						<div class="alert alert-light mt-3" role="alert">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+							</svg>
+							<small>Need help finding a list of your approved MCC codes? <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=What are my approved MCC codes?" class="custom-link fz-14">Contact us here</a>.</small>
+						</div>
+						<li>All merchant DBA names, full legal names, contact details, 
+							owners/principles, and transaction accounts. 
+						</li>
 						<div class="alert alert-light mt-3" role="alert">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
 								<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
 							</svg>
-							<small>Live merchant enrollments can only be completed once production functionality is enabled for your account. 
-								<a target="_blank" href="mailto:csm@tripleplaypay.com?subject=Is my production access enabled?" class="custom-link fz-14">Contact us here</a>
-								if you are just getting started and are not sure if your production-side functionality is yet enabled.
-							</small>
+							<small>Don't have all of these? Don't worry - populate the spreadsheet 
+								with what you can and we'll gather the rest when we send the Click-to-Agree form to the 
+								merchants for their remaining details and to sign their Terms & Agreement. Just make sure 
+								to include their email addresses so we have somewhere to send that form!</small>
 						</div>
+					</ul>
+				</div>
 
-                        <h4>Individually Enroll a Merchant</h4>
-                        <div class="border-left mb-4">
-
-							How to manually enroll an individual merchant
-
-Go to your Clients page and click on your Business Account.
-In the Client Details section, you will see a link labeled Enrollment Link. This link is unique to your client account.
-Copy the link and open it in a new tab. You can bookmark the page for quick access on-the-go.
-Fill out the form with the merchant's details.
-Click the Send Click to Agree Form button. This will send a form to the merchant where they can input their required business details and agree to our Terms & Conditions.
-                            <p>How to anually enroll an individual merchant with a form:</p>
-                            <ol>
-                                <li>Go to your Clients page and click on your Business Account.</li>
-                                <li>In the Client Details section, you will see a link labeled Enrollment Link. This link is unique to your client account.</li>
-                                <li>Copy the link and open it in a new tab. You can bookmark the page for quick access on-the-go.</li>
-                                <li>To enroll a merchant, fill out the form with the merchant's details. If you wish, enter a transaction rate mark-up and/or a fee if the client has agreed to pay you a portion of their total volume.</li>
-                                <li>Click the "Send Click to Agree Form" button. This will send a link to the merchant via email where they must input their required business details and agree to our Terms & Conditions. 
-                                    <a href="https://tripleplaypay.com/enroll/testapikey" target="_blank" class="custom-link">Here is an example</a> 
-                                    of the form with some default data (please do not send this form).</li>
-                            </ol>
-                        </div>
-
-                        <h4>Batch-Enroll Merchants</h4>
-                        <div class="border-left mb-4">
-                            <p>Enroll multiple merchants by completing and sending us a <a href="https://docs.google.com/spreadsheets/d/1UUxl_BwM7qfByeOW5QvvlgKAkDIi6kIekhNhU0jVaRA/edit#gid=0" target="_blank" class="custom-link">Batch Enrollment Spreadsheet</a>.</p>
-                            <p>Copy this document into your own Google or Excel sheet, fill it out with each merchant on their own line 
-								of the spreadsheet (view additional instructions <a href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5422644" target="_blank" class="custom-link">here</a>), and email it to 
-								<a href="mailto:csm@tripleplaypay.com?subject=Batch Enroll Spreadsheed Complete" target="_blank" class="custom-link">csm@tripleplaypay.com</a>.</p>
-                            <br>
-                            <p>What to have handy when you fill out this spreadsheet:</p> 
-                            <ul>
-                                <li>Your account ID. To get this, go to "Clients" in the navigation bar of the portal and click on your business account. 
-									It will be visible at the top of the page that pops up.
-								</li>
-								<div class="alert alert-light mt-3" role="alert">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-									</svg>
-									<small>Need help finding your ID? <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=What's my Client ID?" class="custom-link fz-14">We're happy to help</a>.</small>
-								</div>
-                                <li>Your approved MCC codes (each merchant needs to be designated an MCC code).</li>
-								<div class="alert alert-light mt-3" role="alert">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
-										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
-									</svg>
-									<small>Need help finding a list of your approved MCC codes? <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=What are my approved MCC codes?" class="custom-link fz-14">Contact us here</a>.</small>
-								</div>
-                                <li>All merchant DBA names, full legal names, contact details, 
-                                    owners/principles, and transaction accounts. 
-								</li>
-								<div class="alert alert-light mt-3" role="alert">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
-										<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-									</svg>
-									<small>Don't have all of these? Don't worry - populate the spreadsheet 
-										with what you can and we'll gather the rest when we send the Click-to-Agree form to the 
-										merchants for their remaining details and to sign their Terms & Agreement. Just make sure 
-										to include their email addresses so we have somewhere to send that form!</small>
-								</div>
-                            </ul>
-                        </div>
-
-                        <h4>Enroll with the API</h4>
-                        <div class="border-left">
-                            <p>Discover how to integrate our API into your app so that you can enroll merchants from your environment.</p>
-                            <div class="row">
-                                <div class="col-4"><a target="_blank" class="custom-link" href="/api.html">Go to the API Documentation page ></a></div>
-                                <div class="col-4"><a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2">Explore sample code in GitHub ></a></div>
-                            </div>
-                        </div>
-
-                        <div class="alert alert-light mt-5" role="alert">
-							<h5>
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3-week-fill" viewBox="0 0 16 16">
-								<path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2h16a2 2 0 0 0-2-2H2zM0 14V3h16v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm12-8a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM5 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm5-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM2 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
-							</svg>
-							What comes next?</h5>
-                            <p>Once a merchant completes the Click-to-Agree form that they receive in their inbox, 
-                                the Triple Play Pay Customer Success Team will run completion and regulatory checks. 
-                                <br>
-                                With all tests passed, a newly-enrolled merchant can go live within 
-                                one business day, if not only a few hours after completing their Click-to-Agree form.
-                                Upon approval, the client will receive 
-                                an email with their approval and link to the <a href="https://tripleplaypay.com/app" target="_blank" class="custom-link">Triple Play Pay portal</a> and <a href="https://tripleplaypay.com/app/createlink" target="_blank" class="custom-link">digital terminal</a> page. Partners have visibility of 
-								all of their onboarding and live clients in their client list under the "Clients" tab of the portal. Refresh the list when you wish to load updated data.
-							</p>
-                        </div>
-
-                        <!-- <h1 class="h1 mt-5" id="item-4">Reporting</h1>
-
-                        <div class="border-left">
-                            <p>All closed batches of transactions are visible in the "Reporting" tab of 
-                                the Navigation Bar.
-                                <br>
-                                On this page, you can filter by merchant and by dates or download the 
-                                data as an Excel Spreadsheet to run your own analytics on.
-                            </p>
-                        </div>
-
-						<h1 class="h1 mt-5" id="item-5">Whitelabel & Branding</h1> -->
-						
+				<h4>Enroll with the API</h4>
+				<div class="border-left">
+					<p>Discover how to integrate our API into your app so that you can enroll merchants from your environment.</p>
+					<div class="row">
+						<div class="col-4"><a target="_blank" class="custom-link" href="/api.html">Go to the API Documentation page ></a></div>
+						<div class="col-4"><a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2">Explore sample code in GitHub ></a></div>
 					</div>
 				</div>
+
+				<div class="alert alert-light mt-5" role="alert">
+					<h5>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3-week-fill" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2h16a2 2 0 0 0-2-2H2zM0 14V3h16v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm12-8a1 1 0 1 0 2 0 1 1 0 0 0-2 0zM5 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm5-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM2 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
+					</svg>
+					What comes next?</h5>
+					<p>Once a merchant completes the Click-to-Agree form that they receive in their inbox, 
+						the Triple Play Pay Customer Success Team will run completion and regulatory checks. 
+						<br>
+						With all tests passed, a newly-enrolled merchant can go live within 
+						one business day, if not only a few hours after completing their Click-to-Agree form.
+						Upon approval, the client will receive 
+						an email with their approval and link to the <a href="https://tripleplaypay.com/app" target="_blank" class="custom-link">Triple Play Pay portal</a> and <a href="https://tripleplaypay.com/app/createlink" target="_blank" class="custom-link">digital terminal</a> page. Partners have visibility of 
+						all of their onboarding and live clients in their client list under the "Clients" tab of the portal. Refresh the list to load updated data.
+					</p>
+				</div>
+
+				<!-- <h1 class="h1 mt-5" id="item-4">Reporting</h1>
+
+				<div class="border-left">
+					<p>All closed batches of transactions are visible in the "Reporting" tab of 
+						the Navigation Bar.
+						<br>
+						On this page, you can filter by merchant and by dates or download the 
+						data as an Excel Spreadsheet to run your own analytics on.
+					</p>
+				</div>
+
+				<h1 class="h1 mt-5" id="item-5">Whitelabel & Branding</h1> -->
+				
 			</div>
-		</div>
+		</main>
 	</div>
 
-	<footer class="text-center mt-5 p1">
+	<footer class="text-center mt-5 ">
 		<p class="mt-2 fw-700">POWERED BY: TRIPLE PLAY PAY INC</p>
 		<p class="mt-2">Simon Payments LLC is a registered payment facilitator of Fifth Third Bank</p>
 		<p class="mt-2">© Triple Play Payment Solutions, 2022 All rights reserved.</p>
@@ -188,8 +231,6 @@ Click the Send Click to Agree Form button. This will send a form to the merchant
 		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
 		crossorigin="anonymous">
 	</script>
-
-	<script src="/dist/api/scripts/renderNavbar.js"></script>
 
 	<script>
 		var sdks  = {

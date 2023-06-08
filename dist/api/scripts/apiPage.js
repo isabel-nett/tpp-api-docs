@@ -71,7 +71,7 @@ function renderEndpoints(endpoints) {
 				<p class="method">${endpoint[1]}</p>
 
 				<p class="mb-2">
-					<span class="fw-700 mb-2"> ${endpoint[0]} </span>
+					<span class="endpoint mb-2"> ${endpoint[0]} </span>
 				</p>
 
 				<p>${endpoint[2]}</p>
@@ -113,7 +113,7 @@ function fetchNav() {
 		]);
 
 		var scrollSpy = new window.bootstrap.ScrollSpy(document.body, {
-			target: '#nav_el',
+			target: '#pageNav_el',
 		});
 
 		scrollSpy._element.addEventListener('activate.bs.scrollspy', updateUrlWithId);

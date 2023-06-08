@@ -6,290 +6,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link href="/dist/api/style/main.css" rel="stylesheet" />
-    <script src="/dist/api/scripts/constants.js"></script>
     <title>Payment Methods</title>
 </head>
 <body>
-    <header class="header mb-5">
-        <div class="logo">
-            <img
-                src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
-                alt=""
-            />
+    <header class="header main-shadow">
+		<nav id="siteNav" class="navbar navbar-expand-lg">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+				  </svg>
+				</button>
+				<div class="brand">
+					<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+						<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+						<span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="nav nav-underline">
+						<li class="nav-item">
+						<a class="nav-link" aria-current="page" href="/index.html">Getting Started</a>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+								<br>
+								<sup>Integrate & customize the iframe</sup>
+							</a>
+							</li>
+							<li><a class="dropdown-item" href="/api.html">API Documentation
+								<br>
+								<sup>Leverage the API in your platform</sup>
+							</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="/partners.html">Portal Guide
+								<br>
+								<sup>Utilize the TPP portal</sup>
+							</a></li>
+							<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+								<br>
+								<sup>Discover available payment options</sup>
+							</a></li>
+							<li>
+							<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+								<br>
+								<sup>Enroll as an ISV or Agent</sup>
+							</a>
+							</li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+								<br>
+								<sup>Pass the certification to go live</sup>
+							</a></li>
+						</ul>
+						</li>
+						<li class="nav-item">
+						<button href="https://tripleplaypay.com/login" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+    <div class="content container-xxl row gap-lg-1 mx-auto">
+        <div class="scrollspy d-none d-lg-block col-4 col-lg-2">
+            <nav id="pageNav" class="h-100 mt-3">
+                <nav class="nav flex-column nav-pills">
+                    <a class="nav-link" href="#item-1">Card, ACH, & Crypto</a>
+                    <a class="nav-link" href="#item-2">Digital Wallets</a>
+                    <a class="nav-link" href="#item-3">Point-of-Sale</a>
+                    <a class="nav-link" href="#item-4">QD4 Terminal Guide</a>
+                </nav>
+            </nav>
         </div>
-
-        <h2 class="fw-300 page-header" style="color: white;">
-            Documentation
-        </h2>
-
-        <div class="sign-in-container">
-            <a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
-        </div>
-    </header>
-
-    <div class="container pb-5">
-        <div class="row">
-            <div class="col">
-                <div id="tabs"></div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-2">
-                    <nav id="nav" class="h-100 mt-3">
-                        <nav class="nav flex-column nav-pills">
-                            <a class="nav-link" href="#item-1">Card, ACH, & Crypto</a>
-                            <a class="nav-link" href="#item-2">Digital Wallets</a>
-                            <a class="nav-link" href="#item-3">Point-of-Sale</a>
-                            <a class="nav-link" href="#item-4">QD4 Terminal Guide</a>
-                        </nav>
-                    </nav>
-                </div>
-
-                <div class="col-10">
-                    <div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-                        <h1 class="h1" id="item-1">Card, ACH, & Crypto</h1>
-
-                        <p>We securely process payments via card, ACH, and crypto so that you can give your customers the best experience possible. This combination of three payment methods is the origin of our name! Our payment processing options are safe, secure, and adaptable to your unique business needs.</p>
-        
-                        <h1 class="h1 mt-5" id="item-2">Digital Wallets</h1>
-
-                        <p>Digital wallets are a popular way to pay online and in person. 
-                            When customers use a digital wallet, their payment information is stored 
-                            securely so that they can quickly and safely choose their payment 
-                            method to check out at a POS or on the web. We handle all of the secure data so that 
-                            card details never touch your system, making the process safe for both you and your customers.</p>
-                        
-                            <h2 class="h2 mt-5">Enabling Digital Wallets</h2>
-                        <p>Digital wallets are available in our iframe only. Digital wallets will be automatically 
-                            enabled with the selection of card payment methods in your iframe setup:
-                            <code>paymentOptions: ['credit_card']</code>.
-                        </p>
-                        </br>
-                        <a target="_blank" class="custom-link" href="/iframe.html">Go to the iframe page ></a>
-                        </br>
-
-                        <div class="mt-5 ms-3">
-                            <p class="mt-3" style="font-weight: bolder;">Our Integrations:</p>
                     
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3 class="mt-3"><img class="wallet-logo" src="/dist/api/images/GPay_Acceptance_Mark_800.png" alt="Google Pay Logo"> | Google Pay&trade;</h3>
-                                    <small>Google Pay is a trademark of Google LLC.</small>
-                                    <p>The Google Pay button will automatically present on any browser that 
-                                        supports the button. All partners and merchants 
-                                        must adhere to the Google Pay APIs <a href="https://payments.developers.google.com/terms/aup" target="_blank" class="custom-link">Acceptable Use Policy</a>. 
-                                        By utilizing the Google Pay button, a merchant 
-                                        accepts the Google Pay API <a href="https://payments.developers.google.com/terms/sellertos" target="_blank" class="custom-link">Terms of Service</a>.</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mt-3 col-6"><img class="wallet-logo" src="/dist/api/images/Apple_Pay_Mark_RGB_041619.svg" alt="Apple Pay Logo"> | Apple Pay&trade;</h3>
-                                    <small>Apple Pay is a trademark of Apple Inc.</small>
-                                    <p>The Apple Pay button will automatically present in the Safari browser on any Apple OS devices that support the button.</p>
-                                </div>
-                            </div>
-                            <br>
-                            <p class="mt-3" style="font-weight: bolder;">Coming Soon:</p>
+        <main class="col col-lg-9 ms-lg-4">
+            <div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+            <h1 class="h1" id="item-1">Card, ACH, & Crypto</h1>
 
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3 class="mt-3 col-6"><img class="wallet-logo" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/optimize/44_Yellow_PayPal_Pill_Button.png" alt="PayPal" /> | PayPal&trade;</h3>
-                                    <small>PayPal is a trademark of PayPal.</small>
-                                </div>
-                                    <!-- <h3 class="mt-5"><img class="wallet-logo" src="" alt="Samsung Logo"> | Samsung Pay</h3>
-                                    <small>Samsung Pay is a trademark of Samsung Electronics America, Inc.</small> -->
-                                <div class="col-md-6">
-                                    <h3 class="mt-3 col-6"><img class="wallet-logo" src="/dist/api/images/Amazon_Pay-Logo.png" alt="Amazon Pay Logo"> | Amazon Pay</h3>
-                                    <small>Amazon Pay is a trademark of Amazon Payments, Inc.</small>
-                                </div> 
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <p>*For timelines and to request additional payment methods, email us at <a target="_blank" href="mailto: coo@tripleplaypay.com?subject=Additional Payment Methods" style="text-decoration: none;" class="custom-link">devteam@tripleplaypay.com</a>.</p>
+            <p>We securely process payments via card, ACH, and crypto so that you can give your customers the best experience possible. This combination of three payment methods is the origin of our name! Our payment processing options are safe, secure, and adaptable to your unique business needs.</p>
 
-                        <h1 class="h1 mt-5" id="item-2">Point-of-Sale</h1>
+            <h1 class="h1 mt-5" id="item-2">Digital Wallets</h1>
 
-                        <p>We take the hassle out of secure and reliable POS terminal transactions. We offer advanced hardware options 
-                        or direct integration with a merchant's current hardware.</p>
+            <p>Digital wallets are a popular way to pay online and in person. 
+                When customers use a digital wallet, their payment information is stored 
+                securely so that they can quickly and safely choose their payment 
+                method to check out at a POS or on the web. We handle all of the secure data so that 
+                card details never touch your system, making the process safe for both you and your customers.</p>
+            
+                <h2 class="h2 mt-5">Enabling Digital Wallets</h2>
+            <p>Digital wallets are available in our iframe only. Digital wallets will be automatically 
+                enabled with the selection of card payment methods in your iframe setup:
+                <code>paymentOptions: ['credit_card']</code>.
+            </p>
+            </br>
+            <a target="_blank" class="custom-link" href="/iframe.html">Go to the iframe page ></a>
+            </br>
 
-                        <button href="tripleplaypay.com/order" class="btn btn-secondary mt-4">Order Terminals</button>
-                        
-                        <p class="mt-5" id="item-4" style="font-size: 20px;">The Dejavoo QD4 Guide</p>
-                        <p> The Dejavoo QD4 Terminal is our most popular terminal. Below are the instructions to successfully set up and use this device.</p>
-                            
-                        <div class="ms-3" style="font-size: 12px">
-                            <div class="row">
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">How To Process a Transaction</p>
-                                    <p class="ms-2">
-                                        1. Tap on the CREDIT icon on your terminal home screen. 
-                                        <br>
-                                        2. Tap on the SALE icon. 
-                                        <br>
-                                        3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration.   
-                                        <br>
-                                        4. Input the SALE AMOUNT and press OK. 
-                                        <br>
-                                        5. Tap (contactless only) or insert chip card. 
-                                        <br>
-                                        6. If prompted, confirm the sale amount by tapping OK or NO. Conditional on the terminal’s configuration. 
-                                        <br>
-                                        7. The transaction is processed. Sales receipts will print with details of the transaction.
-                                        <br>
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">Debit Sale</p>
-                                    <p class="ms-2">
-                                        1. Tap on the DEBIT icon on your terminal home screen. 
-                                        <br>
-                                        2. Tap on the SALE icon. 
-                                        <br>
-                                        3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration.   
-                                        <br>
-                                        4. Input the SALE AMOUNT and press OK. 
-                                        <br>
-                                        5. Tap (contactless only) or insert chip card. 
-                                        <br>
-                                        6. If prompted, confirm the sale amount by tapping OK or NO. Conditional on the terminal’s configuration. 
-                                        <br>
-                                        7. Customer enters PIN on encrypted terminal PIN Pad or encrypted external PIN Pad and presses OK. 
-                                        <br>
-                                        8. The transaction is processed. Sales receipts will print with details of the transaction.
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">Manually Entered Sale</p>
-                                    <p class="ms-2"> 
-                                        1. Tap on the CREDIT icon on your terminal home screen. 
-                                        <br>
-                                        2. Tap on the SALE icon. 
-                                        <br>
-                                        3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration. 
-                                        <br>
-                                        4. Input the SALE AMOUNT and press OK. 
-                                        <br>
-                                        5. Manually input CARD #. 6. Follow the CNP prompts (input exp. date, ZIP code etc). Conditional on the terminal’s configuration. 
-                                        <br>
-                                        7. The transaction is processed. Sales receipts will print with details of the transaction.
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">How To Run a Refund</p>
-                                    <p class="ms-2">
-                                        1. Tap on the CREDIT icon on your terminal home screen.
-                                        <br>
-                                        2. Tap on the RETURN icon.
-                                        <br>
-                                        3. Input the RETURN AMOUNT and press OK.
-                                        <br>
-                                        4. If prompted, confirm the return amount by tapping OK or NO. Conditional on the terminal’s configuration.
-                                        <br>
-                                        5. If prompted, input MANAGER PASSWORD (default password is 1234).
-                                        <br>
-                                        6. Tap (contactless only) or insert chip card.
-                                        <br>
-                                        7. The transaction is processed. Return receipts will print with details of the transaction.
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">How To Void a Transaction: Card Present</p>
-                                    <p class="ms-2">
-                                        1. Tap on the CREDIT icon on your terminal home screen.
-                                        <br>
-                                        2. Tap on the VOID icon.
-                                        <br>
-                                        3. Input the VOID AMOUNT and press OK.
-                                        <br>
-                                        4. If prompted, confirm the void amount by tapping OK or NO. Conditional on the terminal’s configuration.
-                                        <br>
-                                        5. If prompted, input MANAGER PASSWORD (default password is 1234).
-                                        <br>
-                                        6. Tap (contactless only) or insert chip card.
-                                        <br>
-                                        7. Enter the void transaction # and press OK.
-                                        <br>
-                                        8. The transaction is processed. Void receipts will print with details of the transaction.
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">How To Void a Transaction: Card Not Present</p>
-                                    <p class="ms-2">
-                                        1. From the idle prompt, tap the STAR  icon to access the FAVORITES menu.
-                                        <br>
-                                        2. Tap VOID TRANSACTION.
-                                        <br>
-                                        3. If prompted, input Manager Password (1234 default).
-                                        <br>
-                                        4. Tap BY TRANSACTION #.
-                                        <br>
-                                        5. Input TRANSACTION # to be voided and press OK.
-                                        <br>
-                                        6. Confirm the void transaction by tapping SELECT.
-                                        <br>
-                                        7. If prompted, confirm the void amount by tapping OK or CANCEL. Conditional on the terminal’s configuration.
-                                        <br>
-                                        8. If prompted, input Manager Password (1234 default).
-                                        <br>
-                                        9. The void is processed. Void receipts will print with details of the transaction.
-                                    </p>
-                                </div>
-
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">Edit Tips By Transaction Number</p>
-                                    <p class="ms-2">
-                                        1. From the idle prompt, tap the STAR icon to access the FAVORITES menu.
-                                        <br>
-                                        2. Tap EDIT TIP.
-                                        <br>
-                                        3. If prompted, input Manager Password (1234 default).
-                                        <br>
-                                        4. Tap ALL.
-                                        <br>
-                                        5. Tap TRANSACTION #.
-                                        <br>
-                                        6. Input TRANSACTION # and press OK.
-                                        <br>
-                                        7. Transaction amount appears, input TIP AMOUNT and press OK.
-                                        <br>
-                                        8. If prompted, confirm the tip amount by tapping YES or NO. Conditional on the terminal’s configuration.
-                                        <br>
-                                        9. Repeat steps 5 and 6 as needed.
-                                        <br>
-                                        10. After all desired tips have been adjusted, press the BACK key continually to return to the homescreen.
-                                    </p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="mt-3 fz-16" style="font-weight: bolder;">How To Settle Your Current Batch</p>
-                                    <p class="ms-2">
-                                        1. From the idle prompt, tap the STAR icon to access the FAVORITES menu.
-                                        <br>
-                                        2. Tap SETTLE DAILY BATCH.
-                                        <br>
-                                        3. If prompted, input Manager Password (1234 default).
-                                        <br>
-                                        4. Terminal communicates with the host.
-                                        <br>
-                                        5. Settlement Report prints.
-                                    </p>
-                                </div>
-
-                            </div>
-                            
-                        </div>
+            <div class="mt-5 ms-3">
+                <p class="mt-3" style="font-weight: bolder;">Our Integrations:</p>
+        
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt-3"><img class="wallet-logo" src="/dist/api/images/GPay_Acceptance_Mark_800.png" alt="Google Pay Logo"> | Google Pay&trade;</h3>
+                        <small>Google Pay is a trademark of Google LLC.</small>
+                        <p>The Google Pay button will automatically present on any browser that 
+                            supports the button. All partners and merchants 
+                            must adhere to the Google Pay APIs <a href="https://payments.developers.google.com/terms/aup" target="_blank" class="custom-link">Acceptable Use Policy</a>. 
+                            By utilizing the Google Pay button, a merchant 
+                            accepts the Google Pay API <a href="https://payments.developers.google.com/terms/sellertos" target="_blank" class="custom-link">Terms of Service</a>.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="mt-3 col-6"><img class="wallet-logo" src="/dist/api/images/Apple_Pay_Mark_RGB_041619.svg" alt="Apple Pay Logo"> | Apple Pay&trade;</h3>
+                        <small>Apple Pay is a trademark of Apple Inc.</small>
+                        <p>The Apple Pay button will automatically present in the Safari browser on any Apple OS devices that support the button.</p>
                     </div>
                 </div>
+                <br>
+                <p class="mt-3" style="font-weight: bolder;">Coming Soon:</p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="mt-3 col-6"><img class="wallet-logo" src="https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/C2/logos-buttons/optimize/44_Yellow_PayPal_Pill_Button.png" alt="PayPal" /> | PayPal&trade;</h3>
+                        <small>PayPal is a trademark of PayPal.</small>
+                    </div>
+                        <!-- <h3 class="mt-5"><img class="wallet-logo" src="" alt="Samsung Logo"> | Samsung Pay</h3>
+                        <small>Samsung Pay is a trademark of Samsung Electronics America, Inc.</small> -->
+                    <div class="col-md-6">
+                        <h3 class="mt-3 col-6"><img class="wallet-logo" src="/dist/api/images/Amazon_Pay-Logo.png" alt="Amazon Pay Logo"> | Amazon Pay</h3>
+                        <small>Amazon Pay is a trademark of Amazon Payments, Inc.</small>
+                    </div> 
+                </div>
             </div>
-        </div>
+            <br>
+            <br>
+            <p>*For timelines and to request additional payment methods, email us at <a target="_blank" href="mailto: coo@tripleplaypay.com?subject=Additional Payment Methods" style="text-decoration: none;" class="custom-link">devteam@tripleplaypay.com</a>.</p>
+
+            <h1 class="h1 mt-5" id="item-3">Point-of-Sale</h1>
+
+            <p>We take the hassle out of secure and reliable POS terminal transactions. We offer advanced hardware options 
+            or direct integration with a merchant's current hardware.</p>
+
+            <button href="tripleplaypay.com/order" class="btn btn-secondary mt-4">Order Terminals</button>
+            
+            <p class="mt-5" id="item-4" style="font-size: 20px;">The Dejavoo QD4 Guide</p>
+            <p> The Dejavoo QD4 Terminal is our most popular terminal. Below are the instructions to successfully set up and use this device.</p>
+                
+            <div class="ms-3" style="font-size: 12px">
+                <div class="row">
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">How To Process a Transaction</p>
+                        <p class="ms-2">
+                            1. Tap on the CREDIT icon on your terminal home screen. 
+                            <br>
+                            2. Tap on the SALE icon. 
+                            <br>
+                            3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration.   
+                            <br>
+                            4. Input the SALE AMOUNT and press OK. 
+                            <br>
+                            5. Tap (contactless only) or insert chip card. 
+                            <br>
+                            6. If prompted, confirm the sale amount by tapping OK or NO. Conditional on the terminal’s configuration. 
+                            <br>
+                            7. The transaction is processed. Sales receipts will print with details of the transaction.
+                            <br>
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">Debit Sale</p>
+                        <p class="ms-2">
+                            1. Tap on the DEBIT icon on your terminal home screen. 
+                            <br>
+                            2. Tap on the SALE icon. 
+                            <br>
+                            3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration.   
+                            <br>
+                            4. Input the SALE AMOUNT and press OK. 
+                            <br>
+                            5. Tap (contactless only) or insert chip card. 
+                            <br>
+                            6. If prompted, confirm the sale amount by tapping OK or NO. Conditional on the terminal’s configuration. 
+                            <br>
+                            7. Customer enters PIN on encrypted terminal PIN Pad or encrypted external PIN Pad and presses OK. 
+                            <br>
+                            8. The transaction is processed. Sales receipts will print with details of the transaction.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">Manually Entered Sale</p>
+                        <p class="ms-2"> 
+                            1. Tap on the CREDIT icon on your terminal home screen. 
+                            <br>
+                            2. Tap on the SALE icon. 
+                            <br>
+                            3. Input CLERK ID# and press OK. Conditional on the terminal’s configuration. 
+                            <br>
+                            4. Input the SALE AMOUNT and press OK. 
+                            <br>
+                            5. Manually input CARD #. 6. Follow the CNP prompts (input exp. date, ZIP code etc). Conditional on the terminal’s configuration. 
+                            <br>
+                            7. The transaction is processed. Sales receipts will print with details of the transaction.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">How To Run a Refund</p>
+                        <p class="ms-2">
+                            1. Tap on the CREDIT icon on your terminal home screen.
+                            <br>
+                            2. Tap on the RETURN icon.
+                            <br>
+                            3. Input the RETURN AMOUNT and press OK.
+                            <br>
+                            4. If prompted, confirm the return amount by tapping OK or NO. Conditional on the terminal’s configuration.
+                            <br>
+                            5. If prompted, input MANAGER PASSWORD (default password is 1234).
+                            <br>
+                            6. Tap (contactless only) or insert chip card.
+                            <br>
+                            7. The transaction is processed. Return receipts will print with details of the transaction.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">How To Void a Transaction: Card Present</p>
+                        <p class="ms-2">
+                            1. Tap on the CREDIT icon on your terminal home screen.
+                            <br>
+                            2. Tap on the VOID icon.
+                            <br>
+                            3. Input the VOID AMOUNT and press OK.
+                            <br>
+                            4. If prompted, confirm the void amount by tapping OK or NO. Conditional on the terminal’s configuration.
+                            <br>
+                            5. If prompted, input MANAGER PASSWORD (default password is 1234).
+                            <br>
+                            6. Tap (contactless only) or insert chip card.
+                            <br>
+                            7. Enter the void transaction # and press OK.
+                            <br>
+                            8. The transaction is processed. Void receipts will print with details of the transaction.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">How To Void a Transaction: Card Not Present</p>
+                        <p class="ms-2">
+                            1. From the idle prompt, tap the STAR  icon to access the FAVORITES menu.
+                            <br>
+                            2. Tap VOID TRANSACTION.
+                            <br>
+                            3. If prompted, input Manager Password (1234 default).
+                            <br>
+                            4. Tap BY TRANSACTION #.
+                            <br>
+                            5. Input TRANSACTION # to be voided and press OK.
+                            <br>
+                            6. Confirm the void transaction by tapping SELECT.
+                            <br>
+                            7. If prompted, confirm the void amount by tapping OK or CANCEL. Conditional on the terminal’s configuration.
+                            <br>
+                            8. If prompted, input Manager Password (1234 default).
+                            <br>
+                            9. The void is processed. Void receipts will print with details of the transaction.
+                        </p>
+                    </div>
+
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">Edit Tips By Transaction Number</p>
+                        <p class="ms-2">
+                            1. From the idle prompt, tap the STAR icon to access the FAVORITES menu.
+                            <br>
+                            2. Tap EDIT TIP.
+                            <br>
+                            3. If prompted, input Manager Password (1234 default).
+                            <br>
+                            4. Tap ALL.
+                            <br>
+                            5. Tap TRANSACTION #.
+                            <br>
+                            6. Input TRANSACTION # and press OK.
+                            <br>
+                            7. Transaction amount appears, input TIP AMOUNT and press OK.
+                            <br>
+                            8. If prompted, confirm the tip amount by tapping YES or NO. Conditional on the terminal’s configuration.
+                            <br>
+                            9. Repeat steps 5 and 6 as needed.
+                            <br>
+                            10. After all desired tips have been adjusted, press the BACK key continually to return to the homescreen.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="mt-3 fz-16" style="font-weight: bolder;">How To Settle Your Current Batch</p>
+                        <p class="ms-2">
+                            1. From the idle prompt, tap the STAR icon to access the FAVORITES menu.
+                            <br>
+                            2. Tap SETTLE DAILY BATCH.
+                            <br>
+                            3. If prompted, input Manager Password (1234 default).
+                            <br>
+                            4. Terminal communicates with the host.
+                            <br>
+                            5. Settlement Report prints.
+                        </p>
+                    </div>
+                </div>
+        </main>
     </div>
 
-    <footer class="text-center mt-5 p1">
+    <footer class="text-center mt-5 ">
         <p class="mt-2 fw-700">POWERED BY: TRIPLE PLAY PAY INC</p>
         <p class="mt-2">Simon Payments LLC is a registered payment facilitator of Fifth Third Bank</p>
         <p class="mt-2">© Triple Play Payment Solutions, 2022 All rights reserved.</p>

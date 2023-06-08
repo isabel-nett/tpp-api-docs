@@ -6,262 +6,305 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 		<link href="/dist/api/style/main.css" rel="stylesheet" />
-		<script src="/dist/api/scripts/constants.js"></script>
 		<title>Get started</title>
 	</head>
 	<body>
-		<header class="header mb-5">
-			<div class="logo">
-				<img
-					src="http://3playpay.com/wp-content/uploads/2022/05/TPP_logo_reversed_horz3.png"
-					alt=""
-				/>
-			</div>
-
-			<h2 class="fw-300 page-header" style="color: white;">
-				Documentation
-			</h2>
-
-			<div class="sign-in-container">
-				<a href="https://tripleplaypay.com/login" class="sign-in" target="_blank">Go To The Portal</a>
-			</div>
+		<header class="header main-shadow">
+			<nav id="siteNav" class="navbar navbar-expand-lg">
+				<div class="container-fluid">
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+					  </svg>
+					</button>
+					<div class="brand">
+						<a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+							<img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+							<span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="nav nav-underline">
+							<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="/index.html">Getting Started</a>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Developers</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+									<br>
+									<sup>Integrate & customize the iframe</sup>
+								</a>
+								</li>
+								<li><a class="dropdown-item" href="/api.html">API Documentation
+									<br>
+									<sup>Leverage the API in your platform</sup>
+								</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
+							</li>
+							<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/partners.html">Portal Guide
+									<br>
+									<sup>Utilize the TPP portal</sup>
+								</a></li>
+								<li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+									<br>
+									<sup>Discover available payment options</sup>
+								</a></li>
+								<li>
+								<a href="https://tripleplaypay.com/login"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+									<br>
+									<sup>Enroll as an ISV or Agent</sup>
+								</a>
+								</li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="/certificate.html">Integration Certification
+									<br>
+									<sup>Pass the certification to go live</sup>
+								</a></li>
+							</ul>
+							</li>
+							<li class="nav-item log-in">
+							<button href="https://tripleplaypay.com/login" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</header>
 
-		<div class="container pb-5">
-			<div class="row">
-				<div class="col">
-					<div id="tabs"></div>
-				</div>
+		<div class="content container-xxl row gap-lg-1 mx-auto">
+			<div class="scrollspy d-none d-lg-block col-4 col-lg-2">
+				<nav id="pageNav" class="h-100 mt-3">
+					<nav class="nav flex-column nav-pills">
+						<a class="nav-link" href="#item-1">About</a>
+						<a class="nav-link" href="#item-2">Setup</a>
+						<a class="nav-link" href="#item-3">Resources</a>
+						<a class="nav-link" href="#item-4">Tests</a>
+					</nav>
+				</nav>
+			</div>
+								
+			<main class="col col-lg-9 ms-lg-4">
+				<div class="page-content" data-bs-spy="scroll" data-bs-target="#pageNav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
+					<h1 class="h1" id="item-1">Welcome to the Development Certification Process</h1>
 
-				<div class="row">
-					<div class="col-md-2">
-						<nav id="nav" class="h-100 mt-3">
-                            <nav class="nav flex-column nav-pills">
-                              <a class="nav-link" href="#item-1">About</a>
-                              <a class="nav-link" href="#item-2">Setup</a>
-                              <a class="nav-link" href="#item-3">Resources</a>
-                              <a class="nav-link" href="#item-4">Tests</a>
-                            </nav>
-                        </nav>
+					<p class="mt-2">
+						For smooth integration and stakeholder satisfaction, Triple Play
+						Pay has built this quick certification process that utilizes a test
+						API Key and specified tests in our Sandbox environment to ensure that developers
+						have the resources and know-how to properly utilize our
+						endpoints, requests, and responses for successful transactions
+						and user experiences.
+					</br></br>
+						Work through these steps for your successful integration of Triple Play Pay’s API.
+					<br/><br/>
+					You will accomplish:
+					<ol>
+						<li>Familiarizing yourself with the Developer Documentation and GitHub repository</li>
+						<li>Integrating the API by using a Sandbox test API key</li>
+						<li>Submitting our required test data</li>
+						<li>Receiving a certificate of completion</li>
+					</ol>
+					</p>
+
+					<h1 class="h1 mt-5" id="item-2">Setup</h1>
+
+					<p class="mt-2 mb-3">
+						To get an API Key and for access to our Sandbox testing environment,
+						your organization must enroll as an ISV or a merchant with
+						Triple Play Pay Inc. We are structured to work with ISVs who serve many 
+						(even thousands of) merchants as well as directly with individual 
+						merchants of any size.
+					
+					</br>
+					<p class="mt-3">
+						For developers: once your business has enrolled with Triple Play Pay,
+					</p>
+					<ol>
+						<li>Ensure that you have an account with Sandbox access. An admin user at your 
+							organization must grant Sandbox access.</li>
+						<li>Retrieve your business's API key in the Processing Settings.</li>
+						<li>Integrate the API into your platform using the sandbox.tripleplaypay.com/api URL. Visit <a href="https://github.com/TriplePlayPay/API/discussions/2" target="_blank" class="custom-link">GitHub</a> for sample code.</li>
+						<li>Perform the tests listed in the <a class="custom-link" href="#item-4">Tests</a> section of this page.</li>
+						<li>Receive your business's certificate via email.
+						</li>
+					</ol>
+					</p>
+
+					<h1 class="h1 mt-5" id="item-3">Resources</h1>
+
+					<p class="mt-5 fw-700">OpenAPI SDK</p>
+
+					<p class="mt-1">
+						For developers who prefer their native language or who don’t
+						have a development app that converts calls to REST, we offer
+						robust Software Development Kits (SDKs) in the following
+						languages: Python, c#, Java, Javascript, PHP, Curl, Go.
+					</p>
+
+					<div class="mt-3">
+						<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
+							<option selected>SDK Download</option>
+							<option value="PYTHON">PYTHON</option>
+							<option value="C">C#</option>
+							<option value="JAVA">JAVA</option>
+							<option value="JAVASCRIPT">JAVASCRIPT</option>
+							<option value="GO">GO</option>
+							<option value="PHP">PHP</option>
+							<option value="JSON">JSON</option>
+							<option value="WOOCOMMERCE">WOOCOMMERCE</option>
+						</select>
 					</div>
 
-					<div class="col-10">
-						<div class="page-content" data-bs-spy="scroll" data-bs-target="#nav" data-bs-smooth-scroll="true" class="scrollspy" tabindex="0">
-							<h1 class="h1" id="item-1">Welcome to the Development Certification Process</h1>
+					<p h2 class="mt-5 fw-700">GitHub</p>
 
-							<p class="p1 mt-2">
-								For smooth integration and stakeholder satisfaction, Triple Play
-								Pay has built this quick certification process that utilizes a test
-								API Key and specified tests in our Sandbox environment to ensure that developers
-								have the resources and know-how to properly utilize our
-								endpoints, requests, and responses for successful transactions
-								and user experiences.
-                            </br></br>
-                                Work through these steps for your successful integration of Triple Play Pay’s API.
-                            <br/><br/>
-                            You will accomplish:
-                            <ol>
-                                <li>Familiarizing yourself with the Developer Documentation and GitHub repository</li>
-                                <li>Integrating the API by using a Sandbox test API key</li>
-                                <li>Submitting our required test data</li>
-                                <li>Receiving a certificate of completion</li>
-                            </ol>
-							</p>
+					<p class="mt-1">
+						Great news! We’re open-source, open-discussion, and open for the
+						success of organizations and developers everywhere.
+					</p>
 
-							<h1 class="h1 mt-5" id="item-2">Setup</h1>
+					<div class="mt-4">
+						<div class="row">
+							<div class="col-md-6 mb-md-0 mb-3">
+								<p>In the GitHub Repository, you will find:</p>
 
-							<p class="p1 mt-2 mb-3">
-								To get an API Key and for access to our Sandbox testing environment,
-								your organization must enroll as an ISV or a merchant with
-								Triple Play Pay Inc. We are structured to work with ISVs who serve many 
-                                (even thousands of) merchants as well as directly with individual 
-                                merchants of any size.
-                            
-                            </br>
-                            <p class="p1 mt-3">
-                                For developers: once your business has enrolled with Triple Play Pay,
-                            </p>
-                            <ol>
-                                <li>Ensure that you have an account with Sandbox access. An admin user at your 
-                                    organization must grant Sandbox access.</li>
-                                <li>Retrieve your business's API key in the Processing Settings.</li>
-                                <li>Integrate the API into your platform using the sandbox.tripleplaypay.com/api URL. Visit <a href="https://github.com/TriplePlayPay/API/discussions/2" target="_blank" class="custom-link">GitHub</a> for sample code.</li>
-                                <li>Perform the tests listed in the <a class="custom-link" href="#item-4">Tests</a> section of this page.</li>
-                                <li>Receive your business's certificate via email.
-								</li>
-                            </ol>
-							</p>
+								<ul>
+									<li>source files</li>
 
-                            <h1 class="h1 mt-5" id="item-3">Resources</h1>
+									<li>release notes</li>
 
-							<p class="mt-5 fw-700">OpenAPI SDK</p>
+									<li>the full OpenAPI SDK variety for download</li>
+								</ul>
 
-							<p class="p1 mt-1">
-								For developers who prefer their native language or who don’t
-								have a development app that converts calls to REST, we offer
-								robust Software Development Kits (SDKs) in the following
-								languages: Python, c#, Java, Javascript, PHP, Curl, Go.
-							</p>
-
-							<div class="mt-3">
-								<select class="btn btn-secondary mt-3 form-select" data-bs-toggle="dropdown" onChange="download(this.value)">
-									<option selected>SDK Download</option>
-									<option value="PYTHON">PYTHON</option>
-									<option value="C">C#</option>
-									<option value="JAVA">JAVA</option>
-									<option value="JAVASCRIPT">JAVASCRIPT</option>
-									<option value="GO">GO</option>
-									<option value="PHP">PHP</option>
-									<option value="JSON">JSON</option>
-									<option value="WOOCOMMERCE">WOOCOMMERCE</option>
-								</select>
+								<a
+									class="btn btn-primary mt-3"
+									href="https://github.com/TriplePlayPay/API"
+									target="_blank"
+								>
+									GitHub Repository
+								</a>
 							</div>
 
-							<p h2 class="mt-5 fw-700">GitHub</p>
+							<div class="col-md-6">
+								<p>In the GitHub Discussion, you will find:</p>
 
-							<p class="p1 mt-1">
-								Great news! We’re open-source, open-discussion, and open for the
-								success of organizations and developers everywhere.
-							</p>
+								<ul>
+									<li>sample code to help you with development</li>
+									<li>iframe and API call response examples</li>
+									<li>a place to ask questions</li>
+								</ul>
 
-							<div class="mt-4">
-								<div class="row">
-									<div class="col-md-6 mb-md-0 mb-3">
-										<p>In the GitHub Repository, you will find:</p>
-
-										<ul>
-											<li>source files</li>
-
-											<li>release notes</li>
-
-											<li>the full OpenAPI SDK variety for download</li>
-										</ul>
-
-										<a
-											class="btn btn-primary mt-3"
-											href="https://github.com/TriplePlayPay/API"
-											target="_blank"
-										>
-											GitHub Repository
-										</a>
-									</div>
-
-									<div class="col-md-6">
-										<p>In the GitHub Discussion, you will find:</p>
-
-										<ul>
-											<li>sample code to help you with development</li>
-											<li>iframe and API call response examples</li>
-											<li>a place to ask questions</li>
-										</ul>
-
-										<a
-											class="btn btn-primary mt-3"
-											href="https://github.com/TriplePlayPay/API/discussions"
-											target="_blank"
-										>
-											GitHub Discussion
-										</a>
-									</div>
-								</div>
+								<a
+									class="btn btn-primary mt-3"
+									href="https://github.com/TriplePlayPay/API/discussions"
+									target="_blank"
+								>
+									GitHub Discussion
+								</a>
 							</div>
-
-                            <h1 class="h1 mt-5" id="item-4">Tests</h1>
-
-                            <p class="p1 mt-2 mb-2">Alright, now it's time for the tests: you will find the specific test data below for the required tests.
-                                </br>
-								</br>
-                                Once you have submitted these tests, let us know at <a target="_blank" class="custom-link" href="mailto: devteam@tripleplaypay.com?subject=Integration Tests Complete">devteam@tripleplaypay.com</a>. Please give us 24 hours to reach out with results and feedback.
-                                <br><br>
-								<div class="alert alert-danger" role="alert">
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-										<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-									</svg>
-									<strong>Caution:</strong> All tests must be made through sandbox.tripleplaypay.com. We do not grant production access to allow any live enrollments or transactions until all tests appropriate for your integration plan are passed.  Premature use of the production URL may result in live emails being sent.
-									<br>
-									<small>If your team wishes to begin enrolling live merchants before development integration is complete, simply <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=Enrollment Help" style="text-decoration: none;" class="custom-link fz-14">contact us</a> for alternative methods.</small>
-								</div>
-                            </p>
-
-                            <table class="table table-striped w-100 mt-4">
-                                <thead>
-                                  <tr>
-                                    <th scope="col" class="col-2">Endpoint</th>
-                                    <th scope="col">Integration Test</th>
-                                  </tr>
-                                </thead>
-                          
-                                <tbody>
-                                  <tr>
-                                    <td>/authorize</td>
-                                    <td>At this time, we are running custom tests only. <a href="mailto: devteam@tripleplaypay.com?subject=Integration Test Plan" target="_blank" class="fz-12 custom-link">Contact us</a> to begin.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/charge</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/settle</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/refund</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/tokenize</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/subscription</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/report</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/enroll</td>
-                                    <td>See above.</td>
-                                  </tr>
-    
-                                  <tr>
-                                    <td>/callback</td>
-                                    <td>See above.</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-
-                              <!-- <h1 class="h1 mt-5" id="item-5">Certificate</h1> -->
-
 						</div>
 					</div>
+
+					<h1 class="h1 mt-5" id="item-4">Tests</h1>
+
+					<p class="mt-2 mb-2">Alright, now it's time for the tests: you will find the specific test data below for the required tests.
+						</br>
+						</br>
+						Once you have submitted these tests, let us know at <a target="_blank" class="custom-link" href="mailto: devteam@tripleplaypay.com?subject=Integration Tests Complete">devteam@tripleplaypay.com</a>. Please give us 24 hours to reach out with results and feedback.
+						<br><br>
+						<div class="alert alert-danger" role="alert">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+							</svg>
+							<strong>Caution:</strong> All tests must be made through sandbox.tripleplaypay.com. We do not grant production access to allow any live enrollments or transactions until all tests appropriate for your integration plan are passed.  Premature use of the production URL may result in live emails being sent.
+							<br>
+							<small>If your team wishes to begin enrolling live merchants before development integration is complete, simply <a target="_blank" href="mailto:csm@tripleplaypay.com?subject=Enrollment Help" style="text-decoration: none;" class="custom-link fz-14">contact us</a> for alternative methods.</small>
+						</div>
+					</p>
+
+					<table class="table table-striped w-100 mt-4">
+						<thead>
+							<tr>
+							<th scope="col" class="col-2">Endpoint</th>
+							<th scope="col">Integration Test</th>
+							</tr>
+						</thead>
+					
+						<tbody>
+							<tr>
+							<td>/authorize</td>
+							<td>At this time, we are running custom tests only. <a href="mailto: devteam@tripleplaypay.com?subject=Integration Test Plan" target="_blank" class="fz-12 custom-link">Contact us</a> to begin.</td>
+							</tr>
+
+							<tr>
+							<td>/charge</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/settle</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/refund</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/tokenize</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/subscription</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/report</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/enroll</td>
+							<td>See above.</td>
+							</tr>
+
+							<tr>
+							<td>/callback</td>
+							<td>See above.</td>
+							</tr>
+						</tbody>
+						</table>
+
+						<!-- <h1 class="h1 mt-5" id="item-5">Certificate</h1> -->
+
 				</div>
-			</div>
+			</main>
 		</div>
 
-		<footer class="text-center mt-5 p1">
+		<footer class="text-center mt-5 ">
 			<p class="mt-2 fw-700">POWERED BY: TRIPLE PLAY PAY INC</p>
 			<p class="mt-2">Simon Payments LLC is a registered payment facilitator of Fifth Third Bank</p>
 			<p class="mt-2">© Triple Play Payment Solutions, 2022 All rights reserved.</p>
 			
 		</footer>
 
-		<script src="/dist/api/scripts/renderTabs.js"></script>
 		<script 
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
 			integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
 			crossorigin="anonymous">
 		</script>
 
-		<script src="/dist/api/scripts/renderNavbar.js"></script>
 		<script>
 			var sdks  = {
 			'PYTHON':['/static/sdk/python-client-generated.zip','TriplePlayPayAPI-PYTHON-v1.5.3.zip'],

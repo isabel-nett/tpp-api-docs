@@ -1,4 +1,4 @@
-const NAV_CONTAINER = '#nav';
+const NAV_CONTAINER = '#pageNav';
 
 function renderNavItem(tab) {
 	let className = 'menu-link-el ';
