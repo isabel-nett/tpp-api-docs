@@ -686,6 +686,10 @@
 			for (let index = 0; index < endpoints.length; index++) {
 				const endpoint = endpoints[index];
 
+				if(endpoint[1] === 'get' && (endpoint[0] === 'apikeys' || endpoint[0] === 'iframekey')) {
+					endpoint[2] += ' No parameters are needed for this endpoint.';
+				}
+
 				result += `
 				</br></br>
 				<div id="item-6-${index + 1}">
@@ -702,13 +706,6 @@
 
 				<hr />
 				`;
-
-				if(endpoint[1] === 'get' && (endpoint[0] === 'apikeys' || endpoint[0] === 'iframekey')) {
-					const descrEl = document.querySelector('.descr-text');
-					if (descrEl) {
-						descrEl.textContent += ' No parameters are needed for this endpoint.';
-					}
-				}
 			}
 
 			container.innerHTML = result;
