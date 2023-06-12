@@ -68,6 +68,7 @@ header {
 #pageNav {
     position: fixed;
     top: 150px;
+    overflow: scroll;
 }
 
 * {
