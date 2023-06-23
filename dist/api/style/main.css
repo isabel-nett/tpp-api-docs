@@ -112,7 +112,7 @@ p {
 }
 
 .content {
-    margin-top: 120px;
+    margin-top: 140px !important;
 }
 
 footer {
@@ -247,6 +247,7 @@ pre {
     border-radius: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-top: 0;
 }
 
 .snippet p {
@@ -257,6 +258,7 @@ pre {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     color: var(--secondary-color);
+    margin-bottom: 0;
 }
 
 .descr-text {
