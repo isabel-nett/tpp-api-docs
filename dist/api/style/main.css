@@ -129,6 +129,11 @@ footer {
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.779);
 }
 
+.sub {
+    margin-bottom: 0;
+    color: var(--secondary-color)
+}
+
 /* components */
 
 .btn-primary {

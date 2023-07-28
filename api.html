@@ -91,10 +91,11 @@
 							<a class="nav-link ms-3 my-1" href="#item-2-1">Requests</a>
 							<a class="nav-link ms-3 my-1" href="#item-2-2">Responses</a>
 						</nav>
-						<a class="nav-link" href="#item-3">GitHub</a>
-						<a class="nav-link" href="#item-4">Building for Accessibility</a>
-						<a class="nav-link" href="#item-5">Development Certificate</a>
-						<a class="nav-link" href="#item-6">Endpoints</a>
+						<a class="nav-link" href="#item-3">Building for Accessibility</a>
+						<a class="nav-link" href="#item-4">Development Certificate</a>
+						<a class="nav-link" href="#item-5">Application of our API</a>
+						<a class="nav-link" href="#item-6">GitHub</a>
+						<a class="nav-link" href="#item-7">Endpoints</a>
 						<nav class="nav nav-pills flex-column endpoints-nav" id="endpointsNav">
 						</nav>
 					</nav>
@@ -152,220 +153,174 @@
 						</div>
 					</div>
 
-					<h1 class="h1 mt-5" id="item-2-1">Requests</h1>
+					<div class="border-left">
 
-					<p class="mt-2">
-						Each endpoint in our API has its own unique path.
-					</p>
+						<h1 class="h1" id="item-2-1">Requests</h1>
 
-					<p class="mt-2">
-						Data is accessed and utilized via standard HTTPS requests in
-						UTF-8 format to an API endpoint. Where possible, the API uses
-						appropriate HTTP verbs for each action:
-					</p>
+						<p class="mt-2">
+							Each endpoint in our API has its own unique path.
+						</p>
 
-					<p class="mt-2">
-						<b>GET</b>: Retrieves resources <br />
-						<b>POST</b>: Creates resources<br />
-						<b>PUT</b>: Changes and/or replaces resources or collections<br />
-						<b>DELETE</b>: Deletes resources
-					</p>
+						<p class="mt-2">
+							Data is accessed and utilized via standard HTTPS requests in
+							UTF-8 format to an API endpoint. Where possible, the API uses
+							appropriate HTTP verbs for each action:
+						</p>
 
-					<h1 class="h1 mt-5" id="item-2-2">Responses</h1>
+						<p class="mt-2">
+							<b>GET</b>: Retrieves resources <br />
+							<b>POST</b>: Creates resources<br />
+							<b>PUT</b>: Changes and/or replaces resources or collections<br />
+							<b>DELETE</b>: Deletes resources
+						</p>
 
-					<p class="mt-2">
-						Triple Play Pay API responses always include a JSON object.
-						Explore the documentation under "Endpoints" in the navigation list on this page
-						for endpoints and their responses.
-					</p>
+						<h1 class="h1 mt-5" id="item-2-2">Responses</h1>
 
-					<br>
+						<p class="mt-2">
+							Triple Play Pay API responses always include a JSON object.
+							Explore the documentation under "Endpoints" in the navigation list on this page
+							for endpoints and their responses.
+						</p>
 
-					<div class="accordion accordion-flush" id="responses">
-						<div class="accordion-item">
-							<h2 class="accordion-header">
-							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-								Standard Response >
-							  </button>
-							</h2>
-							<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#responses">
-							  <div class="accordion-body">
-								<p class="mt-2" style="font-weight: bolder">
-									Our standard response:
-								</p>
-			
-								<div class="mt-3 ms-5 mb-4 p-4 col-md-6" style="background-color: #f8f8f8; border-radius: 8px;">
-									<code>{<br>
-									"status": true or false,<br>
-									"id": "<transactionId>",<br>
-									"message": result (json) or error message (string),<br>
-									"method": endpoint called<br>
-									}</code>
+						<br>
+
+						<div class="accordion accordion-flush" id="responses">
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+									Standard Response >
+								</button>
+								</h2>
+								<div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#responses">
+								<div class="accordion-body">
+									<p class="mt-2" style="font-weight: bolder">
+										Our standard response:
+									</p>
+				
+									<div class="mt-3 ms-5 mb-4 p-4 col-md-6" style="background-color: #f8f8f8; border-radius: 8px;">
+										<code>{<br>
+										"status": true or false,<br>
+										"id": "<transactionId>",<br>
+										"message": result (json) or error message (string),<br>
+										"method": endpoint called<br>
+										}</code>
+									</div>
 								</div>
-							  </div>
-							</div>
-						</div>
-						<div class="accordion-item">
-						  <h2 class="accordion-header">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-							  Status Codes >
-							</button>
-						  </h2>
-						  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#responses">
-							<div class="accordion-body">
-								<p class="mt-2">
-									<b>Status Codes</b>: Our API uses the following response status
-									codes, as defined in the RFC 2616 and RFC 6585:
-								</p>
-								<div class="d-flex row m-4" style="font-size: 10px;">
-
-									<p class="mt-2 col-md-6">
-										<b>200</b> - OK <br />
-			
-										The request has succeeded. The client can read the result of the
-										request in the body and the headers of the response.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>201</b> - Created <br />
-										The request has been fulfilled and resulted in a new resource
-										being created.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>202</b> - Accepted <br />
-										The request has been accepted for processing, but the processing
-										has not been completed.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>204</b> - No Content <br />
-										The request has succeeded but returns no message body.
-									</p>
-			
-									<p class="mt-2 col-md-6"><b>304</b> - Not Modified</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>400</b> - Bad Request <br />
-										The request could not be understood by the server due to
-										malformed syntax. The message body will contain more
-										information.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>401</b> - Unauthorized <br />
-										The request requires user authentication or, if the request
-										included authorization credentials, authorization has been
-										refused for those credentials.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>403</b> - Forbidden <br />
-										The server understood the request, but is refusing to fulfill it.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>404</b> - Not Found <br />
-										The requested resource could not be found. This error can be due
-										to a temporary or permanent condition.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>429</b> - Too Many Requests <br />
-										Rate limiting has been applied.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>500</b> - Internal Server Error <br />
-										You should not come across any of these. Please report these to
-										us by posting in the GitHub discussion.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>502</b> - Bad Gateway <br />
-										The server was acting as a gateway or proxy and received an
-										invalid response from the upstream server.
-									</p>
-			
-									<p class="mt-2 col-md-6">
-										<b>503</b> - Service Unavailable <br />
-										Again, you should not come across any of these. The server is
-										currently unable to handle the request due to a temporary
-										condition which will be alleviated after some delay. You can
-										choose to resend the request again. Please report these to us by
-										posting in the GitHub discussion.
-									</p>
-			
 								</div>
 							</div>
-						  </div>
-						</div>
-						<div class="accordion-item">
+							<div class="accordion-item">
 							<h2 class="accordion-header">
-							  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-								Example Code >
-							  </button>
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+								Status Codes >
+								</button>
 							</h2>
-							<div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#responses">
-							  <div class="accordion-body">
-								<p class="mt-2">
-									Explore examples of API calls and JSON responses <a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions/2#discussioncomment-5349536">here in our GitHub</a>.
-								</p>
-							  </div>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#responses">
+								<div class="accordion-body">
+									<p class="mt-2">
+										<b>Status Codes</b>: Our API uses the following response status
+										codes, as defined in the RFC 2616 and RFC 6585:
+									</p>
+									<div class="d-flex row m-4" style="font-size: 10px;">
+
+										<p class="mt-2 col-md-6">
+											<b>200</b> - OK <br />
+				
+											The request has succeeded. The client can read the result of the
+											request in the body and the headers of the response.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>201</b> - Created <br />
+											The request has been fulfilled and resulted in a new resource
+											being created.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>202</b> - Accepted <br />
+											The request has been accepted for processing, but the processing
+											has not been completed.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>204</b> - No Content <br />
+											The request has succeeded but returns no message body.
+										</p>
+				
+										<p class="mt-2 col-md-6"><b>304</b> - Not Modified</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>400</b> - Bad Request <br />
+											The request could not be understood by the server due to
+											malformed syntax. The message body will contain more
+											information.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>401</b> - Unauthorized <br />
+											The request requires user authentication or, if the request
+											included authorization credentials, authorization has been
+											refused for those credentials.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>403</b> - Forbidden <br />
+											The server understood the request, but is refusing to fulfill it.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>404</b> - Not Found <br />
+											The requested resource could not be found. This error can be due
+											to a temporary or permanent condition.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>429</b> - Too Many Requests <br />
+											Rate limiting has been applied.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>500</b> - Internal Server Error <br />
+											You should not come across any of these. Please report these to
+											us by posting in the GitHub discussion.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>502</b> - Bad Gateway <br />
+											The server was acting as a gateway or proxy and received an
+											invalid response from the upstream server.
+										</p>
+				
+										<p class="mt-2 col-md-6">
+											<b>503</b> - Service Unavailable <br />
+											Again, you should not come across any of these. The server is
+											currently unable to handle the request due to a temporary
+											condition which will be alleviated after some delay. You can
+											choose to resend the request again. Please report these to us by
+											posting in the GitHub discussion.
+										</p>
+				
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+									Example Code >
+								</button>
+								</h2>
+								<div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#responses">
+								<div class="accordion-body">
+									<p class="mt-2">
+										Explore examples of API calls and JSON responses <a target="_blank" class="custom-link" href="https://github.com/TriplePlayPay/API/discussions">here in our GitHub</a>.
+									</p>
+								</div>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<h1 class="h1 mt-5" id="item-3">GitHub</h1>
-
-					<p class="mt-2">
-						Great news! We’re open-source, open-discussion, and open for the
-						success of organizations and developers everywhere.
-					</p>
-
-					<div class="mt-4">
-						<div class="row">
-							<div class="col-md-6 mb-md-0 mb-4">
-								<p>In the GitHub Repository, you will find:</p>
-
-								<ul>
-									<li>source files</li>
-
-									<li>release notes</li>
-
-									<li>the full OpenAPI SDK variety for download</li>
-								</ul>
-
-								<a
-									class="btn btn-primary mt-3"
-									href="https://github.com/TriplePlayPay/API"
-									target="_blank"
-								>
-									GitHub Repository
-								</a>
-							</div>
-
-							<div class="col-md-6">
-								<p>In the GitHub Discussion, you will find:</p>
-
-								<ul>
-									<li>sample code to help you with development</li>
-									<li>a place to ask questions</li>
-									<li>a place to share ideas</li>
-								</ul>
-
-								<a
-									class="btn btn-primary mt-3"
-									href="https://github.com/TriplePlayPay/API/discussions"
-									target="_blank"
-								>
-									GitHub Discussion
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<h1 class="h1 mt-5" id="item-4">Building for Accessibility</h1>
+					<h1 class="h1 mt-5" id="item-3">Building for Accessibility</h1>
 
 					<p class="mt-2">
 						Designing and developing an app for accessibility ensures a
@@ -435,7 +390,7 @@
 						Email us at: <a target="_blank" class="custom-link" href="mailto:devteam@tripleplaypay.com">devteam@tripleplaypay.com</a>
 					</p>
 
-					<h1 class="h1 mt-5" id="item-5">Sandbox & Development Certificate</h1>
+					<h1 class="h1 mt-5" id="item-4">Sandbox & Development Certificate</h1>
 
 					<p class="mt-2">
 						For smooth integration and stakeholder satisfaction, Triple Play
@@ -456,9 +411,95 @@
 							Go to the certification page >
 						</a>
 					</p>
-					
 
-					<h1 class="h1 mt-5" id="item-6">Endpoints</h1>
+					<h1 class="h1 mt-5" id="item-5">Application of our API</h1>
+					
+					<p>Our payment processing API provides endpoints for common payment 
+						workflows like authorizing charges, settling authorized amounts, and 
+						tokenizing payment methods for future use. It also provides endpoints 
+						for more advanced functionality such as retrieving transaction history, 
+						uploading signatures and documents required for merchant onboarding, and more. 
+						Below are some key notes for use of the API endpoints.</p> 
+					
+					<p class="sub">Generating a Failed Charge</p>
+
+					<p>When processing charges, it's important to note that 
+						any transaction made with the Sandbox URL for $3.33 will fail. 
+						This is so that you can see the reponse for a failed transaction.</p> 
+
+					<p class="sub">Duplicate Charge Catching</p>
+
+					<p>The API also has duplicate charge prevention enabled by default. 
+						If you submit multiple charges for the same amount on the same card or 
+						bank account within a single day, the second and subsequent charges will 
+						fail. If you need to process many similar charges in a short timeframe, you 
+						can request duplicate protection to be disabled for your account.</p>
+
+					<p class="sub">Authorizations for Future Charges</p>
+
+					<p>For authorizing a charge without completing it right away, use the "authorize" endpoint. 
+						This will check for available funds on the provided payment method. Once authorized, 
+						you can submit the "settle" or "charge" requests with the authorized 
+						amount to complete the transaction.</p>
+					
+					<p class="sub">Saving Payment Details for Future Charges</p>
+
+					<p>To generate a tokenized version of a payment method like a card or 
+						bank account, use the "token" endpoint. The returned token can be safely 
+						stored and used for future "charge" requests, without having to handle 
+						sensitive payment details again. Retrieving existing tokens can be done 
+						with the "wallet" endpoint.</p>
+
+					<h1 class="h1 mt-5" id="item-6">GitHub</h1>
+
+					<p class="mt-2">
+						Great news! We’re open-source, open-discussion, and open for the
+						success of organizations and developers everywhere.
+					</p>
+
+					<div class="mt-4">
+						<div class="row">
+							<div class="col-md-6 mb-md-0 mb-4">
+								<p>In the GitHub Repository, you will find:</p>
+
+								<ul>
+									<li>source files</li>
+
+									<li>release notes</li>
+
+									<li>the full OpenAPI SDK variety for download</li>
+								</ul>
+
+								<a
+									class="btn btn-primary mt-3"
+									href="https://github.com/TriplePlayPay/API"
+									target="_blank"
+								>
+									GitHub Repository
+								</a>
+							</div>
+
+							<div class="col-md-6">
+								<p>In the GitHub Discussion, you will find:</p>
+
+								<ul>
+									<li>sample code to help you with development</li>
+									<li>a place to ask questions</li>
+									<li>a place to share ideas</li>
+								</ul>
+
+								<a
+									class="btn btn-primary mt-3"
+									href="https://github.com/TriplePlayPay/API/discussions"
+									target="_blank"
+								>
+									GitHub Discussion
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<h1 class="h1 mt-5" id="item-7">Endpoints</h1>
 
 					<div id="endpoints">
 						<!-- <div>
@@ -620,7 +661,7 @@
 
 				result += `
 				</br></br>
-				<div id="item-6-${index + 1}">
+				<div id="item7-${index + 1}">
 					<p class="method">${endpoint[1]}</p>
 
 					<p class="mb-2">
@@ -652,7 +693,7 @@
 						return {
 							title: e[0],
 							method: e[1],
-							url: `#item-6-${index + 1}`,
+							url: `#item-7-${index + 1}`,
 						};
 					});
 
