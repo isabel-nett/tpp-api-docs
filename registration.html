@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link href="/dist/api/style/main.css" rel="stylesheet" />
+	<title>Registration</title>
+</head>
+<body>
+<header class="header main-shadow">
+    <nav id="siteNav" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="brand">
+                <a class="navbar-brand" href="https://3playpay.com/" target="_blank">
+                    <img src="/dist/api/images/TPP_logo_white_icon.png" alt="Triple Play Pay" width="70" height="70">
+                    <span class="d-none d-sm-inline"><span class="d-none d-sm-inline"><b>Triple Play Pay</b> | Documentation</span></span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/index.html">Getting Started</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Developers</a>
+                        <ul class="dropdown-menu" data-bs-display="responsive">
+                            <li><a class="dropdown-item" href="/iframe.html">Iframe Documentation
+                                <br>
+                                <sup>Integrate & customize the iframe</sup>
+                            </a>
+                            </li>
+                            <li><a class="dropdown-item" href="/api.html">API Documentation
+                                <br>
+                                <sup>Leverage the API in your platform</sup>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="/certificate.html">Integration Certification
+                                <br>
+                                <sup>Pass the certification to go live</sup>
+                            </a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">ISVs & Agents</a>
+                        <ul class="dropdown-menu" data-bs-display="responsive">
+                            <li><a class="dropdown-item" href="/partners.html">Portal Guide
+                                <br>
+                                <sup>Utilize the TPP portal</sup>
+                            </a></li>
+                            <li><a class="dropdown-item" href="/paymentmethods.html">Payment Methods
+                                <br>
+                                <sup>Discover available payment options</sup>
+                            </a></li>
+                            <li>
+                            <a href="https://3playpay.com/partnership/"  type="button" class="dropdown-item" id="getStarted" target="_blank">Apply for Partnership
+                                <br>
+                                <sup>Enroll as an ISV or Agent</sup>
+                            </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/certificate.html">Integration Certification
+                                <br>
+                                <sup>Pass the certification to go live</sup>
+                            </a></li>
+                        </ul>
+                        </li>
+                        <li class="nav-item log-in">
+                        <button href="https://3playpay.com/partnership/" type="button" class="btn btn-tertiary" id="login" target="_blank">Portal Log-In</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="content mx-auto">
+    <div class="card reg-card w-50 mx-auto main-shadow">
+        <div class="card-body">
+            <form id="registrationForm">
+                <div class="step step-1">
+                    <h2 class="mb-4">Step 1: Developer Information</h2>
+                    <div class="form-group">
+                        <!-- <label for="name" class="reg-label">First Name</label> -->
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                        <div class="invalid-feedback">Your full name is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="name" class="reg-label">Last Name</label> -->
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                        <div class="invalid-feedback">Your full name is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="email" class="reg-label">Work Email Address</label> -->
+                        <input type="email" class="form-control" id="email" placeholder="Work Email Address" required>
+                        <div class="invalid-feedback">Your work email address is required.</div>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="company" class="reg-label">Company Name</label> -->
+                        <input type="text" class="form-control" id="company" placeholder="Company Name" required>
+                        <div class="invalid-feedback">Your company name is required.</div>
+                    </div>
+                    <button class="btn btn-primary next-step">Next</button>
+                </div>
+
+                <div class="step step-2">
+                    <h2 class="mb-4">Step 2: Integration Requirements</h2>
+                    <p>Select your skills:</p>
+                    <div class="form-group">
+                        <input type="checkbox" id="javascript" name="skills" value="JavaScript" required>
+                        <label for="javascript" class="reg-label">JavaScript</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="python" name="skills" value="Python">
+                        <label for="python" class="reg-label">Python</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="java" name="skills" value="Java">
+                        <label for="java" class="reg-label">Java</label>
+                    </div>
+                    <button class="btn btn-primary prev-step">Previous</button>
+                    <button type="submit" class="btn btn-tertiary complete-step" onclick="validateForm()">Complete</button>
+                    <p class="mb-3 d-none" id="errorDiv">Please go back and check your inputs.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
+    crossorigin="anonymous">
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("registrationForm");
+    const steps = form.querySelectorAll(".step");
+    const nextButtons = form.querySelectorAll(".next-step");
+    const prevButtons = form.querySelectorAll(".prev-step");
+    const completeButton = form.querySelector(".complete-step");
+
+    let currentStep = 0;
+
+    function showStep(stepIndex) {
+        steps.forEach((step, index) => {
+            if (index === stepIndex) {
+                step.style.display = "block";
+            } else {
+                step.style.display = "none";
+            }
+        });
+    }
+
+    nextButtons.forEach((button, index) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            currentStep++;
+            showStep(currentStep);
+        });
+    });
+
+    prevButtons.forEach((button, index) => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            currentStep--;
+            showStep(currentStep);
+        });
+    });
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (form.checkValidity() === true) {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            console.log("Form data:", data);
+            // Here you can send the form data to your server or via email
+            // Replace card contents with "Complete" and a checkmark
+            const cardBody = document.querySelector('.card-body');
+            cardBody.innerHTML = `
+                <div class="d-flex flex-column align-items-center">
+                    <h2 class="mb-4">Complete</h2>
+                    <div class="text-success mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M12.186 3.186a.5.5 0 0 1 .628.628l-5 10a.5.5 0 0 1-.8.07l-3.5-3.5a.5.5 0 1 1 .708-.708L6 12.293l4.186-8.187z"/>
+                        </svg>
+                    </div>
+                    <p class="mb-0">Your registration has been completed.</p>
+                </div>
+            `;
+        }
+    });
+
+    // Form validation
+    function validateForm() {
+        const form = document.getElementById("registrationForm");
+        const errorDiv = document.getElementById("errorDiv");
+
+        // Validate the inputs in Step 1
+        const step1Inputs = form.querySelectorAll('.step-1 .form-control');
+        step1Inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                input.classList.add('is-invalid');
+            } else {
+                input.classList.remove('is-invalid');
+            }
+        });
+
+        // Validate the checkboxes in Step 2
+        const step2Checkboxes = form.querySelectorAll('.step-2 input[type="checkbox"]');
+        let atLeastOneCheckboxChecked = false;
+        step2Checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                atLeastOneCheckboxChecked = true;
+            }
+        });
+
+        if (!atLeastOneCheckboxChecked) {
+            errorDiv.classList.remove('d-none');
+        } else {
+            errorDiv.classList.add('d-none');
+        }
+
+        // If either step has invalid inputs or unchecked checkboxes, prevent submission
+        if (form.querySelectorAll('.is-invalid').length > 0 || !atLeastOneCheckboxChecked) {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+        } else {
+            form.classList.remove('was-validated');
+        }
+    };
+});
+</script>
+</body>
+</html>

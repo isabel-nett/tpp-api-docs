@@ -3,7 +3,7 @@
     --secondary-color: rgb(116, 142, 236);
     --tertiary-color: rgb(239, 65, 54);
     --real-purple: rgb(70, 83, 130);
-    --off-black: rgb(34, 35, 42);
+    --off-black: rgb(25, 31, 54);
     --off-white: rgba(255, 255, 255, 0.887);
     --font-primary: 'Open Sans', sans-serif;
     
@@ -126,7 +126,7 @@ footer {
 }
 
 .main-shadow {
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.779);
+    box-shadow: 0 .125rem .25rem rgba(25, 31, 54, 0.779);
 }
 
 .sub {
@@ -339,6 +339,51 @@ td {
     margin: 15px 0;
     padding: 5px 0 5px 10px;
     border-left: var(--secondary-color) 1px solid;
+}
+
+/* registration */
+
+.reg-card {
+    background-color: rgb(70, 83, 130, 0.2);
+    border: none;
+    color: var(--off-white);
+    border-radius: 18px;
+}
+
+.step {
+    display: none;
+    width: 30vw;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.step-1 {
+    display: block;
+}
+
+.step-2 {
+    display: none;
+}
+
+.reg-h3 {
+    color: var(--main-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.reg-btn {
+    margin-right: 1rem;
+}
+
+/* Add transition effect */
+.card-body {
+    transition: transform 0.5s ease-in-out;
+}
+
+.invalid-feedback {
+    color: var(--off-white);
 }
 
 @media screen and (max-width: 991px) {
