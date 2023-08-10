@@ -79,34 +79,36 @@
     </nav>
 </header>
 <div class="content mx-auto">
-    <div class="card reg-card w-50 mx-auto main-shadow">
-        <div class="card-body">
-            <form id="registrationForm">
+    <form id="registrationForm">
+        <div class="card reg-card w-50 mx-auto main-shadow">
+            <div class="card-body">
                 <div class="step step-1">
                     <h2 class="mb-4">Step 1: Developer Information</h2>
                     <div class="form-group">
-                        <!-- <label for="name" class="reg-label">First Name</label> -->
+                        <label for="firstName" class="reg-label">First Name</label>
                         <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                         <div class="invalid-feedback">Your full name is required.</div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="name" class="reg-label">Last Name</label> -->
+                        <label for="lastName" class="reg-label">Last Name</label>
                         <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
                         <div class="invalid-feedback">Your full name is required.</div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="email" class="reg-label">Work Email Address</label> -->
+                        <label for="email" class="reg-label">Work Email Address</label>
                         <input type="email" class="form-control" id="email" placeholder="Work Email Address" required>
                         <div class="invalid-feedback">Your work email address is required.</div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="company" class="reg-label">Company Name</label> -->
+                        <label for="company" class="reg-label">Company Name</label>
                         <input type="text" class="form-control" id="company" placeholder="Company Name" required>
                         <div class="invalid-feedback">Your company name is required.</div>
                     </div>
-                    <button class="btn btn-primary next-step">Next</button>
                 </div>
-
+            </div>
+        </div>
+        <div class="card reg-card w-50 mx-auto main-shadow mt-5">
+            <div class="card-body">
                 <div class="step step-2">
                     <h2 class="mb-4">Step 2: Integration Requirements</h2>
                     <p>Select your skills:</p>
@@ -122,12 +124,22 @@
                         <input type="checkbox" id="java" name="skills" value="Java">
                         <label for="java" class="reg-label">Java</label>
                     </div>
-                    <button class="btn btn-primary prev-step">Previous</button>
-                    <button type="submit" class="btn btn-tertiary complete-step" onclick="validateForm()">Complete</button>
-                    <p class="mb-3 d-none" id="errorDiv">Please go back and check your inputs.</p>
                 </div>
-            </form>
+            </div>
         </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-tertiary complete-step" onclick="validateForm()">Complete</button>
+            <p class="mb-3 d-none" id="errorDiv">Please go back and check your inputs.</p>
+        </div>
+    </form>
+    <div class="confirmation d-none">
+        <h2 class="mb-4">Complete</h2>
+        <div class="text-success mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M12.186 3.186a.5.5 0 0 1 .628.628l-5 10a.5.5 0 0 1-.8.07l-3.5-3.5a.5.5 0 1 1 .708-.708L6 12.293l4.186-8.187z"/>
+            </svg>
+        </div>
+        <p class="mb-0">Your registration has been completed.</p>
     </div>
 </div>
 
@@ -140,101 +152,20 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("registrationForm");
-    const steps = form.querySelectorAll(".step");
-    const nextButtons = form.querySelectorAll(".next-step");
-    const prevButtons = form.querySelectorAll(".prev-step");
-    const completeButton = form.querySelector(".complete-step");
-
-    let currentStep = 0;
-
-    function showStep(stepIndex) {
-        steps.forEach((step, index) => {
-            if (index === stepIndex) {
-                step.style.display = "block";
-            } else {
-                step.style.display = "none";
-            }
-        });
-    }
-
-    nextButtons.forEach((button, index) => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            currentStep++;
-            showStep(currentStep);
-        });
-    });
-
-    prevButtons.forEach((button, index) => {
-        button.addEventListener("click", function (e) {
-            e.preventDefault();
-            currentStep--;
-            showStep(currentStep);
-        });
-    });
+    const confirmationDiv = document.querySelector(".confirmation");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (form.checkValidity() === true) {
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            console.log("Form data:", data);
+        if (form.checkValidity()) {
             // Here you can send the form data to your server or via email
-            // Replace card contents with "Complete" and a checkmark
-            const cardBody = document.querySelector('.card-body');
-            cardBody.innerHTML = `
-                <div class="d-flex flex-column align-items-center">
-                    <h2 class="mb-4">Complete</h2>
-                    <div class="text-success mb-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
-                            <path d="M12.186 3.186a.5.5 0 0 1 .628.628l-5 10a.5.5 0 0 1-.8.07l-3.5-3.5a.5.5 0 1 1 .708-.708L6 12.293l4.186-8.187z"/>
-                        </svg>
-                    </div>
-                    <p class="mb-0">Your registration has been completed.</p>
-                </div>
-            `;
+            // Show the confirmation
+            form.style.display = "none";
+            confirmationDiv.style.display = "block";
+        } else {
+            const errorDiv = document.getElementById("errorDiv");
+            errorDiv.classList.remove("d-none");
         }
     });
-
-    // Form validation
-    function validateForm() {
-        const form = document.getElementById("registrationForm");
-        const errorDiv = document.getElementById("errorDiv");
-
-        // Validate the inputs in Step 1
-        const step1Inputs = form.querySelectorAll('.step-1 .form-control');
-        step1Inputs.forEach(input => {
-            if (!input.checkValidity()) {
-                input.classList.add('is-invalid');
-            } else {
-                input.classList.remove('is-invalid');
-            }
-        });
-
-        // Validate the checkboxes in Step 2
-        const step2Checkboxes = form.querySelectorAll('.step-2 input[type="checkbox"]');
-        let atLeastOneCheckboxChecked = false;
-        step2Checkboxes.forEach(checkbox => {
-            if (checkbox.checked) {
-                atLeastOneCheckboxChecked = true;
-            }
-        });
-
-        if (!atLeastOneCheckboxChecked) {
-            errorDiv.classList.remove('d-none');
-        } else {
-            errorDiv.classList.add('d-none');
-        }
-
-        // If either step has invalid inputs or unchecked checkboxes, prevent submission
-        if (form.querySelectorAll('.is-invalid').length > 0 || !atLeastOneCheckboxChecked) {
-            event.preventDefault();
-            event.stopPropagation();
-            form.classList.add('was-validated');
-        } else {
-            form.classList.remove('was-validated');
-        }
-    };
 });
 </script>
 </body>
