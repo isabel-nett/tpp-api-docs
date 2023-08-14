@@ -381,6 +381,12 @@ td {
     color: var(--off-white);
 }
 
+.confirmation {
+    display: none;
+    color: var(--off-white);
+    text-align: center;
+}
+
 @media screen and (max-width: 991px) {
     .menu {
         display: none;
