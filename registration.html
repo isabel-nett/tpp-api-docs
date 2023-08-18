@@ -111,25 +111,55 @@
             <div class="card-body">
                 <div class="step step-2">
                     <h2 class="mb-4">Step 2: Integration Requirements</h2>
-                    <p>Select your skills:</p>
+                    <p>Select all features that you will need for your application:</p>
                     <div class="form-group">
-                        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
-                        <label for="javascript" class="reg-label">JavaScript</label>
+                        <label>Required to Complete:</label>
+                        <ul>
+                            <li>Retrieving Tokens</li>
+                            <li>Retrieving Transaction Reports</li>
+                            <li>Retrieving Receipts</li>
+                            <li>Refunding Transactions</li>
+                            <li>Enrolling Merchants</li>
+                        </ul>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" id="python" name="skills" value="Python">
-                        <label for="python" class="reg-label">Python</label>
+                        <label>Iframe (select all features that you will use via the iframe):</label>
+                        <ul>
+                            <li><input type="checkbox" name="iframeSkills" value="ChargeCard"> Charge Cards</li>
+                            <li><input type="checkbox" name="iframeSkills" value="ChargeACH"> Charge ACH</li>
+                            <li><input type="checkbox" name="iframeSkills" value="ChargeCrypto"> Charge with Crypto</li>
+                            <li><input type="checkbox" name="iframeSkills" value="TokenizeCard"> Tokenize Cards (Save a card for a future transaction)</li>
+                            <li><input type="checkbox" name="iframeSkills" value="TokenizeACH"> Tokenize ACH (Save an ACH for a future transaction)</li>
+                            <li><input type="checkbox" name="iframeSkills" value="BeginSubscription"> Begin and Cancel Subscriptions</li>
+                            <li><input type="checkbox" name="iframeSkills" value="IncludeMetaData"> Include Meta Data (such as Patient or Customer ID or Account Number)</li>
+                            <li><input type="checkbox" name="iframeSkills" value="AuthorizeSettleCard"> Authorize and Settle a Card</li>
+                        </ul>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" id="java" name="skills" value="Java">
-                        <label for="java" class="reg-label">Java</label>
+                        <label>Terminal (select all features that you will use via terminals):</label>
+                        <ul>
+                            <li><input type="checkbox" name="terminalSkills" value="Charge"> Charge</li>
+                            <li><input type="checkbox" name="terminalSkills" value="AuthorizeSettle"> Authorize and Settle</li>
+                            <li><input type="checkbox" name="terminalSkills" value="Signature"> Signature</li>
+                        </ul>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label>API  (select all features that you will use via direct API calls):</label>
+                        <ul>
+                            <li><input type="checkbox" name="apiSkills" value="ChargeCard"> Charge Cards</li>
+                            <li><input type="checkbox" name="apiSkills" value="ChargeACH"> Charge ACH</li>
+                            <li><input type="checkbox" name="apiSkills" value="AuthorizeSettle"> Authorize and Settle</li>
+                            <li><input type="checkbox" name="apiSkills" value="BeginSubscription"> Begin and Cancel Subscriptions</li>
+                            <li><input type="checkbox" name="apiSkills" value="TokenizeCard"> Tokenize Cards (Save a card for a future transaction)</li>
+                            <li><input type="checkbox" name="apiSkills" value="TokenizeACH"> Tokenize ACH (Save an ACH for a future transaction)</li>
+                        </ul>
+                    </div>
+                </div>                
             </div>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <p class="mt-3 mb-0 d-none" id="errorDiv">Please make sure you have selected your integration needs.</p>
             <button type="submit" class="btn btn-primary complete-step">Complete</button>
-            <p class="mb-3 d-none" id="errorDiv">Please go back and check your inputs.</p>
         </div>
     </form>
     <div class="confirmation">
@@ -155,20 +185,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmationDiv = document.querySelector(".confirmation");
 
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        if (form.checkValidity()) {
-            // Show the confirmation
-            const formData = new FormData(document.querySelector('form'));
-            console.log(formData.get('fieldName'));
-            form.style.display = "none";
-            confirmationDiv.style.display = "block";
-            form.classList.add('was-validated');
-        } else {
-            event.preventDefault()
-            event.stopPropagation()
-            const errorDiv = document.getElementById("errorDiv");
-            errorDiv.classList.remove("d-none");
-        }
+    e.preventDefault();
+
+    const iframeCheckboxes = document.querySelectorAll('input[name="iframeSkills"]:checked');
+    const terminalCheckboxes = document.querySelectorAll('input[name="terminalSkills"]:checked');
+    const apiCheckboxes = document.querySelectorAll('input[name="apiSkills"]:checked');
+
+    if (form.checkValidity() && checkedCheckboxes.length >= 1) {
+        // Form is valid, proceed with submission
+        const formData = new FormData(document.querySelector('form'));
+        // ... Your submission logic ...
+        form.style.display = "none";
+        confirmationDiv.style.display = "block";
+        form.classList.add('was-validated');
+    } else {
+        event.preventDefault();
+        event.stopPropagation();
+        const errorDiv = document.getElementById("errorDiv");
+        errorDiv.classList.remove("d-none");
+    }
     });
 });
 </script>
