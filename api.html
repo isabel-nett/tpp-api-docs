@@ -557,6 +557,9 @@
 
 
 	<script>
+
+		const endpointsLoadedEvent = new Event('endpointsLoaded');
+
 		var sdks  = {
 		'PYTHON':['/static/sdk/python-client-generated.zip','TriplePlayPayAPI-PYTHON-v1.5.3.zip'],
 		'C':['/static/sdk/csharp-client-generated.zip','TriplePlayPayAPI-CHSARP-v1.5.3.zip'],
@@ -699,7 +702,7 @@
 
 					const navHtml = renderNavItem(formattedEndpoints);
 					document.querySelector('#endpointsNav').innerHTML = navHtml;
-				});
+				}).finally(() => document.dispatchEvent(endpointsLoadedEvent));
 			}
 
 			fetchNav();
@@ -725,6 +728,14 @@
 				}
 				return `<ul>${links}</ul>`;
 			}
+
+			document.addEventListener("endpointsLoaded", () => {
+				const [_url, id] = window.location.href.split('#');
+				console.log(id);
+				if (id != undefined)
+					document.getElementById(id).scrollIntoView();
+			});
+
 		</script>
 
 	</body>
