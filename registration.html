@@ -80,9 +80,9 @@
 </header>
 <div class="content mx-auto">
     <form class="needs-validation" id="registrationForm">
-        <div class="card reg-card w-50 mx-auto main-shadow">
+        <div class="card reg-card w-75 w-md-50 mx-auto main-shadow">
             <div class="card-body">
-                <div class="step step-1">
+                <div class="step step-1 mx-auto w-auto px-5">
                     <h2 class="mb-4">Step 1: Developer Information</h2>
                     <div class="form-group">
                         <label for="firstName" class="reg-label">First Name</label>
@@ -107,15 +107,14 @@
                 </div>
             </div>
         </div>
-        <div class="card reg-card w-50 mx-auto main-shadow mt-5">
+        <div class="card reg-card w-75 w-md-50 mx-auto main-shadow mt-5">
             <div class="card-body">
-                <div class="step step-2">
+                <div class="step step-2 mx-auto w-auto px-5">
                     <h2 class="mb-4">Step 2: Integration Requirements</h2>
                     <p>Select all features that you will need for your application:</p>
                     <div class="form-group">
                         <label>Required to Complete:</label>
                         <ul>
-                            <li>Retrieving Tokens</li>
                             <li>Retrieving Transaction Reports</li>
                             <li>Retrieving Receipts</li>
                             <li>Refunding Transactions</li>
@@ -124,34 +123,34 @@
                     </div>
                     <div class="form-group">
                         <label>Iframe (select all features that you will use via the iframe):</label>
-                        <ul>
-                            <li><input type="checkbox" name="iframeSkills" value="ChargeCard"> Charge Cards</li>
-                            <li><input type="checkbox" name="iframeSkills" value="ChargeACH"> Charge ACH</li>
-                            <li><input type="checkbox" name="iframeSkills" value="ChargeCrypto"> Charge with Crypto</li>
-                            <li><input type="checkbox" name="iframeSkills" value="TokenizeCard"> Tokenize Cards (Save a card for a future transaction)</li>
-                            <li><input type="checkbox" name="iframeSkills" value="TokenizeACH"> Tokenize ACH (Save an ACH for a future transaction)</li>
-                            <li><input type="checkbox" name="iframeSkills" value="BeginSubscription"> Begin and Cancel Subscriptions</li>
-                            <li><input type="checkbox" name="iframeSkills" value="IncludeMetaData"> Include Meta Data (such as Patient or Customer ID or Account Number)</li>
-                            <li><input type="checkbox" name="iframeSkills" value="AuthorizeSettleCard"> Authorize and Settle a Card</li>
+                        <ul style="list-style-type: none;">
+                            <li><input type="checkbox" name="iframeCardCharge" value="ChargeCard" id="iframeCardCharge"> Charge Cards</li>
+                            <li><input type="checkbox" name="iframeAchCharge" value="ChargeACH" id="iframeAchCharge"> Charge ACH</li>
+                            <li><input type="checkbox" name="iframeCryptoCharge" value="ChargeCrypto" id="iframeCryptoCharge"> Charge with Crypto</li>
+                            <li><input type="checkbox" name="iframeCardTokenize" value="TokenizeCard" id="iframeCardTokenize"> Tokenize Cards (Save a card for a future transaction)</li>
+                            <li><input type="checkbox" name="iframeAchTokenize" value="TokenizeACH" id="iframeAchTokenize"> Tokenize ACH (Save an ACH for a future transaction)</li>
+                            <li><input type="checkbox" name="iframeSubs" value="BeginSubscription" id="iframeSubs"> Begin and Cancel Subscriptions</li>
+                            <li><input type="checkbox" name="iframeMeta" value="IncludeMetaData" id="iframeMeta"> Include Meta Data (such as Patient or Customer ID or Account Number)</li>
+                            <li><input type="checkbox" name="iframeAuthSet" value="AuthorizeSettleCard" id="iframeAuthSet"> Authorize and Settle a Card</li>
                         </ul>
                     </div>
                     <div class="form-group">
                         <label>Terminal (select all features that you will use via terminals):</label>
-                        <ul>
-                            <li><input type="checkbox" name="terminalSkills" value="Charge"> Charge</li>
-                            <li><input type="checkbox" name="terminalSkills" value="AuthorizeSettle"> Authorize and Settle</li>
-                            <li><input type="checkbox" name="terminalSkills" value="Signature"> Signature</li>
+                        <ul style="list-style-type: none;">
+                            <li><input type="checkbox" name="terminalCharge" value="Charge" id="terminalCharge"> Charge</li>
+                            <li><input type="checkbox" name="terminalAuthSet" value="AuthorizeSettle" id="terminalAuthSet"> Authorize and Settle</li>
+                            <li><input type="checkbox" name="terminalSignature" value="Signature" id="terminalSignature"> Signature</li>
                         </ul>
                     </div>
                     <div class="form-group">
                         <label>API  (select all features that you will use via direct API calls):</label>
-                        <ul>
-                            <li><input type="checkbox" name="apiSkills" value="ChargeCard"> Charge Cards</li>
-                            <li><input type="checkbox" name="apiSkills" value="ChargeACH"> Charge ACH</li>
-                            <li><input type="checkbox" name="apiSkills" value="AuthorizeSettle"> Authorize and Settle</li>
-                            <li><input type="checkbox" name="apiSkills" value="BeginSubscription"> Begin and Cancel Subscriptions</li>
-                            <li><input type="checkbox" name="apiSkills" value="TokenizeCard"> Tokenize Cards (Save a card for a future transaction)</li>
-                            <li><input type="checkbox" name="apiSkills" value="TokenizeACH"> Tokenize ACH (Save an ACH for a future transaction)</li>
+                        <ul style="list-style-type: none;">
+                            <li><input type="checkbox" name="apiCardCharge" value="ChargeCard" id="apiCardCharge"> Charge Cards</li>
+                            <li><input type="checkbox" name="apiAchCharge" value="ChargeACH" id="apiAchCharge"> Charge ACH</li>
+                            <li><input type="checkbox" name="apiAuthSet" value="AuthorizeSettle" id="apiAuthSet"> Authorize and Settle</li>
+                            <li><input type="checkbox" name="apiSubs" value="BeginSubscription" id="apiSubs"> Begin and Cancel Subscriptions</li>
+                            <li><input type="checkbox" name="apiCardTokenize" value="TokenizeCard" id="apiCardTokenize"> Tokenize Cards (Save a card for a future transaction)</li>
+                            <li><input type="checkbox" name="apiAchTokenize" value="TokenizeACH" id="apiAchTokenize"> Tokenize ACH (Save an ACH for a future transaction)</li>
                         </ul>
                     </div>
                 </div>                
@@ -159,7 +158,7 @@
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center">
             <p class="mt-3 mb-0 d-none" id="errorDiv">Please make sure you have selected your integration needs.</p>
-            <button type="submit" class="btn btn-primary complete-step">Complete</button>
+            <button type="submit" class="btn btn-primary complete-step">Submit</button>
         </div>
     </form>
     <div class="confirmation">
@@ -169,7 +168,7 @@
                 <path d="M12.186 3.186a.5.5 0 0 1 .628.628l-5 10a.5.5 0 0 1-.8.07l-3.5-3.5a.5.5 0 1 1 .708-.708L6 12.293l4.186-8.187z"/>
             </svg>
         </div>
-        <p class="mb-0">Your registration has been completed. We'll reach out within one business day.</p>
+        <p class="mb-0">Your registration has been completed. Check your inbox for further instructions.</p>
     </div>
 </div>
 
@@ -185,26 +184,82 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmationDiv = document.querySelector(".confirmation");
 
     form.addEventListener("submit", function (e) {
-    e.preventDefault();
+        e.preventDefault();
 
-    const iframeCheckboxes = document.querySelectorAll('input[name="iframeSkills"]:checked');
-    const terminalCheckboxes = document.querySelectorAll('input[name="terminalSkills"]:checked');
-    const apiCheckboxes = document.querySelectorAll('input[name="apiSkills"]:checked');
+        // Object to store the instructions based on checkbox IDs
+        const emailContent = {
+            subject: "Development Certification Instructions",
+            instructions: [],
+        };
 
-    if (form.checkValidity() && checkedCheckboxes.length >= 1) {
-        // Form is valid, proceed with submission
-        const formData = new FormData(document.querySelector('form'));
-        // ... Your submission logic ...
-        form.style.display = "none";
-        confirmationDiv.style.display = "block";
-        form.classList.add('was-validated');
-    } else {
-        event.preventDefault();
-        event.stopPropagation();
-        const errorDiv = document.getElementById("errorDiv");
-        errorDiv.classList.remove("d-none");
-    }
+        // Instructions for each checkbox
+        const checkboxInstructions = {
+            iframeCardCharge: "Iframe: Charge a card for $4.23. Refund the transaction for $2.11.",
+            iframeAchCharge: "Iframe: Charge an ACH account for $5.26. Refund the transaction for $2.12.",
+            iframeCryptoCharge: "Iframe: There are currently no sandbox simulations for Crypto.",
+            iframeCardTokenize: "Iframe: Tokenize a card without charging it. Retrieve the token. Charge that tokenized card $7.23.",
+            iframeAchTokenize: "Iframe: Tokenize a bank account without charging it. Retrieve the token. Charge that tokenized account $7.24.",
+            iframeSubs: "Iframe: Set a subscription that will start 30 days from the date of set-up and be charged monthly. Set up another subscription that will begin today and charge the card weekly. Cancel the weekly subscription. Refund half of the payment that was made.",
+            iframeMeta: "Iframe: Include an invoice number of #12345 with a card transaction.",
+            iframeAuthSet: "Iframe: Authorize a card for $50. Settle the authorized card for $23.22.",
+            terminalCharge: "Terminal: Charge a card for $4.24. Refund the transaction for $2.13.",
+            terminalAuthSet: "Terminal: Authorize a card for $30. Settle the card for $20.22. Refund the transaction for $2.14.",
+            terminalSignature: "Terminal: Retrieve a signature with a charge of $40.99.",
+            apiCardCharge: "API: Charge a card for $4.25. Refund the transaction for $2.21.",
+            apiAchCharge: "API: Charge an ACH account for $5.27. Refund the transaction for $2.18.",
+            apiAuthSet: "API: Authorize a card for $60. Settle the authorized card for $25.99. Refund the transaction for $2.29.",
+            apiSubs: "API: Set a subscription that will start 15 days from the date of set-up and be charged monthly. Set up another subscription that will begin today and charge the card weekly. Cancel the weekly subscription. Refund half of the payment that was made.",
+            apiCardTokenize: "API: Tokenize a card without charging it. Retrieve the token. Charge that tokenized card $7.25.",
+            apiAchTokenize: "API: Tokenize a bank account without charging it. Retrieve the token. Charge that tokenized account $7.26.",
+        };
+
+        // Loop through the checkboxes
+        for (const checkboxId in checkboxInstructions) {
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox.checked) {
+                const checkboxInstruction = checkboxInstructions[checkboxId];
+                emailContent.instructions.push(checkboxInstruction);
+            }
+        }
+
+        if (form.checkValidity() && emailContent.instructions.length > 0) {
+            // Call sendEmail function with API call
+            sendEmail(emailContent);
+
+            form.style.display = "none";
+            confirmationDiv.style.display = "block";
+            form.classList.add('was-validated');
+        } else {
+            event.preventDefault();
+            event.stopPropagation();
+            const errorDiv = document.getElementById("errorDiv");
+            errorDiv.classList.remove("d-none");
+        }
     });
+
+    function sendEmail(emailContent) {
+        const to = `devteam@tripleplaypay.com,` + document.getElementById('email').value
+        const emailBody = emailContent.instructions.join('<br>')
+        const welcome = encodeURIComponent(`Hello and welcome to Triple Play Pay's development certificate process.<br><br>
+        Below are the tests that need to be submitted before you will receive a certificate of readiness and ability to use a live API key. 
+        To find your account API key, log in to <a href="https://sandbox.tripleplaypay.com" target="_blank">sandbox</a>, go to "Accounts," 
+        and open the account that you wish to retrieve the API key for. In the sandbox environment, no sensitive data is saved, 
+        and dummy data and card details can be used. It is a true practice environment. Once you are ready, complete the tests below. 
+        Upon completion, please email devteam@tripleplaypay.com.<br><br>`)
+        const required = encodeURIComponent(`API: Retrieve your report for the past week of transactions.<br>API: Retrieve a receipt for a transaction that you have completed.<br>API: Fully refund a transaction that you have submitted.<br>API (or contact link, if provided): Enroll a merchant with any dummy details that you choose.<br>`)
+        const details = encodeURIComponent(`<br><br>Lead Developer: ` + document.getElementById('firstName').value + ` ` + document.getElementById('lastName').value + `<br>Email: ` + document.getElementById('email').value + `<br>Company: ` + document.getElementById('company').value)
+        const contact = encodeURIComponent(`<br><br>Please reach out to devteam@tripleplaypay.com with questions.`)
+
+        fetch(`https://tripleplaypay.com/api/email?apikey=4ed74ef8-94ba-4f63-80f5-79aa2dc08a93&to=${to}&subject=${emailContent.subject}&body=${welcome}${emailBody}${required}${details}${contact}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch: ${response.statusText}`);
+                }
+                return response.json();
+            })
+            .then(data => console.log(data))
+            .catch(error => console.error(error.message));
+    }
 });
 </script>
 </body>

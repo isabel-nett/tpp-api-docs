@@ -376,11 +376,6 @@ td {
     color: var(--off-white);
 }
 
-/* Add transition effect */
-.card-body {
-    transition: transform 0.5s ease-in-out;
-}
-
 .invalid-feedback {
     color: var(--off-white);
 }
