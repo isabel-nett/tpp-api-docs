@@ -635,7 +635,7 @@
 						<td class="col-1"><p class="${row[0] === '' ? 'section-head' : 'highlight text-capitalize'}">
 							${row[0] === '' ? '' : row[1]}
 						</p></td>
-						<td class="col-1"><p class="${row[0] === '' ? 'hide' : 'highlight'}">
+						<td class="col-1"><p class="${(row[0] === '' || row[2] == false) ? 'hide' : 'highlight'}">
 							${row[2] === false ? '' : row[2]}
 						</p></td>
 						<td class="col-5">${row[3]}</td>
