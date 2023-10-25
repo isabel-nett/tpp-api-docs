@@ -194,13 +194,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Instructions for each checkbox
         const checkboxInstructions = {
-            iframeCardCharge: "Iframe: Charge a card for $4.23. Refund the transaction for $2.11.",
-            iframeAchCharge: "Iframe: Charge an ACH account for $5.26. Refund the transaction for $2.12.",
+            iframeCardCharge: "Iframe: Charge a card for $4.23. Refund $2.11 of the transaction.",
+            iframeAchCharge: "Iframe: Charge an ACH account for $5.26. Refund $2.12 of the transaction.",
             iframeCryptoCharge: "Iframe: There are currently no sandbox simulations for Crypto.",
             iframeCardTokenize: "Iframe: Tokenize a card without charging it. Retrieve the token. Charge that tokenized card $7.23.",
             iframeAchTokenize: "Iframe: Tokenize a bank account without charging it. Retrieve the token. Charge that tokenized account $7.24.",
             iframeSubs: "Iframe: Set a subscription that will start 30 days from the date of set-up and be charged monthly. Set up another subscription that will begin today and charge the card weekly. Cancel the weekly subscription. Refund half of the payment that was made.",
-            iframeMeta: "Iframe: Include an invoice number of #12345 with a card transaction.",
+            iframeMeta: "Iframe: Include an invoice number of 12345 with a card transaction.",
             iframeAuthSet: "Iframe: Authorize a card for $50. Settle the authorized card for $23.22.",
             terminalCharge: "Terminal: Charge a card for $4.24. Refund the transaction for $2.13.",
             terminalAuthSet: "Terminal: Authorize a card for $30. Settle the card for $20.22. Refund the transaction for $2.14.",
@@ -241,10 +241,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const to = `devteam@tripleplaypay.com,` + document.getElementById('email').value
         const emailBody = emailContent.instructions.join('<br>')
         const welcome = encodeURIComponent(`Hello and welcome to Triple Play Pay's development certificate process.<br><br>
-        Below are the tests that need to be submitted before you will receive a certificate of readiness and ability to use a live API key. 
-        To find your account API key, log in to <a href="https://sandbox.tripleplaypay.com" target="_blank">sandbox</a>, go to "Accounts," 
-        and open the account that you wish to retrieve the API key for. In the sandbox environment, no sensitive data is saved, 
-        and dummy data and card details can be used. It is a true practice environment. Once you are ready, complete the tests below. 
+        Please save this email - below are the tests that need to be submitted to receive a certificate of readiness and ability to use a production API key to process live transactions.<br><br>
+        To find your sandbox API key:<br>
+        1. Log in to the <a href="https://sandbox.tripleplaypay.com" target="_blank">sandbox environment</a> using the email address
+        that received the original registration form link<br>
+        2. Open "Merchant Accounts" in the menu<br>
+        3. Open the account of which you wish to retrieve the API key for integration<br>
+        4. Navigate to the "Open" dropdown toward the right side of the page and select "IDs"<br><br>
+        Test and integrate the API into your platform using the following URL in your API calls: https://sandbox.tripleplaypay.com/api.<br>
+        Test and integrate the iframe by implementing the Sandbox script code and configuring the iframe per the <a href="https://tripleplaypay.com/iframe.html" target="_blank">iframe documentation</a>. Sandbox script source: src="https://sandbox.tripleplaypay.com/static/js/sandbox.js".<br><br>
+        Sandbox URLs, scripts, and API keys save no sensitive data, and dummy data and card details can be used. Dummy card numbers must begin with "1".
+        It is a true practice environment that exactly mimics our production environment. Once you are ready, please complete the tests below.<br><br>
         Upon completion, please email devteam@tripleplaypay.com.<br><br>`)
         const required = encodeURIComponent(`API: Retrieve your report for the past week of transactions.<br>API: Retrieve a receipt for a transaction that you have completed.<br>API: Fully refund a transaction that you have submitted.<br>API (or contact link, if provided): Enroll a merchant with any dummy details that you choose.<br>`)
         const details = encodeURIComponent(`<br><br>Lead Developer: ` + document.getElementById('firstName').value + ` ` + document.getElementById('lastName').value + `<br>Email: ` + document.getElementById('email').value + `<br>Company: ` + document.getElementById('company').value)
